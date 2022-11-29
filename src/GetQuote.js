@@ -1,6 +1,6 @@
 import {BASE_URL, API_KEY} from "./apiConfig";
 
-export default function GetQuote(){
+export default async function GetQuote(){
   const movieID = 'tt0068646';
   const options = {
   	method: 'GET',
@@ -9,9 +9,9 @@ export default function GetQuote(){
   		'X-RapidAPI-Host': API_KEY
   	}
   };
-
-return fetch(BASE_URL + '/title/get-quotes?tconst=' + movieID, options)
-	.then(response => response.json())
-	.then(response => console.log(response))
-	.catch(err => console.error(err));
+  const response = await fetch(BASE_URL + '/get-quotes?tconst=' + movieID, options);
+  if (!response.ok)
+		throw new Error(`HTTP error! status: ${response.status}`);
+  const jsonResponse = await response.json();
+  return jsonResponse;
 }

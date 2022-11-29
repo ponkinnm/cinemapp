@@ -1,14 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import GetQuote from '../GetQuote.js'
 function Test(props) {
-  const results = GetQuote()
-  function quoteCB(quote){
-    if(quote.text) return <div>{quote.text.toString()}</div>
-  }
-  return(
-    (results.quotes && results.quotes[0].lines.map(quoteCB)) || <div>error</div>
+  var [result, setResult] = useState('hello world');
+  const response = async () => {await GetQuote()};
+  const quote = response.quotes;
 
-  )
+  return <div>
+    <button onClick={setResult(quote)}>
+      Click me
+    </button>
+    <div>{result}</div>
+  </div>
 }
 
 export default Test;
