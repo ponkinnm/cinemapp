@@ -5,5 +5,9 @@ export default function TestView(props){
       Click me
     </button>
     <div>{props.result}</div>
+    <button onClick={props.getAnswer}>
+      get answer
+    </button>
+    <div>{props.answer}</div>
   </div>
 }
