@@ -11,7 +11,7 @@ export default function GetTitleIdByGenre(chosenGenre) {
     const URL = 'https://imdb8.p.rapidapi.com/title/v2/get-popular-movies-by-genre?genre=';
     const options = {
         method: 'GET',
-        headers: {'X-RapidAPI-Key': 'bacb10d713mshc282bb17cc3b5c8p1801b6jsn6bd8583b7bea', 'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'}
+        headers: {'X-RapidAPI-Key': '', 'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'}
     };
     //gets one random title from the list of movies
     function getTitleID(titles){
