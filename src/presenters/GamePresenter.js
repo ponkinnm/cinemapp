@@ -3,6 +3,7 @@ import Question from "../pages/gameplay/Question";
 
 function GamePresenter(props) {
     const [answer, setAnswer] = React.useState({})
+    // const [result, setResult] = React.useState()
 
     const movies = [
             {id: 1, title: "Die Hard", quote: ""},
@@ -10,11 +11,11 @@ function GamePresenter(props) {
             {id: 3, title: "Harry Potter and The Philosophers stone", quote: ""},
     ]
 
-    const answerID = 2
-    function checkAnswerACB(){return answer.id === answerID}
+    const correctAnswerID = 2
+    function checkAnswerACB(){return answer.id === correctAnswerID}
     function selectedAnswerACB(movie){setAnswer(movie)}
 
-    function whichMovieACB(movie) {return movie.id === answerID}
+    function whichMovieACB(movie) {return movie.id === correctAnswerID}
 
     return (
         <div>
@@ -24,6 +25,7 @@ function GamePresenter(props) {
                 onSelect={selectedAnswerACB}
                 movies={movies}
             />
+
         </div>
     );
 }
