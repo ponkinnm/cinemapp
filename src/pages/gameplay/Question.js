@@ -22,16 +22,17 @@ function Question({quote, movies, onAnswer, onSelect}) {
         console.log(onAnswer())
     }
 
-    return (<div>
-        {quote}
-        <form>
-            <fieldset>
-                <legend>Which movie?</legend>
-                {movies.map(alternativeCB)}
-                <button onClick={handleAnswerACB} type={"submit"}>Submit</button>
-            </fieldset>
-        </form>
-    </div>);
+    return (
+        <>
+            {quote}
+            <form>
+                <fieldset>
+                    <legend>Which movie?</legend>
+                    {movies.map(alternativeCB)}
+                    <button onClick={handleAnswerACB} type={"submit"}>Submit</button>
+                </fieldset>
+            </form>
+        </>);
 }
 
 export default Question;
