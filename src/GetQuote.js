@@ -9,9 +9,10 @@ export default async function GetQuote(){
   		'X-RapidAPI-Host': API_KEY
   	}
   };
-  const response = await fetch(BASE_URL + '/get-quotes?tconst=' + movieID, options);
-  if (!response.ok)
+  fetch(BASE_URL + '/get-quotes?tconst=' + movieID, options).then((res) => res.json()).then((response) => console.log(response))
+  /*if (!response.ok)
 		throw new Error(`HTTP error! status: ${response.status}`);
-  const jsonResponse = await response.json();
-  return jsonResponse;
+  const jsonResponse = await response.json();*/
+  //console.log(jsonResponse)
+  //return JSON.stringify(jsonResponse);
 }

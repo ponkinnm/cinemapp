@@ -1,15 +1,15 @@
-import React, {useState} from 'react';
-import GetQuote from '../GetQuote.js'
+import React, {useState, useEffect} from 'react';
+import GetQuote from '../GetQuote.js';
+import TestView from '../TestView';
 function Test(props) {
   var [result, setResult] = useState('hello world');
-  const response = async () => {await GetQuote()};
-  const quote = response.quotes;
+  function getQuoteCB(){
+    GetQuote();
+    //setResult(response);
+  }
 
   return <div>
-    <button onClick={setResult(quote)}>
-      Click me
-    </button>
-    <div>{result}</div>
+    <TestView result = {result} findQuote={getQuoteCB}/>
   </div>
 }
 
