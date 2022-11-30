@@ -3,9 +3,6 @@ import {Outlet, Link} from "react-router-dom";
 function Layout() {
     return (
         <>
-
-
-            <Outlet/>
             <nav>
                 <ul>
                     <li>
@@ -15,10 +12,11 @@ function Layout() {
                         <Link to="test">Test</Link>
                     </li>
                     <li>
-                        he
+                        <Link to="game">GamePlay</Link>
                     </li>
                 </ul>
             </nav>
+            <Outlet/>
         </>
     )
 };

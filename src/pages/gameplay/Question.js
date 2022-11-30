@@ -1,34 +1,25 @@
 import React, {useEffect, useState} from 'react';
 import './quotebox.css';
 
-function Question({quote, movies, onAnswer}) {
-
-
-
+function Question({quote, movies, onAnswer, onSelect}) {
 
     function alternativeCB(movie) {
-        return (<div key={movie}>
+        return (<div key={movie.id}>
             <input type="radio"
-                   id={movie}
-                   value={movie}
+                   id={movie.id}
+                   value={movie.id}
                    name={"answer"}
-                   key={movie}
-                   onInput={() => console.log(movie)}
+                   key={movie.id}
+                   onInput={() => {
+                       console.log(movie)
+                       onSelect(movie)
+                   }}
             />
-            <label htmlFor={movie}>{movie}</label>
+            <label htmlFor={movie.id}>{movie.title}</label>
         </div>);
     }
-
-    function handleAnswerACB(e) {
-        e.preventDefault();
-        const input = document.querySelectorAll('input');
-        input.forEach(e => {
-            if (e.checked === true) console.log(e.value)
-        })
-
-        console.log(document.querySelector('form'));
-
-        //onAnswer(input)
+    function handleAnswerACB() {
+        console.log(onAnswer())
     }
 
     return (<div>
