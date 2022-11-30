@@ -10,7 +10,7 @@ export default function GetQuote(){
   	}
   };
   function quoteACB(res){
-    console.log(res)
+    //console.log(res)
     return res;
   }
   return fetch('https://imdb8.p.rapidapi.com/title/get-quotes?tconst=' + movieID, options)

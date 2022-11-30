@@ -4,7 +4,8 @@ import TestView from '../TestView';
 function Test(props) {
   var [result, setResult] = useState('hello world');
   function getQuoteCB(){
-    console.log(GetQuote());
+    //GetQuote().then(function (result){console.log(result)});
+    GetQuote().then(function (res){setResult(res.quotes[0].lines[1].text)});
     //setResult(response[1]);
   }
 
