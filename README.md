@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# CinemApp
+#### The no. 1 Movie Quiz
+#### By Fredrik Ehne, Vincent Ferrigan, Robert Furuvald & Pontus Kinnmark
+
+###
+### Basic Git strategy 
+1. Always base new branches off of (updated) main
+2. Do not push your branch before rebasing (step 3), this may introduce unnecessary conflicts
+3. When done with a branch, rebase off of main (checkout your branch and run `git rebase main`)
+4. Resolve any  conflicts locally
+5. `git push` your branch
+6. Initiate pull request on GitHub
+
+
+
+
+
+#
+#
+#
+#
+#
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
