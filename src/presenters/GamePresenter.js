@@ -11,10 +11,14 @@ import resolvePromise from "../resolvePromise";
 function GamePresenter(props) {
     const [answer, setAnswer] = React.useState({})
     const [hasSubmitedAnswer, setHasSubmitedAnswer] = React.useState(false)
-    const [movie, setMovie] = React.useState({})
+
+    // const [isLoading, setIsLoading] = React.useState(false)
+    // const [movie, setMovie] = React.useState({})
     // const [result, setResult] = React.useState()
+
     React.useEffect(() => {console.log(checkAnswerCB())}, [hasSubmitedAnswer])
 
+    // TODO replace this const with objects from getMovieQuotes through resolvePromise
     const movies = [
             {id: 1, title: "Die Hard", quote: ""},
             {QUOTE},
@@ -28,6 +32,7 @@ function GamePresenter(props) {
 
     function whichMovieACB(movie) {return movie.id === correctAnswerID}
 
+    //TODO add UseEffect and promiseNoData stuff and a view instead of hasSubmittedAnswer ternary operator below
     return (
         <div>
             <Question
