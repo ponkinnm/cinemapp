@@ -14,11 +14,14 @@ function Layout() {
                     <li>
                         <Link to="game">GamePlay</Link>
                     </li>
+                    <li>
+                        <Link to="signup">Sign up</Link>
+                    </li>
                 </ul>
             </nav>
             <Outlet/>
         </>
     )
-};
+}
 
 export default Layout;
