@@ -19,10 +19,9 @@ function GamePresenter(props) {
     const [movie3, setMovie3] = React.useState(null)
 
     const [correctMovieId, setCorrectMovieId] = React.useState("")
-    const [query, setQuery] = React.useState(`.getLines()`)
     const [showCharacter, setShowCharacter] = React.useState(false)
     const [showYear, setShowYear] = React.useState(false)
-    // const [result, setResult] = React.useState()
+    const [isAnswerCorrect, setIsAnswerCorrect] = React.useState(false)
 
     // const fetchMovieQuotesHandler = async () => {
     const fetchMovieQuotesHandler = React.useCallback( async () => {
@@ -41,7 +40,7 @@ function GamePresenter(props) {
                     setMovie2(createQuoteGeneratorStatic(data2))
                     setMovie3(createQuoteGeneratorStatic(data3))
 
-                    setCorrectMovieId(data.id)
+                    setCorrectMovieId(data2.id)
                 }
                 // else {
                 // //     debugger;
@@ -61,22 +60,22 @@ function GamePresenter(props) {
     }, [])
 
     function checkAnswerCB() {
-        // return answer.id === correctMovieId
+        console.log(answer.getId() === correctMovieId)
+        return answer.getId() === correctMovieId
+        debugger
     }
     function submitAnswerACB() {
-        setHasSubmitedAnswer(current => !current)
-        debugger;
+        setHasSubmitedAnswer(true)
+        setIsAnswerCorrect(checkAnswerCB())
     }
     function selectedAnswerACB(movie) {
         setAnswer(movie)
-        debugger;
     }
     function nextQuoteACB(nextQuote){
         nextQuote.popQuote()
         setMovie2( {...nextQuote})
         setShowCharacter(false)
         setShowYear(false)
-        debugger;
     }
     function characterACB() {setShowCharacter(true)}
     function yearACB() {setShowYear(true)}
@@ -88,21 +87,18 @@ function GamePresenter(props) {
             {!isLoading && movie1 && (
                 <div>
                 <Question
-                    movieQuotes = {movie2}
+                    movieToQuote = {movie2}
                     isHintCharacter = {showCharacter}
                     isHintYear = {showYear}
-                    onAnswer={submitAnswerACB}
+                    isAnswerCorrect = {isAnswerCorrect}
+                    hasSubmittedAnswer = {hasSubmitedAnswer}
+                    onSubmit={submitAnswerACB}
                     onNext={nextQuoteACB}
                     onCharacter={characterACB}
                     onYear={yearACB}
                     onSelect={selectedAnswerACB}
                     movies={[movie1, movie2, movie3]}
                 />
-                {/* hasSubmitedAnswer
-                ? checkAnswerCB()
-                        ? <div>"Congratulation!"</div>
-                        : <div>"You Lose! Good Day Sir!"</div>
-                : null*/}
         </div>)}
         </>
     );

@@ -1,7 +1,8 @@
 import React from 'react';
 import './quotebox.css';
 
-function Question({isHintYear, isHintCharacter, movieQuotes, movies, onAnswer, onSelect, onNext, onCharacter, onYear}) {
+function Question({isHintYear, isHintCharacter, hasSubmittedAnswer, isAnswerCorrect,
+                      movieToQuote, movies, onSubmit, onSelect, onNext, onCharacter, onYear}) {
 
     function alternativeCB(movie) {
         return (<div key={movie.getId()}>
@@ -19,20 +20,20 @@ function Question({isHintYear, isHintCharacter, movieQuotes, movies, onAnswer, o
         </div>);
     }
     function handleAnswerACB() {
-        console.log(onAnswer())
+        onSubmit()
     }
-    function nextQuoteRequestACB() {onNext(movieQuotes)}
+    function nextQuoteRequestACB() {onNext(movieToQuote)}
     function characterRequestACB() {onCharacter()}
     function yearRequeastACB() {onYear()}
 
     return (
         <>
-            {movieQuotes.getLines().split ('\n').map((item, i) => <p key={i}>{item}</p>)}
+            {movieToQuote.getLines().split ('\n').map((item, i) => <p key={i}>{item}</p>)}
             {isHintCharacter
-            ? movieQuotes.getCharacters().split ('\n').map((item, i) => <p key={i}>{item}</p>)
+            ? movieToQuote.getCharacters().split ('\n').map((item, i) => <p key={i}>{item}</p>)
             : null}
             {isHintYear
-                ? `${movieQuotes.getYear()}`
+                ? `${movieToQuote.getYear()}`
                 : null}
             <form>
                 <fieldset>
@@ -44,6 +45,14 @@ function Question({isHintYear, isHintCharacter, movieQuotes, movies, onAnswer, o
             <button onClick={nextQuoteRequestACB}>NextQuote</button>
             <button onClick={characterRequestACB}>Character hint</button>
             <button onClick={yearRequeastACB}>Year hint</button>
+            <div>
+            {hasSubmittedAnswer
+                ? isAnswerCorrect
+                    ? "Congratulation!"
+                    : "You Lose! Good Day Sir!"
+                : null
+            }
+            </div>
         </>);
 }
 
