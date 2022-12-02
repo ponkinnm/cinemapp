@@ -1,13 +1,17 @@
 import {createContext, useContext, useEffect, useState} from "react";
 import {
-    createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut
+    createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile
 } from "firebase/auth";
 import {auth} from "../firebaseConfig";
 
-const userAuthContext = createContext();
+const userAuthContext = createContext(null);
 
 export function UserAuthContextProvider({children}) {
     const [user, setUser] = useState({});
+
+    function updateDisplayName(name){
+        return updateProfile(auth.currentUser, {displayName: name})
+    }
 
     function logIn(email, password) {
         return signInWithEmailAndPassword(auth, email, password);
@@ -33,7 +37,7 @@ export function UserAuthContextProvider({children}) {
     }, []);
 
     return (<userAuthContext.Provider
-            value={{user, logIn, signUp, logOut}}
+            value={{user, logIn, signUp, logOut, updateDisplayName}}
         >
             {children}
         </userAuthContext.Provider>);

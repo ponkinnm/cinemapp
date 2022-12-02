@@ -9,14 +9,18 @@ function Signup() {
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
     const [password, setPassword] = useState("");
-    const {signUp} = useUserAuth();
+    const [displayName, setDisplayName] = useState("");
+    const {signUp, updateDisplayName} = useUserAuth();
     let navigate = useNavigate();
+
+    //console.log(auth.currentUser)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
         try {
             await signUp(email, password);
+            updateDisplayName(displayName);
 
             navigate("/");
         } catch (err) {
@@ -32,6 +36,7 @@ function Signup() {
                 {error && <Alert variant="danger">{error}</Alert>}
 
                 <Form onSubmit={handleSubmit}>
+                    <input placeholder="Username" onChange={(e) => setDisplayName(e.target.value)}  type="text" id="displayName"/>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Control
                             type="email"
