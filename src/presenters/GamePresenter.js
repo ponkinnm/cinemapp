@@ -1,52 +1,110 @@
 /**
- * filename         ../src/GamePresenter.js
+ * filename         ../src/presenters/GamePresenter.js
  * @fileoverview    TODO (to write)
  */
 import React, {useState} from 'react';
 import Question from "../pages/gameplay/Question";
-import GetQuote from "../GetQuote";
-import {QUOTE} from "../filmConsts";
-import resolvePromise from "../resolvePromise";
+import {fetchMovieQuotes} from "../movieSource";
+import {createQuoteGeneratorStatic} from "../utilities";
+import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 
 function GamePresenter(props) {
     const [answer, setAnswer] = React.useState({})
     const [hasSubmitedAnswer, setHasSubmitedAnswer] = React.useState(false)
+    const [isLoading, setIsLoading] = React.useState(false)
 
-    // const [isLoading, setIsLoading] = React.useState(false)
-    // const [movie, setMovie] = React.useState({})
+    // switch these three movies to an array of objects instead
+    const [movie1, setMovie1] = React.useState(null)
+    const [movie2, setMovie2] = React.useState(null)
+    const [movie3, setMovie3] = React.useState(null)
+
+    const [correctMovieId, setCorrectMovieId] = React.useState("")
+    const [query, setQuery] = React.useState(`.getLines()`)
+    const [showCharacter, setShowCharacter] = React.useState(false)
+    const [showYear, setShowYear] = React.useState(false)
     // const [result, setResult] = React.useState()
 
-    React.useEffect(() => {console.log(checkAnswerCB())}, [hasSubmitedAnswer])
+    // const fetchMovieQuotesHandler = async () => {
+    const fetchMovieQuotesHandler = React.useCallback( async () => {
+            setIsLoading(true)
+            try {
+                if (!movie1 || !movie2 || !movie3) {
+                    // const data = await fetchMovieQuotes('tt0068646')
+                    // const data = await fetchMovieQuotes('tt0073195')
 
-    // TODO replace this const with objects from getMovieQuotes through resolvePromise
-    const movies = [
-            {id: 1, title: "Die Hard", quote: ""},
-            {QUOTE},
-            {id: 3, title: "Harry Potter and The Philosophers stone", quote: ""},
-    ]
+                    // switch to a parallel fetch instead
+                    const data = await QUOTE
+                    const data2 = await QUOTE2
+                    const data3 = await QUOTE3
 
-    const correctAnswerID = QUOTE.id
-    function checkAnswerCB() {return answer.id === correctAnswerID}
-    function submitAnswerACB() {setHasSubmitedAnswer(current => !current)}
-    function selectedAnswerACB(movie) {setAnswer(movie)}
+                    setMovie1(createQuoteGeneratorStatic(data))
+                    setMovie2(createQuoteGeneratorStatic(data2))
+                    setMovie3(createQuoteGeneratorStatic(data3))
 
-    function whichMovieACB(movie) {return movie.id === correctAnswerID}
+                    setCorrectMovieId(data.id)
+                }
+                // else {
+                // //     debugger;
+                // }
+            } catch(err) {
+                console.log(err)
+                debugger;
+            }
+            setIsLoading(false)
+        debugger;
+        }, [])
+    // }
+
+    React.useEffect(() => {
+        fetchMovieQuotesHandler()
+    // }, [fetchMovieQuotesHandler])
+    }, [])
+
+    function checkAnswerCB() {
+        // return answer.id === correctMovieId
+    }
+    function submitAnswerACB() {
+        setHasSubmitedAnswer(current => !current)
+        debugger;
+    }
+    function selectedAnswerACB(movie) {
+        setAnswer(movie)
+        debugger;
+    }
+    function nextQuoteACB(nextQuote){
+        nextQuote.popQuote()
+        setMovie2( {...nextQuote})
+        setShowCharacter(false)
+        setShowYear(false)
+        debugger;
+    }
+    function characterACB() {setShowCharacter(true)}
+    function yearACB() {setShowYear(true)}
+    // function whichMovieACB(movie) {return movie.id === correctMovieId}
 
     //TODO add UseEffect and promiseNoData stuff and a view instead of hasSubmittedAnswer ternary operator below
     return (
-        <div>
-            <Question
-                quote={"TEST HELLO WORLD"/*movies.find(whichMovieACB).quotes[]*/}
-                onAnswer={submitAnswerACB}
-                onSelect={selectedAnswerACB}
-                movies={movies}
-            />
-            {hasSubmitedAnswer
+        <>
+            {!isLoading && movie1 && (
+                <div>
+                <Question
+                    movieQuotes = {movie2}
+                    isHintCharacter = {showCharacter}
+                    isHintYear = {showYear}
+                    onAnswer={submitAnswerACB}
+                    onNext={nextQuoteACB}
+                    onCharacter={characterACB}
+                    onYear={yearACB}
+                    onSelect={selectedAnswerACB}
+                    movies={[movie1, movie2, movie3]}
+                />
+                {/* hasSubmitedAnswer
                 ? checkAnswerCB()
-                    ? "Congratulation!"
-                    : "You Lose! Good Day Sir!"
-                : null}
-        </div>
+                        ? <div>"Congratulation!"</div>
+                        : <div>"You Lose! Good Day Sir!"</div>
+                : null*/}
+        </div>)}
+        </>
     );
 }
 
