@@ -39,8 +39,6 @@ function createQuoteGeneratorDynamic() {
     };
 }
 function createQuoteGeneratorStatic(movie) {
-    console.log(movie)
-    debugger;
     const id = movie.id
     const title = movie.base.title
     const year = movie.base.year
