@@ -3,7 +3,38 @@
  * @fileoverview    TODO (to write)
  */
 
-// import {QUOTE} from "./filmConsts";
+/**
+ * Closure function capturing the chosen json movie object
+ *
+ * @param movie json object
+ * @returns an object of functions
+ */
+function createQuoteGeneratorStatic(movie) {
+    const id = movie.id
+    const title = movie.base.title
+    const year = movie.base.year
+    const quotes = [...movie.quotes]
+    let quote = quotes.pop()
+
+    function onlyCharactersReducerCB(accumulator, object) {
+        if (object.characters) return accumulator + " " + object.characters[0].character + "\n"
+        else return accumulator + ""
+    }
+    function onlyLinesReducerCB(accumulator, object){
+        if (object.text) return accumulator + "- " + object.text + "\n"
+        else return accumulator + ""
+    }
+    return {
+        "popQuote": () => {quote = {...quotes.pop()}},
+        "getId": () => id,
+        "getTitle": () => title,
+        "getYear": () => year,
+        "getNumberOfQuotes": () => quotes.length,
+        "getLines": () => quote.lines.reduce(onlyLinesReducerCB, ""),
+        "getCharacters": () => quote.lines.reduce(onlyCharactersReducerCB, ""),
+    };
+}
+// const testMovie = QUOTE
 
 function createQuoteGeneratorDynamic() {
     let id = ""
@@ -24,8 +55,8 @@ function createQuoteGeneratorDynamic() {
     return {
         "addMovie": (movie) => {
             id = movie.id
-            title = movie.base.title // base when testing.
-            year = movie.base.year // base when testing
+            title = movie.base.title
+            year = movie.base.year
             quotes = [...movie.quotes]
             quote = quotes.pop()
         },
@@ -38,31 +69,4 @@ function createQuoteGeneratorDynamic() {
         "getCharacters": () => quote.lines.reduce(onlyCharactersReducerCB, ""),
     };
 }
-function createQuoteGeneratorStatic(movie) {
-    const id = movie.id
-    const title = movie.base.title
-    const year = movie.base.year
-    const quotes = [...movie.quotes]
-    let quote = quotes.pop() // empty if no quotes have been poped yet, undefined if the quotes array is empty
-
-    function onlyCharactersReducerCB(accumulator, object) {
-        if (object.characters) return accumulator + " " + object.characters[0].character + "\n"
-        else return accumulator + ""
-    }
-    function onlyLinesReducerCB(accumulator, object){
-        if (object.text) return accumulator + "- " + object.text + "\n"
-        else return accumulator + ""
-    }
-    return {
-        "popQuote": () => {quote = {...quotes.pop()}},
-        "getId": () => id,
-        "getTitle": () => title,
-        "getYear": () => year,
-        "getNumberOfQuotes": () => quotes.length,
-        "getLines": () => quote.lines.reduce(onlyLinesReducerCB, ""), // array of lines with charachters attached. How to solve?
-        "getCharacters": () => quote.lines.reduce(onlyCharactersReducerCB, ""),
-    };
-}
-// const testMovie = QUOTE
-
-export {createQuoteGeneratorStatic, createQuoteGeneratorDynamic};
+export {createQuoteGeneratorStatic};
