@@ -24,15 +24,12 @@ const options = {
  *
  */
 async function fetchMovieQuotes(titleId = 'tt0068646') {
-    // const BASE_URL='imdb8.p.rapidapi.com';
-    // 'https://imdb8.p.rapidapi.com/title/get-quotes?tconst='
     const endpoint = "/title/get-quotes?tconst=" // hardcoded?
 
     // await response of the fetch call
     const response = await fetch(`https://${BASE_URL}${endpoint}${titleId}`, options)
-    if (!response.ok) {
-        throw new Error(`API error! status: ${response.status}`)
-    }
+    if (!response.ok) {throw new Error(`API error! status: ${response.status}`)}
+
     // only proceed once the first promise is resolved
     const data = await response.json()
 
@@ -46,15 +43,15 @@ function myAPICall(endpoint, apiParams) {
         function throwExplanationACB(data) {
             throw new Error("API error" + response.status + " " + data);
         }
-        if (!response.ok) {return response.text().then(throwExplanationACB);}
-        return response.json();
+        return response.ok
+            ? response.json()
+            : response.text().then(throwExplanationACB)
     }
 
-    return (
-        fetch(`https://${BASE_URL}${endpoint}${apiParams}`, options)
-            .then(treatHTTPResponseACB)
-    );
+    return fetch(`https://${BASE_URL}${endpoint}${apiParams}`, options)
+            .then(treatHTTPResponseACB);
 }
+// or just include the CB as an arrow function instead?
 function treatErrorACB(err) {console.log(err)}
 function transformQuoteQueryResultACB(obj){
     return {
@@ -78,7 +75,9 @@ function transformQuoteQueryResultACB(obj){
 function getMovieQuotes(titleId = 'tt0068646') {
     const endpoint = "/title/get-quotes?tconst="
     return (
-        myAPICall(endpoint, titleId).then(transformQuoteQueryResultACB).catch(treatErrorACB)
+        myAPICall(endpoint, titleId)
+            .then(transformQuoteQueryResultACB)
+            .catch(treatErrorACB)
     );
 }
 
@@ -96,7 +95,8 @@ function getArrayOfTitleIdsByGenre(chosenGenre = 'action', noOfTitles = 100) {
 
     return (
         myAPICall(endpoint, new URLSearchParams(searchParams))
-        .then((arr => arr.map(isolateIdACB))).catch(treatErrorACB)
+            .then((arr => arr.map(isolateIdACB)))
+            .catch(treatErrorACB)
     );
 }
 

@@ -28,8 +28,21 @@ function GamePresenter(props) {
             setIsLoading(true)
             try {
                 if (!movie1 || !movie2 || !movie3) {
-                    // const data = await fetchMovieQuotes('tt0068646')
-                    // const data = await fetchMovieQuotes('tt0073195')
+                    /*
+                    let moviePromises = [
+                        fetchMovieQuotes('tt0068646'),
+                        fetchMovieQuotes('tt0073195'),
+                        fetchMovieQuotes('tt0073195'),
+                    ]
+                    Promise.all(moviePromises).then(movies => {
+                        // do something
+                    })
+                     */
+
+                    /*
+                    const data = await fetchMovieQuotes('tt0068646')
+                    const data = await fetchMovieQuotes('tt0073195')
+                     */
 
                     // switch to a parallel fetch instead
                     const data = await QUOTE
@@ -55,7 +68,9 @@ function GamePresenter(props) {
     // }
 
     React.useEffect(() => {
+        console.log("Effect running ")
         fetchMovieQuotesHandler()
+        return () => {console.log("Effect clean up")}
     // }, [fetchMovieQuotesHandler])
     }, [])
 
@@ -82,6 +97,7 @@ function GamePresenter(props) {
     // function whichMovieACB(movie) {return movie.id === correctMovieId}
 
     //TODO add UseEffect and promiseNoData stuff and a view instead of hasSubmittedAnswer ternary operator below
+    // TODO and/or use useContext? useReducer?
     return (
         <>
             {!isLoading && movie1 && (
