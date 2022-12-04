@@ -10,7 +10,7 @@ import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 
 function GamePresenter(props) {
     const [answer, setAnswer] = React.useState({})
-    const [hasSubmitedAnswer, setHasSubmitedAnswer] = React.useState(false)
+    const [hasSubmittedAnswer, setHasSubmittedAnswer] = React.useState(false)
     const [isLoading, setIsLoading] = React.useState(false)
 
     // switch these three movies to an array of objects instead
@@ -80,7 +80,7 @@ function GamePresenter(props) {
         debugger
     }
     function submitAnswerACB() {
-        setHasSubmitedAnswer(true)
+        setHasSubmittedAnswer(true)
         setIsAnswerCorrect(checkAnswerCB())
     }
     function selectedAnswerACB(movie) {
@@ -107,7 +107,7 @@ function GamePresenter(props) {
                     isHintCharacter = {showCharacter}
                     isHintYear = {showYear}
                     isAnswerCorrect = {isAnswerCorrect}
-                    hasSubmittedAnswer = {hasSubmitedAnswer}
+                    hasSubmittedAnswer = {hasSubmittedAnswer}
                     onSubmit={submitAnswerACB}
                     onNext={nextQuoteACB}
                     onCharacter={characterACB}

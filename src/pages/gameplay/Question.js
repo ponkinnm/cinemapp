@@ -1,8 +1,7 @@
 import React from 'react';
 import './quotebox.css';
 
-function Question({isHintYear, isHintCharacter, hasSubmittedAnswer, isAnswerCorrect,
-                      movieToQuote, movies, onSubmit, onSelect, onNext, onCharacter, onYear}) {
+function Question(props) {
 
     function alternativeCB(movie) {
         return (<div key={movie.getId()}>
@@ -13,41 +12,41 @@ function Question({isHintYear, isHintCharacter, hasSubmittedAnswer, isAnswerCorr
                    key={movie.getId()}
                    onInput={() => {
                        console.log(movie)
-                       onSelect(movie)
+                       props.onSelect(movie)
                    }}
             />
             <label htmlFor={movie.getId()}>{movie.getTitle()}</label>
         </div>);
     }
     function handleAnswerACB() {
-        onSubmit()
+        props.onSubmit()
     }
-    function nextQuoteRequestACB() {onNext(movieToQuote)}
-    function characterRequestACB() {onCharacter()}
-    function yearRequeastACB() {onYear()}
+    function nextQuoteRequestACB() {props.onNext(props.movieToQuote)}
+    function characterRequestACB() {props.onCharacter()}
+    function yearRequestACB() {props.onYear()}
 
     return (
         <>
-            {movieToQuote.getLines().split ('\n').map((item, i) => <p key={i}>{item}</p>)}
-            {isHintCharacter
-            ? movieToQuote.getCharacters().split ('\n').map((item, i) => <p key={i}>{item}</p>)
+            {props.movieToQuote.getLines().split ('\n').map((item, i) => <p key={i}>{item}</p>)}
+            {props.isHintCharacter
+            ? props.movieToQuote.getCharacters().split ('\n').map((item, i) => <p key={i}>{item}</p>)
             : null}
-            {isHintYear
-                ? `${movieToQuote.getYear()}`
+            {props.isHintYear
+                ? `${props.movieToQuote.getYear()}`
                 : null}
             <form>
                 <fieldset>
                     <legend>Which movie?</legend>
-                    {movies.map(alternativeCB)}
+                    {props.movies.map(alternativeCB)}
                     <button onClick={handleAnswerACB} type={"submit"}>Submit</button>
                 </fieldset>
             </form>
             <button onClick={nextQuoteRequestACB}>NextQuote</button>
             <button onClick={characterRequestACB}>Character hint</button>
-            <button onClick={yearRequeastACB}>Year hint</button>
+            <button onClick={yearRequestACB}>Year hint</button>
             <div>
-            {hasSubmittedAnswer
-                ? isAnswerCorrect
+            {props.hasSubmittedAnswer
+                ? props.isAnswerCorrect
                     ? "Congratulation!"
                     : "You Lose! Good Day Sir!"
                 : null
