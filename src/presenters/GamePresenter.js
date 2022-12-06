@@ -94,7 +94,7 @@ function GamePresenter(props) {
     // TODO and/or use useContext? useReducer?
     return (
         <>
-            {!isLoading && movies && (
+            {!isLoading && movieQuoteGenerator && (
                 <div>
                 <QuoteBox
                     movieToQuote = {movieQuoteGenerator}
