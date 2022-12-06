@@ -5,7 +5,7 @@
 import React, {useState} from 'react';
 import Question from "../pages/gameplay/Question";
 import {fetchAllMoviesQ, fetchMovieQ, getArrayOfTitleIdsByGenre} from "../movieSource";
-import {createQuoteGeneratorStatic, createPlayer} from "../utilities";
+import {createQuoteGeneratorStatic, createGame} from "../utilities";
 import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
 import ResultBox from "../pages/gameplay/ResultBox";
@@ -16,8 +16,9 @@ function GamePresenter(props) {
     const [isLoading, setIsLoading] = React.useState(false)
     const [error, setError] = React.useState(null)
 
-    const [player, setPlayer] = React.useState(null)
-    const [movies, setMovies] = React.useState([])
+    // const [player, setPlayer] = React.useState(null)
+    const [game, setGame] = React.useState(null)
+    const [movieOptions, setMovieOptions] = React.useState([])
     const [movieQuoteGenerator, setMovieQuoteGenerator] = React.useState(null)
 
     const [correctMovieId, setCorrectMovieId] = React.useState("") // or just use movieQuoteGenerator.getId()
@@ -25,47 +26,50 @@ function GamePresenter(props) {
     const [showYear, setShowYear] = React.useState(false)
     const [isAnswerCorrect, setIsAnswerCorrect] = React.useState(false)
 
-    const gameSetUp = React.useCallback(() => {
-        // get player id and stuff from Firebase?
-        setPlayer(createPlayer('x'))
-    }, [])
+    const gameSetUp = React.useCallback(async () => {
+        //     /*
+        //      * fetch a list of Genre,
+        //      * ask which genre the user wants to play with
+        //      * fetch list of movies
+        //      * choose three of them per game (random?)
+        //      * fetch quoteObjects
+        //      * create QuoteGenerators
+        //      */
 
-    // const addMovieHandler = (movie) => {
-    //     // setMovies(prevMovies => [...prevMovies, movie])
-    //     setMovies(prevMovies => [...prevMovies, createQuoteGeneratorStatic(movie)])
-    // }
-
-    // const fetchMovieQuotesHandler = async () => {
-    const fetchMovieQuotesHandler = React.useCallback( async () => {
         setIsLoading(true)
         setError(null)
         setAnswerId("")
-        // debugger; // this function is called twice when reloaded.
+
+        // get player id and stuff from Firebase?
+        const firstGame = createGame()
+
         try {
+            // get list per genre and add to game
+            const list = await getArrayOfTitleIdsByGenre('action')
+            firstGame.addToMovieList(...list)
 
-            // await list = getArrayOfTitleIdsByGenre('action')
-            // setMovieList(list)
+            // pick a chosen amount of film objects for the game. 3 is default
+            const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
+            const movieData = await fetchAllMoviesQ(...titleIds)
+            // const movieData = [QUOTE, QUOTE2, QUOTE3]
 
-            // const titleIds = player.getArrayOfRandomMovies(3) // magicnumber, hardcoded
-            // await setMovies(fetchAllMoviesQ('tt0068646', 'tt0073195'))
+            // Randomly pick the movie to quote
+            const randomIndex = Math.floor(Math.random() * movieData.length)
+            const quoteMovie = movieData[randomIndex]
 
-            // const data = await fetchAllMoviesQ(...titleIds)
-            const data = [QUOTE, QUOTE2, QUOTE3]
-            setMovies(data)
-
-            // Should pick one random from data
-            const datum = await QUOTE3
-            setMovieQuoteGenerator(createQuoteGeneratorStatic(datum))
-            setCorrectMovieId(datum.id)
-
-        } catch(err) {
-            setError(err.message)
+            // set the states;
+            setMovieOptions(movieData)
+            setGame(firstGame)
+            setMovieQuoteGenerator(createQuoteGeneratorStatic(quoteMovie))
+            setCorrectMovieId(quoteMovie.id)
+        } catch (err){
             console.error(err)
-            debugger;
+            setError(err.message)
         }
         setIsLoading(false)
     }, [])
-    // }
+
+
 
     React.useEffect(() =>{
         console.log("Effect running game set up ")
@@ -73,19 +77,6 @@ function GamePresenter(props) {
         return () => {console.log("Effect clean up game set up")}
     }, [gameSetUp])
 
-    React.useEffect(() => {
-        console.log("Effect running  movieQuoteHandler")
-        /*
-         * fetch a list of Genre,
-         * ask which genre the user wants to play with
-         * fetch list of movies
-         * choose three of them per game (random?)
-         * fetch quoteObjects
-         * create QuoteGenerators
-         */
-        fetchMovieQuotesHandler();
-        return () => {console.log("Effect clean up movieQuoteHandler")}
-    }, [fetchMovieQuotesHandler])
 
     function checkAnswerCB() {
         return answerId === correctMovieId // or just use movieQuoteGenerator.getId() instead of correctMovieId
@@ -106,10 +97,9 @@ function GamePresenter(props) {
     function characterACB() {setShowCharacter(true)}
     function yearACB() {setShowYear(true)}
 
-    //TODO add UseEffect and promiseNoData stuff and a view instead of hasSubmittedAnswer ternary operator below
-    // TODO and/or use useContext? useReducer?
     return (
         <>
+            {error && (`Houston, we have a problem! Tell the newbies that the ${error}`)}
             {!isLoading && movieQuoteGenerator && (
                 <div>
                 <QuoteBox
@@ -123,7 +113,7 @@ function GamePresenter(props) {
                     onCharacter={characterACB}
                     onYear={yearACB}
                     onSelect={selectedAnswerACB}
-                    movies={movies}
+                    movies={movieOptions}
                     hasSelected={answerId}
                 /></div>
                 )
@@ -131,7 +121,7 @@ function GamePresenter(props) {
             {hasSubmittedAnswer && (
                 <ResultBox
                 isAnswerCorrect = {isAnswerCorrect}
-                playerDetails = {player}
+                gameDetails = {game}
                 />
             )}
         </>
