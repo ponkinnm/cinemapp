@@ -4,18 +4,21 @@ function QuoteBox(props) {
 
     return (
         <>
+            <b>The Quote:</b>
+            <p>
             {props.movieToQuote.getLines().split ('\n').map((item, i) => <p key={i}>{item}</p>)}
+            {(props.isHintCharacter || props.isHintYear) ? (<b>Hint:</b>) : null}
+            </p><p>
             {props.isHintCharacter
-                ? `${props.movieToQuote.getArrayOfCharacters()
-                    .reduce((text, value, i, array) => 
-                        text + (i < array.length - 1 ? ', ' : ' and ') + value)}`
-                : null}
-            {/*{props.isHintCharacter*/}
-            {/*    ? props.movieToQuote.getCharacters().split ('\n').map((item, i) => <p key={i}>{item}</p>)*/}
-            {/*    : null}*/}
+            ? `- We quoted ${props.movieToQuote.getArrayOfCharacters()
+                .reduce((text, value, i, array) => 
+                    text + (i < array.length - 1 ? ', ' : ' and ') + value)}.`
+            : null}
+            </p><p>
             {props.isHintYear
-                ? `${props.movieToQuote.getYear()}`
+                ? `- The movie was made ${props.movieToQuote.getYear()}.`
                 : null}
+            </p>
         </>
     );
 }
