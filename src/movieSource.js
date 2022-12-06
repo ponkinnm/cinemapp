@@ -17,13 +17,13 @@ const options = {
  * Return a customized quotes-object of chosen movie.
  *
  * @param titleId the movies titleID, e.g. tt9114286
- * @returns {Promise<*>} Promise that resolves to an object containing the chosen movies id, title and quotes e.g. TODO
+ * @returns TODO {Promise<*>} Promise that resolves to an object containing the chosen movies id, title and quotes e.g.
  *                       id string e.g. "/title/tt9114286/"
  *                       title string e.g. "Scareface"
- *                       quotes array e.g. TODO
+ *                       quotes array e.g.
  *
  */
-async function fetchMovieQuotes(titleId = 'tt0068646') {
+async function fetchMovieQ(titleId = 'tt0068646') {
     const endpoint = "/title/get-quotes?tconst=" // hardcoded?
 
     // await response of the fetch call
@@ -36,6 +36,28 @@ async function fetchMovieQuotes(titleId = 'tt0068646') {
     // only proceed once the second promise is resolved
     // return transformQuoteQueryResultACB(data);
     return data;
+}
+/**
+ * Return an array of customized quotes-object of chosen movies.
+ *
+ * @param titleIds of each movie titleID, e.g. tt9114286, tt0068646
+ * @returns TODO {Promise<*>} An array of promises that each resolves to an object
+ *                       containing the chosen movies id, title and quotes e.g.
+ *                       id string e.g. "/title/tt9114286/"
+ *                       title string e.g. "Scareface"
+ *                       quotes array e.g.
+ *
+ */
+async function fetchAllMoviesQ(...titleIds) {
+    try {
+        const data = await Promise.All(
+           titleIds.map(titleId => fetchMovieQ(titleId))
+        )
+        return data
+    } catch (err) {
+        console.log(err)
+        throw (err)
+    }
 }
 
 function myAPICall(endpoint, apiParams) {
@@ -100,4 +122,4 @@ function getArrayOfTitleIdsByGenre(chosenGenre = 'action', noOfTitles = 100) {
     );
 }
 
-export {getMovieQuotes, getArrayOfTitleIdsByGenre, fetchMovieQuotes}
+export {getMovieQuotes, getArrayOfTitleIdsByGenre, fetchMovieQ, fetchAllMoviesQ}
