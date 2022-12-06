@@ -3,6 +3,33 @@
  * @fileoverview    TODO (to write)
  */
 
+function createPlayer(playerId = '123', nick = "playerNameUnknown", ...movies) {
+    const id = playerId
+    const nickName = nick
+    let movieList = [...movies]
+    let score = 0
+    function arrayOfMoviesCB(nbr= 3) {
+        let arrayOfMovies = []
+
+        while (arrayOfMovies.length < nbr && movieList.length > nbr) {
+            const randomIndex = Math.floor(Math.random() * movieList.length)
+            const movie = movieList[randomIndex]
+            if (arrayOfMovies.some(movie)) {
+                arrayOfMovies = [...arrayOfMovies, movie]
+            }
+        }
+        return arrayOfMovies
+    }
+    return {
+        "getScore" : () => score,
+        "getName": () => nickName,
+        "getId": () => id,
+        "getArrayOfRandomMovies" : (nbr) => {return arrayOfMoviesCB(nbr)},
+        "addPoints": (points) => {score += points},
+        "addToMovieList": (...movies) => {movieList = [...movieList, ...movies]},
+    }
+}
+
 /**
  * Closure function capturing the chosen json movie object
  *
@@ -46,4 +73,4 @@ function createQuoteGeneratorStatic(movie) {
     };
 }
 
-export {createQuoteGeneratorStatic};
+export {createQuoteGeneratorStatic, createPlayer};
