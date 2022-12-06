@@ -3,32 +3,61 @@
  * @fileoverview    TODO (to write)
  */
 
-function createPlayer(playerId = '123', nick = "playerNameUnknown", ...movies) {
-    const id = playerId
-    const nickName = nick
-    let movieList = [...movies]
+function createGame(gameId= '1'){
+    const id = gameId
+    let movieList = []
     let score = 0
-    function arrayOfMoviesCB(nbr= 3) {
-        let arrayOfMovies = []
+    let hints = 0
 
-        while (arrayOfMovies.length < nbr && movieList.length > nbr) {
+    function arrayOfMoviesCB(nbr= 3) {
+        let arrayOfTitleIds = []
+
+        while (arrayOfTitleIds.length < nbr && movieList.length > nbr) {
             const randomIndex = Math.floor(Math.random() * movieList.length)
-            const movie = movieList[randomIndex]
-            if (arrayOfMovies.some(movie)) {
-                arrayOfMovies = [...arrayOfMovies, movie]
+            const randomTitleId = movieList[randomIndex]
+            if (!arrayOfTitleIds.some(titleId => randomTitleId === titleId)) {
+                arrayOfTitleIds = [...arrayOfTitleIds, randomTitleId]
             }
         }
-        return arrayOfMovies
+        return arrayOfTitleIds
     }
+
     return {
         "getScore" : () => score,
-        "getName": () => nickName,
         "getId": () => id,
-        "getArrayOfRandomMovies" : (nbr) => {return arrayOfMoviesCB(nbr)},
-        "addPoints": (points) => {score += points},
+        "getArrayOfRandomMovies" : (nbr = 3) => {return arrayOfMoviesCB(nbr)},
+        "addPoints": (points) => {score += points - hints},
         "addToMovieList": (...movies) => {movieList = [...movieList, ...movies]},
+        "addHints" : ()=> hints += 1,
     }
 }
+
+// function createPlayer(playerId = '123', nick = "playerNameUnknown", ...movies) {
+    // const id = playerId
+    // const nickName = nick
+    // let movieList = [...movies]
+    // let score = 0
+    // function arrayOfMoviesCB(nbr= 3) {
+    //     let arrayOfTitleIds = []
+    //
+    //     while (arrayOfTitleIds.length < nbr && movieList.length > nbr) {
+    //         const randomIndex = Math.floor(Math.random() * movieList.length)
+    //         const randomTitleId = movieList[randomIndex]
+    //         if (!arrayOfTitleIds.some(titleId => randomTitleId === titleId)) {
+    //             arrayOfTitleIds = [...arrayOfTitleIds, randomTitleId]
+    //         }
+    //     }
+    //     return arrayOfTitleIds
+    // }
+    // return {
+    //     "getScore" : () => score,
+    //     "getName": () => nickName,
+    //     "getId": () => id,
+    //     "getArrayOfRandomMovies" : (nbr) => {return arrayOfMoviesCB(nbr)},
+    //     "addPoints": (points) => {score += points},
+    //     "addToMovieList": (...movies) => {movieList = [...movieList, ...movies]},
+    // }
+// }
 
 /**
  * Closure function capturing the chosen json movie object
@@ -44,6 +73,7 @@ function createQuoteGeneratorStatic(movie) {
     const title = movie.base.title
     const year = movie.base.year
     const quotes = [...movie.quotes]
+    const {url:imageUrl} = movie.base.image
     let quote = quotes.pop()
 
     // or an array of characters (where we check fo duplicates)
@@ -70,7 +100,8 @@ function createQuoteGeneratorStatic(movie) {
         "getLines": () => quote.lines.reduce(onlyLinesReducerCB, ""),
         "getCharacters": () => quote.lines.reduce(onlyCharactersReducerCB, ""),
         "getArrayOfCharacters": () => quote.lines.reduce(characterListCB, []),
+        "getImageUrl": () => imageUrl,
     };
 }
 
-export {createQuoteGeneratorStatic, createPlayer};
+export {createQuoteGeneratorStatic, createGame};
