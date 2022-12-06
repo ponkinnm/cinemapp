@@ -28,3 +28,6 @@ yarn-error.log*
 
 # config / env
 /**/*Config*
+
+# firebase
+.firebase/
