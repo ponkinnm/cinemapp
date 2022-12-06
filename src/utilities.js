@@ -8,6 +8,9 @@
  *
  * @param movie json object
  * @returns an object of functions
+ * TODO  Create an array of characters instead of a string. Should the character list contain images?
+ * TODO  Add an image?
+ * TODO  Add trivia?
  */
 function createQuoteGeneratorStatic(movie) {
     const id = movie.id
@@ -16,6 +19,13 @@ function createQuoteGeneratorStatic(movie) {
     const quotes = [...movie.quotes]
     let quote = quotes.pop()
 
+    // or an array of characters (where we check fo duplicates)
+    function characterListCB(accumulator, object) {
+        const isInArrayCB = character => character === object.characters[0].character
+        return (object.characters && !accumulator.some(isInArrayCB))
+            ? [...accumulator, object.characters[0].character]
+            : [...accumulator]
+    }
     function onlyCharactersReducerCB(accumulator, object) {
         if (object.characters) return accumulator + " " + object.characters[0].character + "\n"
         else return accumulator + ""
@@ -32,41 +42,8 @@ function createQuoteGeneratorStatic(movie) {
         "getNumberOfQuotes": () => quotes.length,
         "getLines": () => quote.lines.reduce(onlyLinesReducerCB, ""),
         "getCharacters": () => quote.lines.reduce(onlyCharactersReducerCB, ""),
+        "getArrayOfCharacters": () => quote.lines.reduce(characterListCB, []),
     };
 }
-// const testMovie = QUOTE
 
-function createQuoteGeneratorDynamic() {
-    let id = ""
-    let title = ""
-    let year = ""
-    let quotes = []
-    let quote = {} // empty if no quotes have been poped yet, undefined if the quotes array is empty
-
-    function onlyCharactersReducerCB(accumulator, object) {
-        if (object.characters) return accumulator + " " + object.characters[0].character + "<br>"
-        else return accumulator + ""
-    }
-    function onlyLinesReducerCB(accumulator, object){
-        if (object.text) return accumulator + "- " + object.text + "\n\n"
-        else return accumulator + ""
-    }
-
-    return {
-        "addMovie": (movie) => {
-            id = movie.id
-            title = movie.base.title
-            year = movie.base.year
-            quotes = [...movie.quotes]
-            quote = quotes.pop()
-        },
-        "popQuote": () => {quote = quotes.pop},
-        "getId": () => id,
-        "getTitle": () => title,
-        "getYear": () => year,
-        "getNumberOfQuotes": () => quotes.length,
-        "getLines": () => quote.lines.reduce(onlyLinesReducerCB, ""),
-        "getCharacters": () => quote.lines.reduce(onlyCharactersReducerCB, ""),
-    };
-}
 export {createQuoteGeneratorStatic};
