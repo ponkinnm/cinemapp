@@ -18,9 +18,7 @@ function GamePresenter(props) {
 
     // switch these three movies to an array of objects instead
     const [movies, setMovies] = React.useState([])
-    const [movie1, setMovie1] = React.useState(null)
-    const [movie2, setMovie2] = React.useState(null)
-    const [movie3, setMovie3] = React.useState(null)
+    const [movieQuoteGenerator, setMovieQuoteGenerator] = React.useState(null)
 
     const [correctMovieId, setCorrectMovieId] = React.useState("")
     const [showCharacter, setShowCharacter] = React.useState(false)
@@ -39,23 +37,6 @@ function GamePresenter(props) {
         debugger; // this function is called twice when reloaded.
         try {
             /*
-            let moviePromises = [
-            fetchMovieQuotes('tt0068646'),
-            fetchMovieQuotes('tt0073195'),
-            fetchMovieQuotes('tt0073195'),
-            ]
-            Promise.all(moviePromises).then(movies => {
-            // do something
-            })
-            */
-
-            /*
-            const data = await fetchMovieQ('tt0068646')
-            const data2 = await fetchMovieQ('tt0073195')
-            const data3 = await fetchMovieQ('tt0073195')
-            */
-
-
             /*
              * fetch a list of Genre,
              * ask which genre the user wants to play with
@@ -64,19 +45,16 @@ function GamePresenter(props) {
              * fetch quoteObjects
              * create QuoteGenerators
              */
-            // await setMovies(fetchAllMoviesQ(''))
-            await setMovies(QUOTE, QUOTE2, QUOTE3)
 
-            // switch to a parallel fetch instead
-            const data = await QUOTE
-            const data2 = await QUOTE2
-            const data3 = await QUOTE3
+            // await setMovies(fetchAllMoviesQ('tt0068646', 'tt0073195'))
+            // await data = fetchAllMoviesQ('tt0068646', 'tt0073195')
+            await setMovies([QUOTE, QUOTE2, QUOTE3])
 
-            setMovie1(createQuoteGeneratorStatic(data))
-            setMovie2(createQuoteGeneratorStatic(data2))
-            setMovie3(createQuoteGeneratorStatic(data3))
+            // Should pick one random from data
+            const datum = await QUOTE3
+            setMovieQuoteGenerator(createQuoteGeneratorStatic(datum))
+            setCorrectMovieId(datum.id)
 
-            setCorrectMovieId(data2.id)
         } catch(err) {
             setError(err.message)
             console.error(err)
@@ -103,8 +81,8 @@ function GamePresenter(props) {
         setAnswerId(id)
     }
     function nextQuoteACB(){
-        movie2.popQuote()
-        setMovie2( {...movie2})
+        movieQuoteGenerator.popQuote()
+        setMovieQuoteGenerator( {...movieQuoteGenerator})
         setShowCharacter(false)
         setShowYear(false)
     }
@@ -116,10 +94,10 @@ function GamePresenter(props) {
     // TODO and/or use useContext? useReducer?
     return (
         <>
-            {!isLoading && movie1 && (
+            {!isLoading && movies && (
                 <div>
                 <QuoteBox
-                    movieToQuote = {movie2}
+                    movieToQuote = {movieQuoteGenerator}
                     isHintCharacter = {showCharacter}
                     isHintYear = {showYear}
                 />
@@ -129,7 +107,7 @@ function GamePresenter(props) {
                     onCharacter={characterACB}
                     onYear={yearACB}
                     onSelect={selectedAnswerACB}
-                    movies={[movie1, movie2, movie3]}
+                    movies={movies}
                     hasSelected={answerId}
                 /></div>
                 )

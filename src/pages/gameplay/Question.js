@@ -4,8 +4,11 @@ import './quotebox.css';
 function Question(props) {
 
     function alternativeCB(movie) {
-        const id = movie.getId()
-        const title = movie.getTitle()
+        // const id = movie.getId()
+        // const title = movie.getTitle()
+        const  id = movie.id
+        const title = movie.base.title
+
         return (<div key={id}>
             <input type="radio"
                    id={id}
