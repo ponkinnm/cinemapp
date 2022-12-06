@@ -50,10 +50,8 @@ async function fetchMovieQ(titleId = 'tt0068646') {
  */
 async function fetchAllMoviesQ(...titleIds) {
     try {
-        const data = await Promise.All(
-           titleIds.map(titleId => fetchMovieQ(titleId))
-        )
-        return data
+        const data = await Promise.all(titleIds.map(titleId => fetchMovieQ(titleId)))
+        return [...data]
     } catch (err) {
         console.log(err)
         throw (err)
