@@ -1,25 +1,30 @@
-import {Outlet, Link} from "react-router-dom";
+import {Outlet, NavLink} from "react-router-dom";
 
 function Layout() {
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Home</Link>
+            <nav className={"navigation"}>
+                <span className="font-accent">CinemApp</span>
+                <ul className={"menu"}>
+                    <li className={"menu__item"}>
+                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')} to="/">Home</NavLink>
                     </li>
-                    <li>
-                        <Link to="test">Test</Link>
+                    <li className={"menu__item"}>
+                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')} to="test">Test</NavLink>
                     </li>
-                    <li>
-                        <Link to="game">GamePlay</Link>
+                    <li className={"menu__item"}>
+                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')}
+                                 to="game">GamePlay</NavLink>
                     </li>
-                    <li>
-                        <Link to="signup">Sign up</Link>
+                    <li className={"menu__item"}>
+                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')} to="signup">Sign
+                            up</NavLink>
                     </li>
                 </ul>
             </nav>
-            <Outlet/>
+            <div className="main-content">
+                <Outlet/>
+            </div>
         </>
     )
 }

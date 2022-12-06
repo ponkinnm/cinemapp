@@ -2,43 +2,74 @@ body {
     margin: 32px;
 }
 
-/*
-.App {
-  text-align: center;
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    font-size: 1.25rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.menu__item {
+   text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a, a:visited {
+    text-decoration: none;
+    color: #222;
+    transition: color .2s;
 }
 
-.App-link {
-  color: #61dafb;
+a:hover {
+    color: #666;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a.active {
+    font-weight: 600;
+    border-bottom: 1px solid #222;
 }
-*/
+
+a.active:hover {
+    color: #222;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.font-accent {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 300;
+    font-size: 24px;
+}
+
+.img-wrapper--circle {
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1/1;
+}
+
+.img-md {
+    height: 150px;
+    width: 150px;
+}
