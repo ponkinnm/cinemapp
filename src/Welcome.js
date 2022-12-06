@@ -9,8 +9,7 @@ function Welcome(props) {
     return (
         <div>
             <h1>Welcome to CinemApp</h1>
-            <input type="text" placeholder="Username"/>
-            <input type={"text"} placeholder={"Password"}/>
+
             <Login />
             <img src={ingrid}/>
         </div>
