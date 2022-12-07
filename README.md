@@ -13,11 +13,13 @@ Deployed version: [https://cinemapp-30a1d.web.app](https://cinemapp-30a1d.web.ap
 ### - Mid-term (2022-12-07)
 Done:
 * User can sign up for an account in the app.
-* Use can log in with a created account.
-* Basic game functionality. Movies and relevant data are fetched from imdb API. Quote is displayed to user. User can request different hints.
+* Use can log in with a created account. There is a bug where the move from the login page to the game page gives a blank screen.
+* Basic game functionality. Movies and relevant data are fetched from imdb API. Quote is displayed to user. User can request different hints. Shows quotes from three more movies on right answer. Same bug here where it
+sometimes shows a blank screen. If the game screen gives API error 429, try running it in incognito mode in the browser.
 * Basic score keeping.
 
-TODO: 
+TODO:
+* iron out the bugs.
 * Implement global state manager (i.e. Redux).
 * Improve separation of concerns (e.g. less logic in view components).
 * General styling of app and added interactivity, animations etc.
@@ -30,7 +32,7 @@ Improving the structure is one of the TODOs but as of now the structure is as fo
 We try to keep one component per file. We separate the css-styling so that each component has an own css-file.
 There is a "global" App.css file with more general styling. We have a folder "pages" where we have some of the pages
 as well as a "presenters" folder, however we haven't been entirely consistent and will rework the folder structure.
-There are a lot of "uncategorized" files now in the src/ folder. 
+There are a lot of "uncategorized" files now in the src/ folder.
 We keep some api-related secrets in an .env-file in the project root (not checked in to git).
 
 
