@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Login from "./Login";
+import SignupButton from "./SignupButton";
 import ingrid from "./img/bergman - intermezzo.jpg"
 
 function Welcome(props) {
@@ -13,6 +14,7 @@ function Welcome(props) {
             <input type="text" placeholder="Username"/>
             <input type={"text"} placeholder={"Password"}/>
             <Login />
+            <SignupButton />
         </div>
     );
 }
