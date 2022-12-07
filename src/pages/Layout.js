@@ -20,6 +20,9 @@ function Layout() {
                         <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')} to="signup">Sign
                             up</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="pickGenre">Choose genre</NavLink>
+                    </li>
                 </ul>
             </nav>
             <div className="main-content">
