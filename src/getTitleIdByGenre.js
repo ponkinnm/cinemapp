@@ -12,7 +12,7 @@ export default function getTitleIdByGenre(chosenGenre = 'action', noOfTitles = 1
 
     const endpoint = '/title/v2/get-popular-movies-by-genre?';
     const options = {
-        method: 'GET', headers: {'X-RapidAPI-Key': API_KEY, 'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'}
+        method: 'GET', headers: {'X-RapidAPI-Key': API_KEY, 'X-RapidAPI-Host': BASE_URL}
     };
 
     function isolateIdCB(titleAndId) {
@@ -24,7 +24,7 @@ export default function getTitleIdByGenre(chosenGenre = 'action', noOfTitles = 1
     }
 
     try {
-        return fetch(BASE_URL + endpoint + new URLSearchParams(searchParams), options)
+        return fetch('https://imdb8.p.rapidapi.com' + endpoint + new URLSearchParams(searchParams), options)
             .then((res) => res.json())
             .then((arr => arr.map(isolateIdCB)));
     } catch (err) {
