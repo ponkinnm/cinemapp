@@ -50,8 +50,10 @@ function GamePresenter(props) {
             // firstGame.addToMovieList(...list)
 
             // pick a chosen amount of film objects for the game. 3 is default
+                // API Calls
             // const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
             // const movieData = await fetchAllMoviesQ(...titleIds)
+                // Test Constants
             const movieData = [QUOTE, QUOTE2, QUOTE3]
 
             // Randomly pick the movie to quote
