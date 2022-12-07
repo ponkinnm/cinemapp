@@ -4,7 +4,7 @@
  */
 import React, {useState} from 'react';
 import Question from "../pages/gameplay/Question";
-import {fetchAllMoviesQ, fetchMovieQ, getArrayOfTitleIdsByGenre} from "../movieSource";
+import {fetchAllMoviesQ, fetchArrayOfTitleIdsByGenre} from "../movieSource";
 import {createQuoteGeneratorStatic, createGame} from "../utilities";
 import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
@@ -46,25 +46,28 @@ function GamePresenter(props) {
 
         try {
             // get list per genre and add to game
-            // const list = await getArrayOfTitleIdsByGenre('action')
-            // firstGame.addToMovieList(...list)
+            const list = await fetchArrayOfTitleIdsByGenre()
+            firstGame.addToMovieList(...list)
 
             // pick a chosen amount of film objects for the game. 3 is default
-                // API Calls
-            // const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
-            // const movieData = await fetchAllMoviesQ(...titleIds)
-                // Test Constants
-            const movieData = [QUOTE, QUOTE2, QUOTE3]
+              //  API Calls
+            const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
+            const movieData = await fetchAllMoviesQ(...titleIds)
+            // // Test Constants
+            // const movieData = [QUOTE, QUOTE2, QUOTE3]
 
             // Randomly pick the movie to quote
             const randomIndex = Math.floor(Math.random() * movieData.length)
             const quoteMovie = movieData[randomIndex]
 
+            // Create closure function
+            const quoteGenerator= createQuoteGeneratorStatic(quoteMovie)
+
             // set the states;
             setMovieOptions(movieData)
             setGame(firstGame)
-            setMovieQuoteGenerator(createQuoteGeneratorStatic(quoteMovie))
-            setCorrectMovieId(quoteMovie.id)
+            setMovieQuoteGenerator(quoteGenerator)
+            setCorrectMovieId(quoteMovie.base.id)
         } catch (err){
             console.error(err)
             setError(err.message)
@@ -125,7 +128,7 @@ function GamePresenter(props) {
     return (
         <>
             {error && (`Houston, we have a problem! Tell the newbies that the ${error}`)}
-            {!isLoading && movieQuoteGenerator && (
+            {!isLoading && movieOptions && movieQuoteGenerator && (
                 <div>
                 <QuoteBox
                     movieToQuote = {movieQuoteGenerator}
