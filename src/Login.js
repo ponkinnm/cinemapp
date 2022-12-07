@@ -35,13 +35,13 @@ function Login() {
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Control
-                        placeholder="Username"
+                        placeholder="Enter email"
                         type="email"
                         onChange={(e) => setEmail(e.target.value)}
                     /></Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control
-                        placeholder="Password"
+                        placeholder="Enter password"
                         type="password"
                         onChange={(e) => setPassword(e.target.value)}
                     /></Form.Group>
