@@ -7,7 +7,7 @@ import GamePresenter from "./presenters/GamePresenter";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Signup from "./Signup";
 import GenrePickerPresenter from "./GenrePickerPresenter"
-
+import GetTitlesFromGenre from "./GetTitlesFromGenre"
 function App() {
   return (
       <BrowserRouter>
@@ -18,6 +18,7 @@ function App() {
                   <Route path="game" element={<GamePresenter />}/>
                   <Route path="signup" element={<Signup />} />
                   <Route path="pickGenre" element={<GenrePickerPresenter />} />
+                  <Route path="GetTitles" element={<GetTitlesFromGenre />} />
 {/*
                   <Route path="*" element={<NoPage />} />
 */}

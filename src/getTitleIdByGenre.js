@@ -8,7 +8,7 @@ import {API_KEY, BASE_URL} from "./apiConfig";
  * @returns {Promise<*>} Promise that resolves to array of titleIDs, e.g. tt9114286
  */
 
-export default function getTitleIdByGenre(chosenGenre = 'action', noOfTitles = 100) {
+export default function getTitleIdByGenre(chosenGenre='action', noOfTitles=100) {
 
     const endpoint = '/title/v2/get-popular-movies-by-genre?';
     const options = {
