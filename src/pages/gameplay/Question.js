@@ -6,7 +6,7 @@ function Question(props) {
     function alternativeCB(movie) {
         const  id = movie.id
         const title = movie.base.title
-        const {url:imageUrl} = movie.base.image
+        // const {url:imageUrl} = movie.base.image
 
         return (<div key={id}>
             <input type="radio"

@@ -65,7 +65,7 @@ function GamePresenter(props) {
 
             // set the states;
             setMovieOptions(movieData)
-            setGame(firstGame)
+            setGame({...firstGame})
             setMovieQuoteGenerator(quoteGenerator)
             setCorrectMovieId(quoteMovie.base.id)
         } catch (err){
@@ -77,6 +77,9 @@ function GamePresenter(props) {
 
     React.useEffect(() =>{
         console.log("Effect running game set up ")
+        setIsLoading(true)
+        setError(null)
+
         gameSetUp();
         return () => {console.log("Effect clean up game set up")}
     }, [gameSetUp])
