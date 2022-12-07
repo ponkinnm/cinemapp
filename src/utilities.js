@@ -1,6 +1,7 @@
 /**
  * filename         ../src/utilities.js
  * @fileoverview    TODO (to write)
+ * TODO: createPlayer
  */
 
 function createGame(gameId= '1'){
@@ -11,6 +12,9 @@ function createGame(gameId= '1'){
 
     function arrayOfMoviesCB(nbr= 3) {
         let arrayOfTitleIds = []
+        if (movieList.length === 0) {
+            throw new Error(`Empty movie list`)
+        }
 
         while (arrayOfTitleIds.length < nbr && movieList.length > nbr) {
             const randomIndex = Math.floor(Math.random() * movieList.length)
@@ -28,38 +32,17 @@ function createGame(gameId= '1'){
         "getId": () => id,
         "getArrayOfRandomMovies" : (nbr = 3) => {return arrayOfMoviesCB(nbr)},
         "addPoints": (points) => {score += points - hints},
-        "addToMovieList": (...movies) => {movieList = [...movieList, ...movies]},
+        "addToMovieList": (...movies) => {
+            if (movies.length === 0) {
+                throw new Error(`Argument passed no movie title Ids`)
+            }
+            movieList = [...movieList, ...movies]
+        },
         "addHints" : ()=> hints += 1,
         "resetHintTracker":()=> hints = 0,
     }
 }
 
-// function createPlayer(playerId = '123', nick = "playerNameUnknown", ...movies) {
-    // const id = playerId
-    // const nickName = nick
-    // let movieList = [...movies]
-    // let score = 0
-    // function arrayOfMoviesCB(nbr= 3) {
-    //     let arrayOfTitleIds = []
-    //
-    //     while (arrayOfTitleIds.length < nbr && movieList.length > nbr) {
-    //         const randomIndex = Math.floor(Math.random() * movieList.length)
-    //         const randomTitleId = movieList[randomIndex]
-    //         if (!arrayOfTitleIds.some(titleId => randomTitleId === titleId)) {
-    //             arrayOfTitleIds = [...arrayOfTitleIds, randomTitleId]
-    //         }
-    //     }
-    //     return arrayOfTitleIds
-    // }
-    // return {
-    //     "getScore" : () => score,
-    //     "getName": () => nickName,
-    //     "getId": () => id,
-    //     "getArrayOfRandomMovies" : (nbr) => {return arrayOfMoviesCB(nbr)},
-    //     "addPoints": (points) => {score += points},
-    //     "addToMovieList": (...movies) => {movieList = [...movieList, ...movies]},
-    // }
-// }
 
 /**
  * Closure function capturing the chosen json movie object
@@ -71,7 +54,7 @@ function createGame(gameId= '1'){
  * TODO  Add trivia?
  */
 function createQuoteGeneratorStatic(movie) {
-    const id = movie.id
+    const id = movie.base.id
     const title = movie.base.title
     const year = movie.base.year
     const quotes = [...movie.quotes]
