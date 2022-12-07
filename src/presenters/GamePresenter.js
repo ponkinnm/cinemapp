@@ -113,6 +113,8 @@ function GamePresenter(props) {
         }
         // game.resetHintTracker()
         setGame({...game})
+        setShowCharacter(false)
+        setShowYear(false)
         newGame()
     }
     function newGame(delay = 5000) {
