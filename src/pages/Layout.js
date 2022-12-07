@@ -7,21 +7,15 @@ function Layout() {
                 <span className="font-accent">CinemApp</span>
                 <ul className={"menu"}>
                     <li className={"menu__item"}>
-                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')} to="/">Home</NavLink>
+                        <NavLink to="/">Home</NavLink>
                     </li>
                     <li className={"menu__item"}>
-                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')} to="test">Test</NavLink>
+                        <NavLink
+                            to="game">Quiz</NavLink>
                     </li>
                     <li className={"menu__item"}>
-                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')}
-                                 to="game">GamePlay</NavLink>
-                    </li>
-                    <li className={"menu__item"}>
-                        <NavLink className={({isActive}) => (isActive ? 'active' : 'inactive')} to="signup">Sign
+                        <NavLink to="signup">Sign
                             up</NavLink>
-                    </li>
-                    <li>
-                        <NavLink to="pickGenre">Choose genre</NavLink>
                     </li>
                 </ul>
             </nav>
