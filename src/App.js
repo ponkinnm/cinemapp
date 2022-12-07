@@ -6,6 +6,7 @@ import Test from "./pages/Test";
 import GamePresenter from "./presenters/GamePresenter";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import Signup from "./Signup";
+import GenrePickerPresenter from "./GenrePickerPresenter"
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                   <Route index element={<Welcome />} />
                   <Route path="game" element={<GamePresenter />}/>
                   <Route path="signup" element={<Signup />} />
+                  <Route path="pickGenre" element={<GenrePickerPresenter />} />
 {/*
                   <Route path="*" element={<NoPage />} />
 */}
