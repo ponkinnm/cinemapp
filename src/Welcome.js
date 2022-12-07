@@ -11,8 +11,6 @@ function Welcome(props) {
                 <img alt={"ingrid bergman"} src={ingrid}/>
             </div>
             <h1>Welcome to CinemApp</h1>
-            <input type="text" placeholder="Username"/>
-            <input type={"text"} placeholder={"Password"}/>
             <Login />
             <SignupButton />
         </div>
