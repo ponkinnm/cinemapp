@@ -24,11 +24,13 @@ function createGame(gameId= '1'){
 
     return {
         "getScore" : () => score,
+        "getHits" : () => hints,
         "getId": () => id,
         "getArrayOfRandomMovies" : (nbr = 3) => {return arrayOfMoviesCB(nbr)},
         "addPoints": (points) => {score += points - hints},
         "addToMovieList": (...movies) => {movieList = [...movieList, ...movies]},
         "addHints" : ()=> hints += 1,
+        "resetHintTracker":()=> hints = 0,
     }
 }
 
