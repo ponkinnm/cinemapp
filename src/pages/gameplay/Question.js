@@ -6,7 +6,7 @@ function Question(props) {
     function alternativeCB(movie) {
         const  id = movie.id
         const title = movie.base.title
-        // const {url:imageUrl} = movie.base.image
+        const {url:imageUrl} = movie.base.image
 
         return (<div key={id}>
             <input type="radio"
@@ -14,6 +14,7 @@ function Question(props) {
                    value={id}
                    name={"answer"}
                    key={id}
+                   default={props.hasSelected}
                    onInput={() => {props.onSelect(id)}}
             />
             {/*<label type="radio">*/}
@@ -40,8 +41,8 @@ function Question(props) {
             </form>
             <button onClick={handleAnswerACB} type={"submit"} disabled={props.hasSelected === ""}>Submit</button>
             <button onClick={nextQuoteRequestACB}>I just need another quote!</button>
-            <button onClick={characterRequestACB}>Who said what?</button>
-            <button onClick={yearRequestACB}>Just give me the Year!</button>
+            <button onClick={characterRequestACB} disabled={props.hasHintedCharacter}>Who said what?</button>
+            <button onClick={yearRequestACB} disabled={props.hasHintedYear}>Just give me the Year!</button>
         </>);
 }
 
