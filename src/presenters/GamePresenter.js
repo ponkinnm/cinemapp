@@ -39,19 +39,20 @@ function GamePresenter(props) {
         setIsLoading(true)
         setError(null)
         setAnswerId("")
+        setHasSubmittedAnswer(false)
 
         // get player id and stuff from Firebase?
         const firstGame = createGame()
 
         try {
             // get list per genre and add to game
-            const list = await getArrayOfTitleIdsByGenre('action')
-            firstGame.addToMovieList(...list)
+            // const list = await getArrayOfTitleIdsByGenre('action')
+            // firstGame.addToMovieList(...list)
 
             // pick a chosen amount of film objects for the game. 3 is default
-            const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
-            const movieData = await fetchAllMoviesQ(...titleIds)
-            // const movieData = [QUOTE, QUOTE2, QUOTE3]
+            // const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
+            // const movieData = await fetchAllMoviesQ(...titleIds)
+            const movieData = [QUOTE, QUOTE2, QUOTE3]
 
             // Randomly pick the movie to quote
             const randomIndex = Math.floor(Math.random() * movieData.length)
@@ -69,8 +70,6 @@ function GamePresenter(props) {
         setIsLoading(false)
     }, [])
 
-
-
     React.useEffect(() =>{
         console.log("Effect running game set up ")
         gameSetUp();
@@ -78,24 +77,46 @@ function GamePresenter(props) {
     }, [gameSetUp])
 
 
-    function checkAnswerCB() {
-        return answerId === correctMovieId // or just use movieQuoteGenerator.getId() instead of correctMovieId
-    }
-    function submitAnswerACB() {
-        setHasSubmittedAnswer(true)
-        setIsAnswerCorrect(checkAnswerCB())
-    }
+    function checkAnswerCB() {return answerId === correctMovieId} // or just use movieQuoteGenerator.getId() instead of correctMovieId
     function selectedAnswerACB(id) {
         setAnswerId(id)
     }
     function nextQuoteACB(){
         movieQuoteGenerator.popQuote()
+        game.addHints(1)
+
         setMovieQuoteGenerator( {...movieQuoteGenerator})
+        setGame({...game})
+
         setShowCharacter(false)
-        setShowYear(false)
     }
-    function characterACB() {setShowCharacter(true)}
-    function yearACB() {setShowYear(true)}
+    function characterACB() {
+        game.addHints(1)
+        setGame({...game})
+
+        setShowCharacter(true)
+    }
+    function yearACB() {
+        game.addHints(1)
+        setGame({...game})
+
+        setShowYear(true)
+    }
+
+    function submitAnswerACB() {
+        setHasSubmittedAnswer(true)
+        setIsAnswerCorrect(checkAnswerCB())
+        if (checkAnswerCB()) {
+            game.addPoints(10)
+        }
+        // game.resetHintTracker()
+        setGame({...game})
+        newGame()
+    }
+    function newGame(delay = 5000) {
+        setTimeout(gameSetUp, delay)
+    }
+
 
     return (
         <>
@@ -115,6 +136,8 @@ function GamePresenter(props) {
                     onSelect={selectedAnswerACB}
                     movies={movieOptions}
                     hasSelected={answerId}
+                    hasHintedYear={showYear}
+                    hasHintedCharacter={showCharacter}
                 /></div>
                 )
             }
