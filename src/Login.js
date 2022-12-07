@@ -12,7 +12,7 @@ function Login() {
     const {logIn} = useUserAuth();
     const navigate = useNavigate();
     const navigateToGame = () => {
-        navigate('/game');
+        navigate('game');
     };
     const handleLogin = async (e) => {
         e.preventDefault();
