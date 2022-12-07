@@ -5,12 +5,11 @@ import getTitleIdByGenre from "./getTitleIdByGenre"
 
 export default function GetTitlesFromGenre(){
     const[genre, setGenre] = React.useState("")
-    const[titles, setTitles] = React.useState("")
     function handleGenreChange(event){
         setGenre(event.target.value)
-        console.log(event.target.value)
+        console.log(genre)
     }
-    const filmIDs = getTitleIdByGenre(genre, 10)
+    const filmIDs = getTitleIdByGenre(genre)
     if(!genre) return <GenrePickerView setGenre={handleGenreChange} genres={GENRE}/>
     console.log("got here")
     if(filmIDs) console.log(filmIDs)
