@@ -8,8 +8,7 @@ import {fetchAllMoviesQ, fetchArrayOfTitleIdsByGenre} from "../movieSource";
 import {createQuoteGeneratorStatic, createGame} from "../utilities";
 import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
-import CorrectResultBox from "../pages/gameplay/CorrectResultBox";
-import BadResultBox from "../pages/gameplay/BadResultBox";
+import {CorrectResultBox, BadResultBox} from "../pages/gameplay/ResultBox";
 
 function GamePresenter(props) {
     const [answerId, setAnswerId] = React.useState({})
