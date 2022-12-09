@@ -8,7 +8,8 @@ import {fetchAllMoviesQ, fetchArrayOfTitleIdsByGenre} from "../movieSource";
 import {createQuoteGeneratorStatic, createGame} from "../utilities";
 import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
-import ResultBox from "../pages/gameplay/ResultBox";
+import CorrectResultBox from "../pages/gameplay/CorrectResultBox";
+import BadResultBox from "../pages/gameplay/BadResultBox";
 
 function GamePresenter(props) {
     const [answerId, setAnswerId] = React.useState({})
@@ -54,7 +55,7 @@ function GamePresenter(props) {
             const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
             const movieData = await fetchAllMoviesQ(...titleIds)
             // // Test Constants
-            // const movieData = [QUOTE, QUOTE2, QUOTE3]
+            //const movieData = [QUOTE, QUOTE2, QUOTE3]
 
             // Randomly pick the movie to quote
             const randomIndex = Math.floor(Math.random() * movieData.length)
@@ -151,10 +152,17 @@ function GamePresenter(props) {
                 /></div>
                 )
             }
-            {hasSubmittedAnswer && (
-                <ResultBox
+            {hasSubmittedAnswer && isAnswerCorrect &&(
+                <CorrectResultBox
                 isAnswerCorrect = {isAnswerCorrect}
-                gameDetails = {game}
+                score={game.getScore()}
+                hints={game.getHints()}
+                />
+            )}
+            {hasSubmittedAnswer && !isAnswerCorrect &&(
+                <BadResultBox
+                isAnswerCorrect = {isAnswerCorrect}
+                movie={movieQuoteGenerator.getTitle()}
                 />
             )}
         </>

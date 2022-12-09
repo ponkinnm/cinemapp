@@ -28,7 +28,7 @@ function createGame(gameId= '1'){
 
     return {
         "getScore" : () => score,
-        "getHits" : () => hints,
+        "getHints" : () => hints,
         "getId": () => id,
         "getArrayOfRandomMovies" : (nbr = 3) => {return arrayOfMoviesCB(nbr)},
         "addPoints": (points) => {score += points - hints},
