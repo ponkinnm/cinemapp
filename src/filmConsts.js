@@ -11129,4 +11129,4473 @@ const QUOTE = {
     }
 ]
 }
+const QUOTE4 = {
+        "id": "/title/tt0073195/",
+        "base": {
+            "@type": "imdb.api.title.base",
+            "id": "/title/tt0073195/",
+            "image": {
+                "height": 1535,
+                "id": "/title/tt0073195/images/rm1449540864",
+                "url": "https://m.media-amazon.com/images/M/MV5BMmVmODY1MzEtYTMwZC00MzNhLWFkNDMtZjAwM2EwODUxZTA5XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg",
+                "width": 1000
+            },
+            "title": "Jaws",
+            "titleType": "movie",
+            "year": 1975
+        },
+        "quotes": [
+            {
+                "id": "/title/tt0073195/quotes/qt0457091",
+                "interestingVotes": {
+                    "down": 8,
+                    "up": 258
+                },
+                "lines": [
+                    {
+                        "stageDirection": "the three men are comparing their scars"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What's that one?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "What?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "That one, there, on your arm."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Oh, uh, that's a tattoo, I got that removed."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Don't tell me, don't tell me...\"Mother.\""
+                    },
+                    {
+                        "stageDirection": "he roars with laughter"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "What is it..."
+                    },
+                    {
+                        "stageDirection": "Quint solemnly clamps a hand on Hooper's arm"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Mr. Hooper, that's the USS Indianapolis."
+                    },
+                    {
+                        "stageDirection": "Hooper immediately stops laughing"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "You were on the Indianapolis?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What happened?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Japanese submarine slammed two torpedoes into our side, Chief. We was comin' back from the island of Tinian to Leyte, just delivered the bomb. The Hiroshima bomb. Eleven hundred men went into the water. Vessel went down in twelve minutes. Didn't see the first shark for about a half an hour. Tiger. Thirteen-footer. You know how you know that when you're in the water, Chief? You tell by lookin' from the dorsal to the tail. What we didn't know... was our bomb mission had been so secret, no distress signal had been sent. Heh."
+                    },
+                    {
+                        "stageDirection": "he pauses and takes a drink"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "They didn't even list us overdue for a week. Very first light, Chief, sharks come cruisin'. So we formed ourselves into tight groups. Y'know, it's... kinda like ol' squares in a battle like, uh, you see in a calendar, like the Battle of Waterloo, and the idea was, shark comes to the nearest man and that man, he'd start poundin' and hollerin' and screamin', and sometimes the shark'd go away... sometimes he wouldn't go away. Sometimes that shark, he looks right into ya. Right into your eyes. Y'know the thing about a shark, he's got... lifeless eyes, black eyes, like a doll's eyes. When he comes at ya, doesn't seem to be livin'... until he bites ya. And those black eyes roll over white, and then... oh, then you hear that terrible high-pitch screamin', the ocean turns red, and spite of all the poundin' and the hollerin', they all come in and they... rip you to pieces."
+                    },
+                    {
+                        "stageDirection": "he pauses"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Y'know, by the end of that first dawn... lost a hundred men. I dunno how many sharks. Maybe a thousand. I dunno how many men, they averaged six an hour. On Thursday mornin', Chief, I bumped into a friend of mine, Herbie Robinson from Cleveland- baseball player, boatswain's mate. I thought he was asleep, reached over to wake him up... bobbed up and down in the water just like a kinda top. Upended. Well... he'd been bitten in half below the waist. Noon the fifth day, Mr. Hooper, a Lockheed Ventura saw us, he swung in low and he saw us. Young pilot, a lot younger than Mr. Hooper. Anyway, he saw us and come in low and three hours later, a big fat PBY comes down and start to pick us up. Y'know, that was the time I was most frightened, waitin' for my turn. I'll never put on a life jacket again. So, eleven hundred men went into the water, three hundred sixteen men come out, and the sharks took the rest, June the 29th, 1945."
+                    },
+                    {
+                        "stageDirection": "he pauses, smiles, and raises his glass"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Anyway... we delivered the bomb."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457120",
+                "interestingVotes": {
+                    "down": 4,
+                    "up": 128
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Smile, you son of a BITCH!"
+                    },
+                    {
+                        "stageDirection": "shoots at the air tank; the shark explodes"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457126",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 90
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "That's some bad hat, Harry."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457119",
+                "interestingVotes": {
+                    "up": 35
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "\"Slow ahead.\" I can go slow ahead. Come on down here and chum some of this shit."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457124",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 63
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Martin hates boats. Martin hates water. Martin... Martin sits in his car when we go on the ferry to the mainland. I guess it's a childhood thing. It's a... there's a clinical name for it isn't there?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Drowning."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457087",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 60
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "Quint first scratches the chalk board to get everyone's attention",
+                        "text": "Y'all know me. Know how I earn a livin'. I'll catch this bird for you, but it ain't gonna be easy. Bad fish. Not like going down the pond chasin' bluegills and tommycods. This shark, swallow you whole. Little shakin', little tenderizin', an' down you go. And we gotta do it quick, that'll bring back your tourists, put all your businesses on a payin' basis. But it's not gonna be pleasant. I value my neck a lot more than three thousand bucks, chief. I'll find him for three, but I'll catch him, and kill him, for ten. But you've gotta make up your minds. If you want to stay alive, then ante up. If you want to play it cheap, be on welfare the whole winter. I don't want no volunteers, I don't want no mates, there's just too many captains on this island. $10,000 for me by myself. For that you get the head, the tail, the whole damn thing."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3009593",
+                "interestingVotes": {
+                    "up": 31
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "to Quint after getting his first good look at the great white shark up close while chumming",
+                        "text": "You're gonna need a bigger boat."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457101",
+                "interestingVotes": {
+                    "down": 3,
+                    "up": 70
+                },
+                "lines": [
+                    {
+                        "stageDirection": "last lines"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What day is this?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "It's Wednesday... eh, it's Tuesday, I think."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Think the tide's with us?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Keep kicking."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I used to hate the water..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "I can't imagine why."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457117",
+                "interestingVotes": {
+                    "down": 5,
+                    "up": 90
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Here lies the body of Mary Lee; died at the age of a hundred and three. For fifteen years she kept her virginity; not a bad record for this vicinity."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457122",
+                "interestingVotes": {
+                    "down": 3,
+                    "up": 67
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "seeing Hooper's equipment",
+                        "text": "What are you? Some kind of half-assed astronaut?"
+                    },
+                    {
+                        "stageDirection": "examining the shark cage"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Jesus H Christ, when I was a boy, every little squirt wanted to be a harpooner or a sword fisherman. What d'ya have there - a portable shower or a monkey cage?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Anti-Shark cage."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Anti-shark cage. You go inside the cage?"
+                    },
+                    {
+                        "stageDirection": "Hooper nods"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Cage goes in the water, you go in the water. Shark's in the water. Our shark."
+                    },
+                    {
+                        "stageDirection": "sings"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Farewell and adieu to you, fair Spanish ladies. Farewell and adieu, you ladies of Spain. For we've received orders for to sail back to Boston. And so nevermore shall we see you again."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457153",
+                "interestingVotes": {
+                    "up": 28
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mrs. Kintner",
+                                "characterId": "/character/ch0002882/",
+                                "nameId": "/name/nm0276444/"
+                            }
+                        ],
+                        "text": "Chief Brody?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Yes?"
+                    },
+                    {
+                        "stageDirection": "Mrs. Kintner slaps Brody and sobs"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mrs. Kintner",
+                                "characterId": "/character/ch0002882/",
+                                "nameId": "/name/nm0276444/"
+                            }
+                        ],
+                        "text": "I just found out, that a girl got killed here last week, and you knew it! You knew there was a shark out there! You knew it was dangerous! But you let people go swimming anyway? You knew all those things! But still my boy is dead now. And there's nothing you can do about it. My boy is dead. I wanted you to know that."
+                    },
+                    {
+                        "stageDirection": "Mrs. Kintner walks away"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "I'm sorry, Martin. She's wrong."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "No, she's not."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0549071",
+                "interestingVotes": {
+                    "up": 28
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "singing",
+                        "text": "Farewell and adieu to you fair Spanish ladies. Farewell and adieu to you ladies of Spain. For we've received orders for to sail back to Boston. And so never more shall we see you again."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457086",
+                "interestingVotes": {
+                    "up": 26
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "I'm not going to waste my time arguing with a man who's lining up to be a hot lunch."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457116",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 50
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Here's to swimmin' with bow-legged women."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457089",
+                "interestingVotes": {
+                    "up": 21
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "Fellows, let's be reasonable, huh? This is not the time or the place to perform some kind of a half-assed autopsy on a fish... And I'm not going to stand here and see that thing cut open and see that little Kintner boy spill out all over the dock."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457110",
+                "interestingVotes": {
+                    "up": 21
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "This was no boat accident."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457095",
+                "interestingVotes": {
+                    "up": 19
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Is it true that most people get attacked by sharks in three feet of water about ten feet from the beach?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Yeah."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "And that... and that before people started to swim for recreation - I mean before sharks knew what they were missing - that a lot of these attacks weren't reported?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "That's right."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Now this shark that... that... that swims alone..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Rogue."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What's it called?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            },
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "together",
+                        "text": "Rogue."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Rogue, yeah. Now this guy, he... he keeps swimmin' around in a place where the feeding is good until the food supply is gone, right?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "It's called \"territoriality\". It's just a theory that I happen to... agree with."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Then why don't we have one more drink and go down and cut that shark open?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Martin? Can you do that?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I can do anything; I'm the chief of police."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457108",
+                "interestingVotes": {
+                    "up": 19
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Ha, ha - they're all gonna die."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457147",
+                "interestingVotes": {
+                    "up": 19
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "singing",
+                        "text": "Show me the way to go home / I'm tired and I want to go to bed..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            },
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            },
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "all singing together",
+                        "text": "I had a little drink about an hour ago and it got right to my head / Wherever I may roam / by land or sea or foam..."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457113",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 28
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "It doesn't make any sense when you pay a guy like you to watch sharks."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Well, uh, it doesn't make much sense for a guy who hates the water to live on an island either."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "It's only an island if you look at it from the water."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "That makes a lot of sense."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457157",
+                "interestingVotes": {
+                    "up": 17
+                },
+                "lines": [
+                    {
+                        "stageDirection": "Brody sees his son sitting in a small skiff, and yells for him to get out of it"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Martin, it's his birthday tomorrow!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I don't want him on the ocean!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "He's not on the ocean, he is in a boat! He's not gonna go in the water! I don't think he'll ever go in the water again after what happened yesterday."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "All right, now don't say that. I don't want that to happen, you know that. But I want him to read the boating regulations, the rules, y'know, before he goes out on his own."
+                    },
+                    {
+                        "stageDirection": "while he talks, Ellen flips through the book on sharks he has been reading, and sees an old painting of a shark ramming a hole into the bottom of rowboat's hull"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "stageDirection": "slams the book shut",
+                        "text": "Michael! Did you hear your father? Out of the water now! NOW!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457118",
+                "interestingVotes": {
+                    "up": 16
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Back home we got a taxidermy man. He gonna have a heart attack when he see what I brung him."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457109",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 24
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "That's a twenty footer."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Twenty-five. Three tons of him."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457142",
+                "interestingVotes": {
+                    "up": 15
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Boys, oh boys... I think he's come back for his noon feeding."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457148",
+                "interestingVotes": {
+                    "up": 15
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "trying to get the fishing line secure",
+                        "text": "It may be a marlin or a stingray... but it's definitely a game fish."
+                    },
+                    {
+                        "stageDirection": "Hooper pulls as the lines snaps and he crashes his head into the wall"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "picking up the line",
+                        "text": "Gamin' fish, eh? Marlin? Stingray? Bit through this piano wire? Don't you tell me my business again! You get back on the bridge..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Quint, that doesn't prove a damn thing!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Well it proves one thing, Mr. Hooper. It proves that you wealthy college boys don't have the education enough to admit when you're wrong."
+                    },
+                    {
+                        "stageDirection": "Quint enters the cabin as Hooper makes faces at him"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "following Quint inside the boat",
+                        "text": "What's the point? Hooks and lines..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "slams on the roof at Hooper",
+                        "text": "Hooper! 12 minutes south south east now, full throttle!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "Mocking Pirate Voice",
+                        "text": "Aye, aye, sir! AYE JIMBOY ARAGHHH!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "to Brody",
+                        "text": "See what I do, Chief, is I trick 'em to the surface. And I jab at 'em. I'm not gonna haul 'em up like a lot of catfish."
+                    },
+                    {
+                        "stageDirection": "slams on the roof"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Hooper, full throttle!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "voice imitating W. C. Fields",
+                        "text": "I don't have to take this abuse much longer!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457090",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 29
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "Martin, it's all psychological. You yell barracuda, everybody says, \"Huh? What?\" You yell shark, we've got a panic on our hands on the Fourth of July."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457094",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 29
+                },
+                "lines": [
+                    {
+                        "stageDirection": "Hooper is examining the remains of the first victim, describing the post-mortem into his tape recorder"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "The height and weight of the victim can only be estimated from the partial remains..."
+                    },
+                    {
+                        "stageDirection": "He lifts the sheet covering the remains, inhales sharply, then regains his composure"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "The torso has been severed in mid-thorax; there are no major organs remaining... May I have a glass of water, please?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Medical Examiner",
+                                "nameId": "/name/nm0627495/"
+                            }
+                        ],
+                        "text": "Sure."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Right arm has been severed above the elbow with massive tissue loss in the upper musculature."
+                    },
+                    {
+                        "stageDirection": "takes water"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Thank you very much."
+                    },
+                    {
+                        "stageDirection": "sips the water and continues"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Partially denuded bone remaining..."
+                    },
+                    {
+                        "stageDirection": "to the M.E"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "This was no boating accident."
+                    },
+                    {
+                        "stageDirection": "to Brody"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Did you notify the Coast Guard about this?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "No. It was only local jurisdiction."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "continues post-mortem",
+                        "text": "The left arm, head, shoulders, sternum and portions of the rib cage are intact..."
+                    },
+                    {
+                        "stageDirection": "Brody begins to light a cigarette"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Do not smoke in here, thank you very much!"
+                    },
+                    {
+                        "stageDirection": "lifts up the severed arm"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "This is what happens. It indicates the non-frenzied feeding of a large squalus - possibly Longimanus or Isurus glauca. Now the enormous amount of tissue loss prevents any detailed analysis; however the attacking squalus must be considerably larger than any normal squalus found in these waters."
+                    },
+                    {
+                        "stageDirection": "pulls off his glasses"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Didn't you get on a boat and check out these waters?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "No."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Well, this is not a boat accident! It wasn't any propeller, it wasn't any coral reef, and it wasn't Jack the Ripper!"
+                    },
+                    {
+                        "stageDirection": "splashes water on his face and takes a deep breath"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "It was a shark."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457141",
+                "interestingVotes": {
+                    "up": 13
+                },
+                "lines": [
+                    {
+                        "stageDirection": "about to go looking for the shark"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "On the water?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Well, if we're looking for a shark we're not gonna find him on the land."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457149",
+                "interestingVotes": {
+                    "up": 13
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Hooper, what exactly can you do with these things of yours?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Well, I think I can pump 20 cc's of strychnine nitrate into him, if I can get close enough."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Can you get this little needle through his skin?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "No, I can't do that. But if I can get him close enough to this cage, I think that I can get him in the mouth or the eye..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "That shark will rip that cage to pieces!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "shouting",
+                        "text": "YOU GOT ANY BETTER SUGGESTIONS?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt1497268",
+                "interestingVotes": {
+                    "up": 13
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "What am I going to tell the kids?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Tell them I'm going fishing."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457106",
+                "interestingVotes": {
+                    "up": 12
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "motioning to Brody to get closer to the barrels",
+                        "text": "Come on Martin! Move, move, move!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I'm not going out there!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Beyond the edge of the barrels, go to the end of the barrels! Further out!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Further out!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Why?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Go further out!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What for?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Will you go to the end of the pulpit, please?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Will you just please go to the end of the pulpit!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What for?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "I need to have something in the foreground to give it some scale."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Foreground, my ass!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457115",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 18
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "I don't think either of one you are familiar with our problems."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "I think that I am familiar with the fact that you are going to ignore this particular problem until it swims up and BITES YOU ON THE ASS!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457096",
+                "interestingVotes": {
+                    "up": 11
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ben Gardner",
+                                "characterId": "/character/ch0002883/",
+                                "nameId": "/name/nm0455475/"
+                            }
+                        ],
+                        "text": "When we get them silly bastards down in that rock pile, it'll be some fun, they'll wish their fathers had never met their mothers. When they start takin' their bottoms out and slamming into them rocks, boy! Get away from there, ya goddamn fool, you! What's the matter with you? You wanna swamp us, ya crazy son of a bitch?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457129",
+                "interestingVotes": {
+                    "up": 11
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "Any special questions?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Denherder",
+                                "characterId": "/character/ch0002890/",
+                                "nameId": "/name/nm0150019/"
+                            }
+                        ],
+                        "text": "Uh, is that $3000 bounty on the shark in cash or check?"
+                    },
+                    {
+                        "stageDirection": "the townspeople laugh"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mrs. Taft",
+                                "characterId": "/character/ch0002886/",
+                                "nameId": "/name/nm0183914/"
+                            }
+                        ],
+                        "text": "I don't think that's funny. I don't think that's funny at all, I'm sorry."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457139",
+                "interestingVotes": {
+                    "up": 11
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Yeah, but I'm not drunk enough to go out on a boat."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Yes, you are."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "No, I'm not."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Yes, you are."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I can't do that."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Yes, you can."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457156",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 16
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Mr. Vaughn, what we are dealing with here is a perfect engine, an eating machine. It's really a miracle of evolution. All this machine does is swim and eat and make little sharks, and that's all. Now, why don't you take a long, close look at this sign."
+                    },
+                    {
+                        "stageDirection": "refers to the graffitied billboard"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Those proportions are correct."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "Love to prove that, wouldn't ya? Get your name into the National Geographic."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457121",
+                "interestingVotes": {
+                    "up": 10
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "stageDirection": "to reporter",
+                        "text": "I'm pleased and happy to repeat the news that we have, in fact, caught and killed a large predator that supposedly injured some bathers. But, as you see, it's a beautiful day, the beaches are open and people are having a wonderful time. Amity, as you know, means \"friendship\"."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457123",
+                "interestingVotes": {
+                    "up": 10
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Front, bow. Back, stern. If ya don't get it right, squirt, I throw your ass out the little round window on the side."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457133",
+                "interestingVotes": {
+                    "up": 10
+                },
+                "lines": [
+                    {
+                        "stageDirection": "as Brody sends the air tanks flying"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Dammit, Martin! This is compressed air!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Well, what the hell kind of a knot was that?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "You pulled the wrong one. You screw around with these tanks, and they're gonna blow up!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Yeah, that's real fine expensive gear you brought out here, Mr. Hooper. 'Course I don't know what that bastard shark's gonna do with it, might eat it I suppose. Seen one eat a rockin' chair one time. Hey chieffy, next time you just ask me which line to pull, right?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457137",
+                "interestingVotes": {
+                    "up": 10
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "On radio",
+                        "text": "Your husband's all right, Mrs. Brody. He's fishing. He's just caught a couple of stripers. We'll bring 'em in for dinner. We won't be long, we haven't seen anything yet. Over and out."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457146",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 15
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "points to a scar on chest",
+                        "text": "Mary Ellen Moffat. She broke my heart."
+                    },
+                    {
+                        "stageDirection": "Hooper, Brody and Quint all laugh"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457145",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 14
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "You wanna drink? Drink to your leg."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "I'll drink to your leg."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Okay, so we drink to our legs!"
+                    },
+                    {
+                        "stageDirection": "both laugh"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457099",
+                "interestingVotes": {
+                    "up": 9
+                },
+                "lines": [
+                    {
+                        "stageDirection": "first lines"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Tom Cassidy",
+                                "characterId": "/character/ch0175511/",
+                                "nameId": "/name/nm0277204/"
+                            }
+                        ],
+                        "text": "What's your name again?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Christine 'Chrissie' Watkins",
+                                "characterId": "/character/ch0002879/",
+                                "nameId": "/name/nm0045681/"
+                            }
+                        ],
+                        "text": "Chrissie."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Tom Cassidy",
+                                "characterId": "/character/ch0175511/",
+                                "nameId": "/name/nm0277204/"
+                            }
+                        ],
+                        "text": "Where are we going?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Christine 'Chrissie' Watkins",
+                                "characterId": "/character/ch0002879/",
+                                "nameId": "/name/nm0045681/"
+                            }
+                        ],
+                        "text": "Swimming!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457111",
+                "interestingVotes": {
+                    "up": 9
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "You have city hands, Mr. Hooper. You been countin' money all your life."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "All right, all right! Hey, I don't need this... I don't need this working-class-hero crap!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457140",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 13
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Wanna get drunk and fool around?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Oh Yeah."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457104",
+                "interestingVotes": {
+                    "up": 8
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "trying to hurry Brody into the boat",
+                        "text": "Come on Chief, this isn't no boy scout picnic. See ya' got ya' rubbers!"
+                    },
+                    {
+                        "stageDirection": "Quint laughs wildly"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457105",
+                "interestingVotes": {
+                    "up": 8
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "talking Brody through making knots",
+                        "text": "Little brown eel comes out of the cave... Swims into the hole... Comes out of the hole... Goes back into the cave again... It's not too good is it Chief?"
+                    },
+                    {
+                        "stageDirection": "Refering to Brody's messed up knot"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457155",
+                "interestingVotes": {
+                    "up": 8
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "to Mayor Vaughn, after the shark attack on July Fourth",
+                        "text": "Larry, the summer is over. You're the mayor of \"shark city\". These people think you want the beaches open."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457143",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 12
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "as he spots Hooper sitting on the deck playing solitaire",
+                        "text": "Stop playin' with yourself, Hooper."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457102",
+                "interestingVotes": {
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "And what did you say the name of this shark is?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "It's a carcaradon carcharias. It's a Great White"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457130",
+                "interestingVotes": {
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Ah. Just like I thought... He came up with the Gulf Stream - from southern waters."
+                    },
+                    {
+                        "stageDirection": "he pulls a Louisiana license plate from the shark. Brody examines it"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "He didn't eat a car, did he?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Naw, a tiger shark's like a garbage can, it'll eat anything. Someone probably threw that in a river."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457132",
+                "interestingVotes": {
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "Poking fun at Brody",
+                        "text": "Ah, the missus, Chief. If they don't like you going out, they'll love you comin' in."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457135",
+                "interestingVotes": {
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "I'm only trying to say that Amity is a summer town. We need summer dollars. Now, if the people can't swim here, they'll be glad to swim at the beaches of Cape Cod, the Hamptons, Long Island..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "That doesn't mean we have to serve them up as smörgåsbord!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457154",
+                "interestingVotes": {
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "I'm not talkin' 'bout pleasure boatin' or day sailin'. I'm talkin' 'bout workin' for a livin'. I'm talkin' 'bout sharkin'!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt1012949",
+                "interestingVotes": {
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "I just want to know one thing - when do I get to become an islander?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mrs. Taft",
+                                "characterId": "/character/ch0002886/",
+                                "nameId": "/name/nm0183914/"
+                            }
+                        ],
+                        "text": "Ellen, never, never! You're not born here, you're not an islander, that's it."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt2811354",
+                "interestingVotes": {
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "on board the Orca",
+                        "text": "Goddamn women today, they can't handle nothin'. Young girls just ain't quite smart... like their grandmothers were!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "stageDirection": "on the dock",
+                        "text": "Gotta be Quint."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Colorful, isn't he?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457150",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 10
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "You see the kids?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "looking out the window",
+                        "text": "They must be in the back yard."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "In Amity, you say \"yahd\"."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "starting out of the bedroom, speaking with a bad New-England accent",
+                        "text": "They're in the \"yahd\", not too \"fah\" from the \"cah\"."
+                    },
+                    {
+                        "stageDirection": "looks back at Ellen"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "How's that?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Like you're from New York."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457136",
+                "interestingVotes": {
+                    "up": 6
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hendricks",
+                                "characterId": "/character/ch0175509/",
+                                "nameId": "/name/nm0469552/"
+                            }
+                        ],
+                        "text": "So then Denherder and Charlie sat there trying to catch their breath - and to figure out how to tell Charlie's wife what happened to her freezer full of meat."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "That's not funny. That's not funny at all."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457144",
+                "interestingVotes": {
+                    "up": 6
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "referring to a cut on Brody's head",
+                        "text": "Chief... don't you worry about it, Chief. It won't be permanent. Wanna see somethin' permanent, boom-boom-boom?"
+                    },
+                    {
+                        "stageDirection": "Quint pulls out a false front tooth and laughs"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Hey, Hoop, you wanna feel somethin' permanent? You just put your hand underneath my cap... and you just feel that little lump. Knock an ole un, St. Paddy's day, Boston."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "I got that beat."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "to Brody",
+                        "text": "I got that beat."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0560050",
+                "interestingVotes": {
+                    "up": 6
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "to Brody",
+                        "text": "'Scuse me. You know those eight guys in the fantail launch out there? Well, none of 'em are gonna get out of the harbor alive."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457114",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 9
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "stageDirection": "upon meeting Matt Hooper",
+                        "text": "My husband tells me you're in sharks."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3063262",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 9
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Out of Towner",
+                                "nameId": "/name/nm0025702/"
+                            }
+                        ],
+                        "text": "Yeah, well, but what kind? What kind of shark?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "With a pencil in his mouth",
+                        "text": "It's a tiger shark."
+                    },
+                    {
+                        "stageDirection": "Three Out of Towners turn slowly to face Hooper"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Out of Towner",
+                                "nameId": "/name/nm0025702/"
+                            }
+                        ],
+                        "text": "A what?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3521759",
+                "interestingVotes": {
+                    "down": 17,
+                    "up": 41
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "In shark's mouth",
+                        "text": "Aaaaaaaaaaaaaaaaaaaaaaaaaahhhh!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457088",
+                "interestingVotes": {
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "This shark, swallow you whole."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457097",
+                "interestingVotes": {
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Hello."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ben Gardner",
+                                "characterId": "/character/ch0002883/",
+                                "nameId": "/name/nm0455475/"
+                            }
+                        ],
+                        "text": "Hello back... young feller. How are ya? Say I hope you not going out with those nuts, are ya?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457158",
+                "interestingVotes": {
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "I got the creme de la creme. Right here. Hold on. Yeah, you see that?"
+                    },
+                    {
+                        "stageDirection": "takes off his t-shirt, showing a very hairy chest"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "You're wearing a sweater!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0943695",
+                "interestingVotes": {
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "on telephone",
+                        "text": "Doctor, there is no need for me to come to Brisbane, when I have a great white shark right here!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt1249194",
+                "interestingVotes": {
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I don't believe it! Two barrels, and he's going down again!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457093",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 7
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "Hooper attempts to wet his mask before Quint and Brody lower him in the shark cage",
+                        "text": "I got no spit."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457131",
+                "interestingVotes": {
+                    "up": 4
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What are you doing out there? These are your people - go and talk to them."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hendricks",
+                                "characterId": "/character/ch0175509/",
+                                "nameId": "/name/nm0469552/"
+                            }
+                        ],
+                        "text": "Those aren't my people. They're from all over the place. Did you see all the license plates out in the parking lot? Connecticut, Rhode Island, New Jersey... I'm all by myself out there."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt1374098",
+                "interestingVotes": {
+                    "up": 4
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Mr. Taft"
+                            }
+                        ],
+                        "text": "Why do you insist on playing the heavy all of the time?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mrs. Taft",
+                                "characterId": "/character/ch0002886/",
+                                "nameId": "/name/nm0183914/"
+                            }
+                        ],
+                        "text": "Look, I have a point of view and I think it speaks for many of the people here. It's not only me because I have the motel - how do you feel?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mr. Hassett"
+                            }
+                        ],
+                        "text": "Oh, I hope they don't close the beaches!"
+                    },
+                    {
+                        "stageDirection": "Mrs. Taft nods in agreement"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt4556621",
+                "interestingVotes": {
+                    "up": 4
+                },
+                "lines": [
+                    {
+                        "stageDirection": "With the shark now dead, Brody and Hooper laugh with relief that their ordeal is over. Hooper looks around, and his laughter trails off as he realizes Quint is missing"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Quint."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "solemnly",
+                        "text": "No."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457100",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 8
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "stageDirection": "to Chief Brody",
+                        "text": "You told me the shark was caught. And I, I heard it on the news... I heard it on the Cape station."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "They caught A shark, not THE shark. Big difference. Not the shark that killed Chrissie Watkins... and probably not the shark that killed the little boy... which I wanted to prove today, by cutting the shark open..."
+                    },
+                    {
+                        "stageDirection": "sees the Chief pouring the wine he brought"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "you know, you oughta let that breathe a little"
+                    },
+                    {
+                        "stageDirection": "sees the massive glass the Chief has poured"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "- nothing, nothing!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457107",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 6
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "He ate the light."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457125",
+                "interestingVotes": {
+                    "up": 3
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Fast fish."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457128",
+                "interestingVotes": {
+                    "up": 3
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Pratt",
+                                "characterId": "/character/ch0002889/",
+                                "nameId": "/name/nm1188078/"
+                            }
+                        ],
+                        "stageDirection": "to Hooper",
+                        "text": "Ya know, I'm gonna stuff your friggin' head in there, man, and find out if it's a man-eater, all right?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910347",
+                "interestingVotes": {
+                    "up": 3
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "He's gonna go under."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "I tell you he can't with three barrels on him. Not with three, he can't!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457092",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "the Orca, their boat, is clearly sinking with water all over the deck, Quint hands Brody a small hand pump",
+                        "text": "Pump it out Chief!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457134",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Take this stuff back to the office and get to work on those signs. \"Beaches Closed - No Swimming. By the Order of the Amity PD\". And let Polly do the printing."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hendricks",
+                                "characterId": "/character/ch0175509/",
+                                "nameId": "/name/nm0469552/"
+                            }
+                        ],
+                        "text": "What's the matter with my printing?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Let Polly do the printing."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457138",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "Drunk",
+                        "text": "I'm tellin' ya, the crime rate in New York'll kill you. There's so many problems, you never feel like you're accomplishing anything. Violence, rip-offs, muggings... kids can't leave the house - you gotta walk them to school. But in Amity one man can make a difference. In twenty-five years, there's never been a shooting or a murder in this town."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "Around a mouthful of food",
+                        "text": "No kidding. Want a pretzel?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Where are we?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457152",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "You're certifiable, Quint! You know that?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Yeah, yeah, yeah..."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt1374099",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 5
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I just- I just want to tell you what we're planning so far..."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Meadows",
+                                "characterId": "/character/ch0175508/",
+                                "nameId": "/name/nm0331956/"
+                            }
+                        ],
+                        "text": "What about the beaches, Chief?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "We're going to put on the extra- the extra summer deputies as quickly as possible, and then we're going to try and use, uh, shark-spotters on the beach."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mrs. Taft",
+                                "characterId": "/character/ch0002886/",
+                                "nameId": "/name/nm0183914/"
+                            }
+                        ],
+                        "stageDirection": "cuts him off",
+                        "text": "Are you going to close the beaches?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "after brief pause",
+                        "text": "Yes, we are."
+                    },
+                    {
+                        "stageDirection": "townspeople erupt into dismayed argument"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457127",
+                "interestingVotes": {
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "shouting",
+                        "text": "Hooper, ya idiot! Starboard, ain't you watchin' it?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3063263",
+                "interestingVotes": {
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "Amidst commotion",
+                        "text": "We're also planning to bring in some experts from the oceanographic institute on the mainland."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "For only 24 hours!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I didn't agree to that!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "Only 24 hours."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Extra Townswoman"
+                            }
+                        ],
+                        "text": "24 hours is like three weeks!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5909998",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 3
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Ten thousand dollars."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Two hundred dollars a day whether I catch him or not."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "You got it."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Get the Mayor off my back so I don't have any more of this zoning crap."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "You got that."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "One case of apricot brandy. You buy the lunch."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Two cases!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457151",
+                "interestingVotes": {
+                    "down": 4,
+                    "up": 4
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Christine 'Chrissie' Watkins",
+                                "characterId": "/character/ch0002879/",
+                                "nameId": "/name/nm0045681/"
+                            }
+                        ],
+                        "text": "GOD HELP ME, PLEEEAAAAASE!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457098",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Christine 'Chrissie' Watkins",
+                                "characterId": "/character/ch0002879/",
+                                "nameId": "/name/nm0045681/"
+                            }
+                        ],
+                        "text": "Come on into the water!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt0457103",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "before leaving dock",
+                        "text": "Break it up will ya', Chief! Daylight's wastin'."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3390611",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "stageDirection": "Quint has just destroyed the boat radio with a baseball bat when Chief Brody is trying to call on the Coast Guard"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "handing the bat to Brody",
+                        "text": "Excuse me, chief."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "shouts hysterically; slamming down the receiver and hitting the bat on the already destroyed radio",
+                        "text": "Ah, that *GREAT*! THAT'S JUST *GREAT*! WHERE THE HELL ARE WE NOW, HUH? YOU'RE CERTIFIABLE, QUINT, YOU KNOW THAT? YOU'RE CERTIFIABLE!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "dismissively",
+                        "text": "Yeah, yeah, yeah..."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3394952",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "stageDirection": "the three shark hunters have found the shark and are preparing to tag and kill it; Brody and Hooper are climbing over the the bow while Quint is in the cabin, taking out his harpoon gun"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Sonar Operator",
+                                "nameId": "/name/nm5026359/"
+                            }
+                        ],
+                        "stageDirection": "via Quint's radio",
+                        "text": "Amity Point Light Station to Orca. This is Amity Point Light Station to Orca. Come in, Orca."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "answering; via receiver",
+                        "text": "Orca. Come in."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Sonar Operator",
+                                "nameId": "/name/nm5026359/"
+                            }
+                        ],
+                        "stageDirection": "via radio cont",
+                        "text": "I have Mrs. Martin Brody here."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Put her on."
+                    },
+                    {
+                        "stageDirection": "Shift back to Brody and Hooper; The shark is circling around the boat"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Come on, Martin! Move, move, move!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I'm not going out there!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Beyond the edge of the barrels, go to the end of the barrels!"
+                    },
+                    {
+                        "stageDirection": "Brody stops halfway"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Further out!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "What?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "points with his outstretched arm",
+                        "text": "Further out!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Why?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Go further out!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What for?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Will you go to the end of the pulpit, please?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "What?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Will you please go to the end of the pulpit!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What for?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "stageDirection": "getting his camera out",
+                        "text": "I need to have something in the foreground to give it some scale!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "shouts",
+                        "text": "Foreground, my ass!"
+                    },
+                    {
+                        "stageDirection": "Scene shifts to Quint"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "rapid fire speech; into the receiver",
+                        "text": "Your husband's all right, Mrs. Brody, he's fishin', he just caught a couple of stripers, we'll bring 'em in for dinner, we won't be long, we haven't seen anything yet, over and out!"
+                    },
+                    {
+                        "stageDirection": "Quint hangs up, ending the call"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt4071705",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Artist",
+                                "nameId": "/name/nm5026794/"
+                            }
+                        ],
+                        "text": "Sh-Shark! The shark! He's going into the pond! The shark's in the estuary!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Now what?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Michael's in the pond!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Artist",
+                                "nameId": "/name/nm5026794/"
+                            }
+                        ],
+                        "text": "In the estuary! The shark's in the pond! He's going in the pond! Somebody do something! In the pond! In the pond! Shark! In the pond!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt4556572",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "to Hooper",
+                        "text": "Well, why don't we start leading the shark into shore instead of him leading us out to sea?"
+                    },
+                    {
+                        "stageDirection": "Without answering, Hooper looks at Quint, then back at Brody"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5459694",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Denherder",
+                                "characterId": "/character/ch0002890/",
+                                "nameId": "/name/nm0150019/"
+                            }
+                        ],
+                        "text": "Charlie, take my word for it, don't look back! Swim, Charlie! Swim!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5909996",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Tom Cassidy",
+                                "characterId": "/character/ch0175511/",
+                                "nameId": "/name/nm0277204/"
+                            }
+                        ],
+                        "text": "I can swim! I just can't walk or undress myself."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910350",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Did you ever have a Great White do this?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "No!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3394953",
+                "interestingVotes": {
+                    "up": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "screaming at Hooper, while Brody wets the reel of his shark-fishing rod",
+                        "text": "HOOPER! REVERSE IT!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt3518979",
+                "interestingVotes": {
+                    "up": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Michael Brody",
+                                "characterId": "/character/ch0002866/",
+                                "nameId": "/name/nm0714268/"
+                            }
+                        ],
+                        "text": "Pond's for old ladies."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I know it's for the old ladies, but just do it for the old man, huh? Please?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt4557312",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "regarding Sean",
+                        "text": "Wanna take him home?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Back to New York?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "No. Home here."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910345",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "He can't stay down with three barrels. Not with three barrels, he can't."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "What about us?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910351",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "We're headin' in, Brody."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Thank Christ!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910343",
+                "interestingVotes": {
+                    "down": 1,
+                    "up": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Mr. Hopper, attach the end of this line to the first keg. I gotta get a good shot at that porker's head. - - He's coming. He-he. He's coming. Hooper? Stay clear of the barrel. Hooper?Tie it up, will ya!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Your turn, Quint."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Hooper, where are you? Hooper, hurry it up now. Tie it on. Hurry up, he's coming straight for us. Don't screw it up now!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Don't wait for me."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Come on, Hooper! Hurry it up! Come on. Tie it on!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Now. Now. Kill it, quick! Kill it! Now!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Shoot!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt4565803",
+                "interestingVotes": {
+                    "down": 2,
+                    "up": 1
+                },
+                "lines": [
+                    {
+                        "stageDirection": "Hendricks has discovered the remains of a woman on the beach. Brody approaches and sees what's left of the body"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Oh, Jesus."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt4556471",
+                "interestingVotes": {
+                    "down": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Got a pen, Larry?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Mayor Vaughn",
+                                "characterId": "/character/ch0002874/",
+                                "nameId": "/name/nm0358069/"
+                            }
+                        ],
+                        "text": "Pen?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "reaching into Vaughn's jacket",
+                        "text": "Yeah a PEN, you know..."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt4556545",
+                "interestingVotes": {
+                    "down": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "stageDirection": "from the crow's nest",
+                        "text": "Brody? Start that chum line again, will ya!"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Let Hooper take a turn."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Hooper drives the boat, Chief."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5322802",
+                "interestingVotes": {
+                    "down": 2
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "stageDirection": "while typing up the report on Chrissy Watkins",
+                        "text": "Polly, if this new filing system is going to work you've gotta keep that outdated stuff off my desk. Just the pending, all right?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Polly",
+                                "characterId": "/character/ch0002887/",
+                                "nameId": "/name/nm2137043/"
+                            }
+                        ],
+                        "text": "Yes, chief. Now we got a bunch of calls about that karate school. It seems that the nine year olds from the school have been... karateing the picket fences!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5766838",
+                "interestingVotes": {
+                    "down": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Michael Brody",
+                                "characterId": "/character/ch0002866/",
+                                "nameId": "/name/nm0714268/"
+                            }
+                        ],
+                        "text": "Aw, Dad, the pond's for old ladies."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "I know it is. But just do it for the old man, will ya?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5909997",
+                "interestingVotes": {
+                    "down": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Ellen Brody",
+                                "characterId": "/character/ch0002873/",
+                                "nameId": "/name/nm0308882/"
+                            }
+                        ],
+                        "text": "Listen, Chief, be careful, will ya?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "In this town?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910349",
+                "interestingVotes": {
+                    "down": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "He's chasing us. I don't believe it!"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910344",
+                "interestingVotes": {
+                    "down": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Well, what do we do now? We're quittin' right?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "We've got one barrel on him. So, we stay out here till we find him again."
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "Yeah, but we could radio in and get a bigger boat out here."
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910346",
+                "interestingVotes": {
+                    "down": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "Hopper, get the pump out of the locker in front you, will you?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Brody",
+                                "characterId": "/character/ch0313300/",
+                                "nameId": "/name/nm0001702/"
+                            }
+                        ],
+                        "text": "We're gonna sink, aren't we?"
+                    }
+                ],
+                "spoiler": false
+            },
+            {
+                "id": "/title/tt0073195/quotes/qt5910348",
+                "interestingVotes": {
+                    "down": 1
+                },
+                "lines": [
+                    {
+                        "characters": [
+                            {
+                                "character": "Hooper",
+                                "characterId": "/character/ch0165770/",
+                                "nameId": "/name/nm0000377/"
+                            }
+                        ],
+                        "text": "Did you ever have one do this before?"
+                    },
+                    {
+                        "characters": [
+                            {
+                                "character": "Quint",
+                                "characterId": "/character/ch0002870/",
+                                "nameId": "/name/nm0001727/"
+                            }
+                        ],
+                        "text": "No."
+                    }
+                ],
+                "spoiler": false
+            }
+        ]
+    }
 export {QUOTE, QUOTE2, QUOTE3, GENRE};
