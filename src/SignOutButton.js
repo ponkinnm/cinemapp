@@ -4,8 +4,10 @@
  *
  *
  */
+import './SignOutButton.css';
 import {useUserAuth} from './context/UserAuthContext';
 import {useNavigate} from "react-router-dom";
+
 export default function SignOutButton(){
     const {logOut} = useUserAuth();
     const navigate = useNavigate();
@@ -21,9 +23,8 @@ export default function SignOutButton(){
     }
     return (
         <>
-
             <div>
-                <button  onClick={handleLogout}>Log out</button>
+                <button className="log-out"  onClick={handleLogout}>Logout</button>
             </div>
         </>
     )
