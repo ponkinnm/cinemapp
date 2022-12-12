@@ -73,3 +73,6 @@ img {
     height: 150px;
     width: 150px;
 }
+.rounded-corners{
+    border-radius:50px;
+}

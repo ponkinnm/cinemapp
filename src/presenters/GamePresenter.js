@@ -9,6 +9,7 @@ import {createQuoteGeneratorStatic, createGame} from "../utilities";
 import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
 import {CorrectResultBox, BadResultBox} from "../pages/gameplay/ResultBox";
+import LoadingScreen from '../LoadingScreen'
 
 function GamePresenter(props) {
     const [answerId, setAnswerId] = React.useState({})
@@ -131,6 +132,7 @@ function GamePresenter(props) {
     return (
         <>
             {error && (`Houston, we have a problem! Tell the newbies that the ${error}`)}
+            {isLoading && <LoadingScreen/>}
             {!isLoading && movieOptions && movieQuoteGenerator && (
                 <div>
                 <QuoteBox
