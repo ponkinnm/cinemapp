@@ -72,6 +72,7 @@ function GamePresenter(props) {
         } catch (err){
             console.error(err)
             setError(err.message)
+            newGame(100);
         }
         setIsLoading(false)
     }, [])
