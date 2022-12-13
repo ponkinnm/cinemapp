@@ -4,7 +4,6 @@ import {Link, useNavigate} from "react-router-dom";
 import {Alert, Button, Form} from "react-bootstrap";
 import {useUserAuth} from "./context/UserAuthContext";
 
-
 function Signup() {
     const [email, setEmail] = useState("");
     const [error, setError] = useState("");
@@ -13,25 +12,32 @@ function Signup() {
     const {signUp, updateDisplayName} = useUserAuth();
     let navigate = useNavigate();
 
-    //console.log(auth.currentUser)
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError("");
         try {
             await signUp(email, password);
-            updateDisplayName(displayName);
-
+            updateDisplayName(displayName)
             navigate("/");
+
         } catch (err) {
-            setError(err.message);
+            if(err.message.includes("email")){
+                setError("Email already in use");
+            }
+            else if(err.message.includes("weak-password")){
+                setError("Password should be at least 6 characters")
+            }
+            else {
+                setError(err.message);
+            }
         }
     };
 
     return (
         <>
             <div className="p-4 box">
-                <h2 className="mb-3">Firebase Auth Signup</h2>
+                <h2 className="mb-3">Signup to CinemApp</h2>
 
                 {error && <Alert variant="danger">{error}</Alert>}
 
