@@ -39,7 +39,7 @@ function Question(props) {
                     {props.movies.map(alternativeCB)}
                 </fieldset>
             </form>
-            <button onClick={handleAnswerACB} type={"submit"} disabled={props.hasSelected === ""}>Submit</button>
+            <button onClick={handleAnswerACB} type={"submit"} disabled={props.hasSelected === ''}>Submit</button>
             <button onClick={nextQuoteRequestACB}>I just need another quote!</button>
             <button onClick={characterRequestACB} disabled={props.hasHintedCharacter}>Who said what?</button>
             <button onClick={yearRequestACB} disabled={props.hasHintedYear}>Just give me the Year!</button>
