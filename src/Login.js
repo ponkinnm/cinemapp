@@ -22,7 +22,12 @@ function Login() {
             navigateToGame();
         }
         catch (err) {
-            setError(err.message);
+            if(err.message.includes("password")){
+                setError("Invalid password");
+            }
+            else {
+                setError("Wrong email");
+            }
         }
     };
 
