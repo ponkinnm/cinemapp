@@ -96,10 +96,14 @@ function myAPICall(endpoint, apiParams) {
 }
 // or just include the CB as an arrow function instead?
 function treatErrorACB(err) {console.log(err)}
+
+// Deconstruct the fetched objects for ease of use
 function transformQuoteQueryResultACB(obj){
+
     return {
         id: obj.base.id,
         title: obj.base.title,
+        image: obj.base.image,
         year: obj.base.year,
         quotes: obj.quotes,
     };
@@ -124,4 +128,4 @@ function getMovieQuotes(titleId = 'tt0068646') {
     );
 }
 
-export {fetchMovieQ, fetchAllMoviesQ, fetchArrayOfTitleIdsByGenre}
+export {fetchMovieQ, fetchAllMoviesQ, fetchArrayOfTitleIdsByGenre, transformQuoteQueryResultACB}

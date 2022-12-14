@@ -54,12 +54,12 @@ function createGame(gameId= '1'){
  * TODO  Add trivia?
  */
 function createQuoteGeneratorStatic(movie) {
-    const id = movie.base.id
-    const title = movie.base.title
-    const year = movie.base.year
-    const quotes = [...movie.quotes]
-    const {url:imageUrl} = movie.base.image
-    let quote = quotes.pop()
+    const id = movie.id || movie.getId()
+    const title = movie.title || movie.getTitle()
+    const year = movie.year || movie.getYear()
+    const image = movie.image || movie.getImage()
+    // const {url:imageUrl} = movie.image
+    const [quote, ...quotes] = movie.quotes || movie.getQuotes()
 
     // or an array of characters (where we check fo duplicates)
     function characterListCB(accumulator, object) {
@@ -77,7 +77,7 @@ function createQuoteGeneratorStatic(movie) {
         else return accumulator + ""
     }
     return {
-        "popQuote": () => {quote = {...quotes.pop()}},
+        // "popQuote": () => {quote = {...quotes.pop()}},
         "getId": () => id,
         "getTitle": () => title,
         "getYear": () => year,
@@ -85,7 +85,9 @@ function createQuoteGeneratorStatic(movie) {
         "getLines": () => quote.lines.reduce(onlyLinesReducerCB, ""),
         "getCharacters": () => quote.lines.reduce(onlyCharactersReducerCB, ""),
         "getArrayOfCharacters": () => quote.lines.reduce(characterListCB, []),
-        "getImageUrl": () => imageUrl,
+        "getImage": () => image,
+        "getImageUrl": () => image.url,
+        "getQuotes": () => quotes,
     };
 }
 

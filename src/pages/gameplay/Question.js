@@ -4,28 +4,27 @@ import './quotebox.css';
 function Question(props) {
 
     function alternativeCB(movie) {
-try{
-    const  id = movie.id
-    const title = movie.base.title
-    // const {url:imageUrl} = movie.base.image
+        const id = movie.id
+        const title = movie.title
+        // const {url:imageUrl} = movie.base.image
 
-    return (<div key={id}>
-        <input type="radio"
-               id={id}
-               value={id}
-               name={"answer"}
-               key={id}
-               default={props.hasSelected}
-               onInput={() => {props.onSelect(id)}}
-        />
-        {/*<label type="radio">*/}
-        {/*    <img alt={title} className="radioPic" width={250} src={imageUrl} /></label>*/}
-        <label htmlFor={id}>{title}</label>
-        {/*<img src={imageUrl} alt={title} />*/}
-    </div>);}
-catch(err){
-    console.error()
-}    }
+        return (<div key={id}>
+            <input type="radio"
+                   id={id}
+                   value={id}
+                   name={"answer"}
+                   key={id}
+                   default={props.hasSelected}
+                   onInput={() => {
+                       props.onSelect(id)
+                   }}
+            />
+            {/*<label type="radio">*/}
+            {/*    <img alt={title} className="radioPic" width={250} src={imageUrl} /></label>*/}
+            <label htmlFor={id}>{title}</label>
+            {/*<img src={imageUrl} alt={title} />*/}
+        </div>)
+    }
     function handleAnswerACB() {
         props.onSubmit()
     }
