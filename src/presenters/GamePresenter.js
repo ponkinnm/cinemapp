@@ -47,7 +47,7 @@ function GamePresenter(props) {
 
         try {
             // get list per genre and add to game
-            const list = await fetchArrayOfTitleIdsByGenre() // TODO comment out when list from genre menu is done
+            const list = await fetchArrayOfTitleIdsByGenre(props.genre) // TODO comment out when list from genre menu is done
             firstGame.addToMovieList(...list) // TODO Replace (...list) with list "prop" from genre menu
 
             // pick a chosen amount of film objects for the game. 3 is default
@@ -72,7 +72,7 @@ function GamePresenter(props) {
         } catch (err){
             console.error(err)
             setError(err.message)
-            newGame(100);
+            newGame(200);
         }
         setIsLoading(false)
     }, [])
