@@ -1,6 +1,6 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {auth} from "../../firebaseConfig";
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile} from "firebase/auth";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile, deleteUser} from "firebase/auth";
 
 const initialState = {
     user: null
@@ -30,6 +30,10 @@ export async function signUp(email, password, displayName) {
     const credential = await createUserWithEmailAndPassword(auth, email, password);
     await updateProfile(auth.currentUser, {displayName});
     return credential.user.toJSON();
+}
+
+export async function deleteCurrentUser() {
+    return await deleteUser(auth.currentUser)
 }
 
 export async function logOut() {
