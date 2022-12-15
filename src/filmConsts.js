@@ -1,3 +1,29 @@
+const USER = {
+    "uid": "SG86a2mFHeb1H0GJXzdLXO6ogCi1",
+    "email": "vincent.ferrigan@gmail.com",
+    "emailVerified": false,
+    "displayName": "Vincent Ferrigan",
+    "isAnonymous": false,
+    "providerData": [
+    {
+        "providerId": "password",
+        "uid": "vincent.ferrigan@gmail.com",
+        "displayName": "Vincent Ferrigan",
+        "email": "vincent.ferrigan@gmail.com",
+        "phoneNumber": null,
+        "photoURL": null
+    }
+],
+    "stsTokenManager": {
+    "refreshToken": "AOkPPWSmCsglMSU8lU5bYTBs5tMy2THj2rAHJvcgN2Hn6YWk4PYuOeDPGO2rkh_11r_ewe-ohBbgDQF0HQUpKF-jUU4Z1my4zYMHg3IcrB2Z3A144pVn42rzs-HY1A8KIaNmRTR24MT_H5fI742b7mCNiTL7tlJ0xRaTyn9UNTQB_KmfLDumN63DbjHCvwTBoSCQiI2VF7P96gCwIGUvbNomGrU6labr2ngVt1ZRf3G7dJU--0ZS53U",
+        "accessToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ijk3OGI1NmM2NmVhYmIwZDlhNmJhOGNhMzMwMTU2NGEyMzhlYWZjODciLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiVmluY2VudCBGZXJyaWdhbiIsImlzcyI6Imh0dHBzOi8vc2VjdXJldG9rZW4uZ29vZ2xlLmNvbS9jaW5lbWFwcC0zMGExZCIsImF1ZCI6ImNpbmVtYXBwLTMwYTFkIiwiYXV0aF90aW1lIjoxNjcwNDIzNzE5LCJ1c2VyX2lkIjoiU0c4NmEybUZIZWIxSDBHSlh6ZExYTzZvZ0NpMSIsInN1YiI6IlNHODZhMm1GSGViMUgwR0pYemRMWE82b2dDaTEiLCJpYXQiOjE2NzEwMjE1MTQsImV4cCI6MTY3MTAyNTExNCwiZW1haWwiOiJ2aW5jZW50LmZlcnJpZ2FuQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJ2aW5jZW50LmZlcnJpZ2FuQGdtYWlsLmNvbSJdfSwic2lnbl9pbl9wcm92aWRlciI6InBhc3N3b3JkIn19.PDO17Zhhrnlc-kSFPKsBHC_I-zxgda1MNxBuGLYLGRW1N4hrTPv00GNH5VsLVONC7OJlntZ7BDAYJTt4HexnmPuIdfuydJKoidO8Q_GnOrczTUnF10yGJsUylS6aCvLfrypHYnOzzRkL8DPkYEEKS3tKSiGI5HH7oCWSSle1HiU-vBRvZtT3mWNwbLXkI9iycPoHi4xhYJNNCuQ-rMsKAlt11hQpykTgJ9V7Jh5dOXYB-OmDHkes2_l5cz09Tjgtm-acUCPWwazhJ6cijfbCqo7q2zgWz18BGNOEHS_zfMS6Ptjpax-snCuUrI1NMFkW_svPOfND5-5X8eTfEFF6gw",
+        "expirationTime": 1671025114107
+},
+    "createdAt": "1670417751241",
+    "lastLoginAt": "1670943475657",
+    "apiKey": "AIzaSyADEcv-zWou4Neiegvx7H3YTA5AI9GR6q4",
+    "appName": "[DEFAULT]"
+}
 const GENRE = ["","action", "adventure", "animation", "biography", "comedy", "crime", "documentary", "drama", "family", "fantasy",
     "film-noir", "history", "horror", "music", "musical", "mystery", "news", "reality-tv", "romance",
     "sci-fi", "short", "sport", "talk-show", "thriller", "war", "western",];
@@ -15598,4 +15624,6 @@ const QUOTE4 = {
             }
         ]
     }
-export {QUOTE, QUOTE2, QUOTE3, GENRE};
+const TITLEIDS = ['tt0073195', 'tt9114286', 'tt0068646',]
+
+export {QUOTE, QUOTE2, QUOTE3, QUOTE4, GENRE, USER, TITLEIDS};

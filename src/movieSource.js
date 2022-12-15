@@ -4,6 +4,7 @@
  * TODO rewrite genre fetch as an async
  */
 import {BASE_URL, API_KEY} from "./apiConfig";
+import {createMovieQuoteGenerator} from "./utilities";
 
 const options = {
     method: 'GET',
@@ -99,14 +100,7 @@ function treatErrorACB(err) {console.log(err)}
 
 // Deconstruct the fetched objects for ease of use
 function transformQuoteQueryResultACB(obj){
-
-    return {
-        id: obj.base.id,
-        title: obj.base.title,
-        image: obj.base.image,
-        year: obj.base.year,
-        quotes: obj.quotes,
-    };
+    return createMovieQuoteGenerator(obj)
 }
 /**
  * Return a customized quotes-object of chosen movie.
