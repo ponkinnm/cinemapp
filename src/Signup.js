@@ -7,6 +7,7 @@ import {useUserAuth} from "./context/UserAuthContext";
 import {database} from './firebaseConfig'
 import {ref, get, set} from "firebase/database";
 import {auth} from './firebaseConfig'
+import FloatingLabel from "react-bootstrap/FloatingLabel";
 
 // have a handler function that checks if the username is already taken
 // and then deletes the currentUser and shows a error message indicating
@@ -48,7 +49,8 @@ function Signup() {
         set(ref(database, 'users/' + auth.currentUser.uid  ), {
             username: displayName,
             uid: auth.currentUser.uid,
-            email: email
+            email: email,
+            highScore: 0
         }).catch(err => console.log(err.message))
     }
 
@@ -82,28 +84,31 @@ function Signup() {
                 {error && <Alert variant="danger">{error}</Alert>}
 
                 <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3">
+                    <FloatingLabel label="Username" className="mb-3">
                         <Form.Control
                             placeholder="Username"
                             onChange={(e) => setDisplayName(e.target.value)}
                             type="text" id="displayName"
                         />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    </FloatingLabel>
+                    <FloatingLabel label="Email" className="mb-3" controlId="formBasicEmail">
                         <Form.Control
                             type="email"
                             placeholder="Email address"
                             onChange={(e) => setEmail(e.target.value)}
                         />
-                    </Form.Group>
+                        <Form.Text className="text-muted">
+                            We'll never share your email with anyone else.
+                        </Form.Text>
+                    </FloatingLabel>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <FloatingLabel label="Password" className="mb-3" controlId="formBasicPassword">
                         <Form.Control
                             type="password"
                             placeholder="Password"
                             onChange={(e) => setPassword(e.target.value)}
                         />
-                    </Form.Group>
+                    </FloatingLabel>
 
                     <div className="d-grid gap-2">
                         <Button variant="primary" type="Submit">
