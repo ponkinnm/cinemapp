@@ -18,7 +18,6 @@ function SignUpView({error, handleSubmit, setHasAccount}) {
         handleSubmit(email, password, displayName)
     }
 
-
     return (
         <>
             <div className="p-4 box">
@@ -29,13 +28,17 @@ function SignUpView({error, handleSubmit, setHasAccount}) {
                 <Form onSubmit={onSubmit}>
                     <Form.Group className="mb-3" controlId="displayName">
                         <FloatingLabel label="Username" className="mb-3">
-                        <Form.Control placeholder="Username" onChange={(e) => setDisplayName(e.target.value)} type="text"
+                        <Form.Control
+                            required
+                            placeholder="Username"
+                            onChange={(e) => setDisplayName(e.target.value)} type="text"
                            />
                     </FloatingLabel>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <FloatingLabel label="Email" className="mb-3" controlId="formBasicEmail">
                         <Form.Control
+                            required
                             type="email"
                             placeholder="Email address"
                             onChange={(e) => setEmail(e.target.value)}
@@ -45,15 +48,22 @@ function SignUpView({error, handleSubmit, setHasAccount}) {
                         </Form.Text>
                     </FloatingLabel>
                     </Form.Group>
-
                     <FloatingLabel label="Password" className="mb-3" controlId="formBasicPassword">
                         <Form.Control
+                            required
                             type="password"
                             placeholder="Password"
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </FloatingLabel>
-
+                    <Form.Group className="mb-3">
+                        <Form.Check
+                            required
+                            label="Agree to terms and conditions"
+                            feedback="You must agree before submitting."
+                            feedbackType="invalid"
+                        />
+                    </Form.Group>
                     <div className="d-grid gap-2">
                         <Button variant="primary" type="Submit">
                             Sign up
@@ -62,7 +72,8 @@ function SignUpView({error, handleSubmit, setHasAccount}) {
                 </Form>
 
             <div className="p-4 box mt-3 text-center">
-                Already have an account? <button onClick={() => setHasAccount(true)}>Log In</button>
+                Already have an account?
+                <Button variant='secondary' onClick={() => setHasAccount(true)}>Log In</Button>
             </div>
             </div>
         </>
