@@ -2,11 +2,13 @@
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import {API_KEY, BASE_URL} from "../../apiConfig";
 
+const headers = {
+    'X-RapidAPI-Key': API_KEY,
+    'X-RapidAPI-Host': BASE_URL
+}
 // Define our single API slice object
 export const apiSlice = createApi({
-    // The cache reducer expects to be added at `state.api` (already default - this is optional)
     reducerPath: 'api',
-    // All of our requests will have URLs starting with '/fakeApi'
     baseQuery: fetchBaseQuery({baseUrl: `https://${BASE_URL}`}),
     // The "endpoints" represent operations and requests for this server
     endpoints: builder => ({
@@ -15,17 +17,20 @@ export const apiSlice = createApi({
             // The URL for the request is '/fakeApi/posts'
             query: ({limit, genre}) => ({
                     url: `/title/v2/get-popular-movies-by-genre?limit=${limit}&genre=${genre}`,
-                    headers: {
-                        'X-RapidAPI-Key': API_KEY,
-                        'X-RapidAPI-Host': BASE_URL
-                    }
+                    headers
                 }
             )
 
 
+        }),
+        getMovie: builder.query({
+            query: (movieId) => ({
+                url: `/title/get-quotes?tconst=${movieId}`,
+                headers
+            })
         })
     })
 })
 
 // Export the auto-generated hook for the `getMovieIdsByGenre` query endpoint
-export const {useGetMovieIdsByGenreQuery} = apiSlice
+export const {useGetMovieIdsByGenreQuery, useGetMovieQuery} = apiSlice
