@@ -18,6 +18,7 @@ function LoginView(setHasAccount) {
     };
     const handleLogin = async (e) => {
 
+<<<<<<< HEAD
         e.preventDefault();
         setError("");
         try {
@@ -32,6 +33,8 @@ function LoginView(setHasAccount) {
             }
         }
     }
+=======
+>>>>>>> 58cf845 (styling and components for views in game and genre selector)
     return (
         <>
         <div className="p-4 box">

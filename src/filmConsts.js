@@ -24,9 +24,11 @@ const USER = {
     "apiKey": "AIzaSyADEcv-zWou4Neiegvx7H3YTA5AI9GR6q4",
     "appName": "[DEFAULT]"
 }
-const GENRE = ["","action", "adventure", "animation", "biography", "comedy", "crime", "documentary", "drama", "family", "fantasy",
+/*const GENRE = ["action", "adventure", "animation", "biography", "comedy", "crime", "documentary", "drama", "family", "fantasy",
     "film-noir", "history", "horror", "music", "musical", "mystery", "news", "reality-tv", "romance",
-    "sci-fi", "short", "sport", "talk-show", "thriller", "war", "western",];
+    "sci-fi", "short", "sport", "talk-show", "thriller", "war", "western",];*/
+const GENRE = [{name:"action", quote:"Feeling lucky, punk?"},{name:"comedy", quote:"Hey, you wanna hear the most annoying sound in the world?"},
+{name:"drama", quote:"We'll always have Paris."},{name:"thriller", quote:"A census taker once tried to test me. I ate his liver with a nice chianti."},]
 
 const QUOTE3 = {
         "id": "/title/tt0073195/",

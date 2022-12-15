@@ -47,13 +47,13 @@ function GamePresenter(props) {
 
         try {
             // get list per genre and add to game
-            // const list = await fetchArrayOfTitleIdsByGenre(props.genre) // TODO comment out when list from genre menu is done
+            //const list = await fetchArrayOfTitleIdsByGenre(props.genre) // TODO comment out when list from genre menu is done
             firstGame.addToMovieList(...props.genre) // TODO Replace (...list) with list "prop" from genre menu
 
             // pick a chosen amount of film objects for the game. 3 is default
               //  API Calls
-            // const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
-            // const movieData = await fetchAllMoviesQ(...titleIds)
+            //const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
+            //const movieData = await fetchAllMoviesQ(...titleIds)
             // // Test Constants
             const movieData = [QUOTE, QUOTE2, QUOTE3].map(createMovieQuoteGenerator)
 
