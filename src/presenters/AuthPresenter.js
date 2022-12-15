@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import SignUpView from "../views/SignUpView";
 import {signUp, setUser, login, deleteCurrentUser} from "../features/auth/authSlice";
 import {useNavigate} from "react-router-dom";
-import {ref, get, set} from 'firebase/database'
+import {ref, get, set, getDatabase} from 'firebase/database'
 import {auth} from '../firebaseConfig'
 import {database} from "../firebaseConfig";
 import {useDispatch} from "react-redux";
