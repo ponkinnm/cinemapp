@@ -1,13 +1,11 @@
 import {createSlice} from '@reduxjs/toolkit'
 import {auth} from "../../firebaseConfig";
-import {
-    signInWithEmailAndPassword, onAuthStateChanged, signOut, updateProfile
-} from "firebase/auth";
-import {useDispatch} from "react-redux";
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile} from "firebase/auth";
 
 const initialState = {
     user: null
 }
+
 
 export const authSlice = createSlice({
     name: 'auth',
@@ -20,23 +18,25 @@ export const authSlice = createSlice({
             // immutable state based off those changes
             state.user = action.payload;
         },
-        logout: (state) => {
-            state.value -= 1
-        },
-        signup: (state, action) => {
-            state.value += action.payload
-        },
     },
 })
 
 export async function login(email, password) {
-    const user = await signInWithEmailAndPassword(auth, email, password);
-    return user.user.toJSON();
+    const response = await signInWithEmailAndPassword(auth, email, password);
+    return response.user.toJSON();
+}
+
+export async function signUp(email, password, displayName) {
+    const credential = await createUserWithEmailAndPassword(auth, email, password);
+    await updateProfile(auth.currentUser, {displayName});
+    return credential.user.toJSON();
 }
 
 export async function logOut() {
     await signOut(auth)
 }
+
+export const selectUser = (state) => state.auth?.user;
 
 // Action creators are generated for each case reducer function
 export const {setUser} = authSlice.actions;

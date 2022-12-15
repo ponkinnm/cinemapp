@@ -1,18 +1,21 @@
 import {Outlet, NavLink} from "react-router-dom";
-import {useUserAuth} from "../context/UserAuthContext"
 import SignOutButton from "../SignOutButton";
-function Layout() {
-    const {user} = useUserAuth();
-    if (user) {
-        return (
+import {useSelector} from "react-redux";
+import {selectUser} from "../features/auth/authSlice";
 
-            <>
-                <nav className={"navigation"}>
-                    <span className="font-accent">CinemApp</span>
-                    <ul className={"menu"}>
-                        <li className={"menu__item"}>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
+function Layout() {
+    const user = useSelector(selectUser);
+
+    return (
+
+        <>
+            <nav className={"navigation"}>
+                <span className="font-accent">CinemApp</span>
+                <ul className={"menu"}>
+                    <li className={"menu__item"}>
+                        <NavLink to="/">Home</NavLink>
+                    </li>
+                    {user && <>
                         <li className={"menu__item"}>
                             <NavLink
                                 to="game">Quiz</NavLink>
@@ -21,40 +24,16 @@ function Layout() {
                             <div>User:{user.displayName}</div>
                         </li>
                         <li className={"menu__item"}>
-                            <SignOutButton />
+                            <SignOutButton/>
                         </li>
-
-                    </ul>
-                </nav>
-                <div className="main-content">
-                    <Outlet/>
-                </div>
-            </>
-        )
-    }
-    else {
-        return (
-
-            <>
-                <nav className={"navigation"}>
-                    <span className="font-accent">CinemApp</span>
-                    <ul className={"menu"}>
-                        <li className={"menu__item"}>
-                            <NavLink to="/">Home</NavLink>
-                        </li>
-
-                        <li className={"menu__item"}>
-                            <NavLink to="signup">Sign
-                                up</NavLink>
-                        </li>
-                    </ul>
-                </nav>
-                <div className="main-content">
-                    <Outlet/>
-                </div>
-            </>
-        )
-    }
+                    </>}
+                </ul>
+            </nav>
+            <div className="main-content">
+                <Outlet/>
+            </div>
+        </>
+    )
 
 }
 

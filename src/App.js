@@ -4,8 +4,9 @@ import Layout from "./pages/Layout";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Test from "./pages/Test";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
-import Signup from "./Signup";
 import QuizPresenter from "./presenters/QuizPresenter"
+import NoPage from "./pages/NoPage";
+
 function App() {
   return (
       <BrowserRouter>
@@ -14,21 +15,12 @@ function App() {
               <Route path="/" element={<Layout />}>
                   <Route index element={<Welcome />} />
                   <Route path="game" element={<QuizPresenter />}/>
-                  <Route path="signup" element={<Signup />} />
-{/*
                   <Route path="*" element={<NoPage />} />
-*/}
               </Route>
               <Route path="test" element={<Test />} />
           </Routes>
           </UserAuthContextProvider>
       </BrowserRouter>
-    /*<div className="App">
-
-      <header className="App-header">
-      </header>
-        <Welcome hej={"amdkmk"}/>
-    </div>*/
   );
 }
 

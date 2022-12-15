@@ -1,19 +1,19 @@
-import React, {useState} from 'react';
-import Login from "./Login";
-import SignupButton from "./SignupButton";
+import React  from 'react';
 import ingrid from "./img/bergman - intermezzo.jpg"
-import {useUserAuth} from "./context/UserAuthContext"
+import AuthPresenter from "./presenters/AuthPresenter";
+import {selectUser} from "./features/auth/authSlice";
+import {useSelector} from "react-redux";
 
-function Welcome(props) {
-    const {user} = useUserAuth();
+function Welcome() {
+    const user = useSelector(selectUser);
+
     return (
         <div style={{width: '50vw', display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
             <div className={"img-wrapper--circle img-md"}>
                 <img alt={"ingrid bergman"} src={ingrid}/>
             </div>
             <h1>Welcome to CinemApp</h1>
-            {!user && <Login />}
-            {!user && <SignupButton />}
+            {!user && <AuthPresenter/>}
         </div>
     );
 }
