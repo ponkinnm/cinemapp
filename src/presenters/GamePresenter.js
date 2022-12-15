@@ -4,8 +4,8 @@
  */
 import React, {useState} from 'react';
 import Question from "../pages/gameplay/Question";
-import {fetchAllMoviesQ, fetchArrayOfTitleIdsByGenre, transformQuoteQueryResultACB} from "../movieSource";
-import {createQuoteGeneratorStatic, createGame} from "../utilities";
+import {fetchAllMoviesQ, fetchArrayOfTitleIdsByGenre} from "../movieSource";
+import {createMovieQuoteGenerator, createGame} from "../utilities";
 import {QUOTE, QUOTE2, QUOTE3} from "../filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
 import {CorrectResultBox, BadResultBox} from "../pages/gameplay/ResultBox";
@@ -55,19 +55,20 @@ function GamePresenter(props) {
             // const titleIds = firstGame.getArrayOfRandomMovies(3) // magic number, hardcoded
             // const movieData = await fetchAllMoviesQ(...titleIds)
             // // Test Constants
-            const movieData = [QUOTE, QUOTE2, QUOTE3].map(transformQuoteQueryResultACB)
+            const movieData = [QUOTE, QUOTE2, QUOTE3].map(createMovieQuoteGenerator)
 
             // Randomly pick the movie to quote
             const randomIndex = Math.floor(Math.random() * movieData.length)
             const quoteMovie = movieData[randomIndex]
 
             // Create closure function
-            const quoteGenerator= createQuoteGeneratorStatic(quoteMovie)
+            // const quoteGenerator= createQuoteGeneratorStatic(quoteMovie)
 
             // set the states;
             setMovieOptions(movieData)
             setGame({...firstGame})
-            setMovieQuoteGenerator(quoteGenerator)
+            // setMovieQuoteGenerator(quoteGenerator)
+            setMovieQuoteGenerator(quoteMovie)
             setCorrectMovieId(quoteMovie.id)
         } catch (err){
             console.error(err)
@@ -95,9 +96,9 @@ function GamePresenter(props) {
         // movieQuoteGenerator.popQuote()
         game.addHints(1)
 
-        setMovieQuoteGenerator( createQuoteGeneratorStatic(movieQuoteGenerator))
+        setMovieQuoteGenerator( movieQuoteGenerator => createMovieQuoteGenerator(movieQuoteGenerator))
         // setMovieQuoteGenerator( {movieQuoteGenerator})
-        setGame({...game})
+        setGame({...game}) // is this necessary?
 
         setShowCharacter(false)
     }
@@ -165,7 +166,7 @@ function GamePresenter(props) {
             {hasSubmittedAnswer && !isAnswerCorrect &&(
                 <BadResultBox
                 isAnswerCorrect = {isAnswerCorrect}
-                movie={movieQuoteGenerator.getTitle()}
+                movie={movieQuoteGenerator.title}
                 />
             )}
         </>
