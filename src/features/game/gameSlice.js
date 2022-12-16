@@ -10,9 +10,9 @@ const initialState = {
     score: 0,
     hints: 0, // is it necessary? TODO: reassess our score-logic
 
-    titleIdList: [],
+    movieIds: [],
     movies: [],
-    correctTitleId: "",
+    correctMovieId: "",
 }
 
 const gameSlice = createSlice({
@@ -31,19 +31,19 @@ const gameSlice = createSlice({
         addHints: (state) => {
             state.hints++
         },
-        addTitleIds: (state, action) => {
-            action.payload.forEach((titleId) => {
-                if (!state.titleIdList.some((id) => id === titleId)) {
-                    state.titleIdList = [...state.titleIdList, titleId]
+        addMovieIds: (state, action) => {
+            action.payload.forEach((movieId) => {
+                if (!state.movieIds.some((id) => id === movieId)) {
+                    state.movieIds= [...state.movieIds, movieId]
                 }
             })
         },
-        replaceTitleIdList: (state, action) => {
-            state.titleIdList = [...action.payload]
+        replaceListOfMovieIds: (state, action) => {
+            state.movieIds= [...action.payload]
         },
-        removeTitleIds: (state, action) => {
-            action.payload.forEach((titleId) => {
-                state.titleIdList = state.titleIdList.filter((id) => id !== titleId);
+        removeMovieIds: (state, action) => {
+            action.payload.forEach((movieId) => {
+                state.movieIds= state.movieIds.filter((itemId) => itemId !== movieId);
             })
         },
         addMovie: (state, action) => {
@@ -59,8 +59,8 @@ const gameSlice = createSlice({
             //     state.movies = state.movies.filter((movie) => movie.id !== id)
             // })
         },
-        setCorrectTitleId : (state, action) => {
-            state.correctTitleId = action.payload
+        setCorrectMovieId : (state, action) => {
+            state.correctMovieId = action.payload
         },
         nextQuote: (state) => {
             // TODO share these CBs with createMovieQuoteGenerator or replace them?
@@ -80,7 +80,7 @@ const gameSlice = createSlice({
                     ? [...accumulator, "- " + object.text]
                     : [...accumulator]
             }
-            const id = state.correctTitleId
+            const id = state.correctMovieId
             // const id = action.payload
             const movie = state.movies.find((item) => item.id === id)
 
@@ -105,5 +105,5 @@ const gameSlice = createSlice({
     },
 })
 
-export const gameActions = gameSlice.actions
+export const gameSliceAction = gameSlice.actions
 export default gameSlice.reducer

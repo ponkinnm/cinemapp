@@ -92,6 +92,23 @@ function createMovieQuoteGenerator(obj) {
     };
 }
 
+const createMovieObjFromApiResult = (obj) => {
+
+    const id = obj.id
+    const title = obj.base.title
+    const year = obj.base.year
+    const imageUrl = obj.base.image.url
+    const quotes = obj.quotes
+
+    return {
+        id,
+        title,
+        year,
+        imageUrl,
+        quotes,
+    };
+}
+
 // function createQuoteGeneratorStatic(movie) {
 //     const id = movie.id || movie.getId()
 //     const title = movie.title || movie.getTitle()
@@ -130,5 +147,5 @@ function createMovieQuoteGenerator(obj) {
 //     };
 // }
 
-export {createGame, createMovieQuoteGenerator};
+export {createGame, createMovieQuoteGenerator, createMovieObjFromApiResult};
 // export {createQuoteGeneratorStatic, createGame};
