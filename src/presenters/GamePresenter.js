@@ -10,6 +10,8 @@ import {QUOTE, QUOTE2, QUOTE3} from "../util/filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
 import {CorrectResultBox, BadResultBox} from "../pages/gameplay/ResultBox";
 import LoadingScreen from '../views/LoadingScreen'
+import HintView from "../pages/gameplay/HintView"
+>>>>>>> 3d74405 (styling of game questions)
 
 function GamePresenter(props) {
     const [answerId, setAnswerId] = React.useState({})
@@ -26,7 +28,6 @@ function GamePresenter(props) {
     const [showCharacter, setShowCharacter] = React.useState(false)
     const [showYear, setShowYear] = React.useState(false)
     const [isAnswerCorrect, setIsAnswerCorrect] = React.useState(false)
-
     const gameSetUp = React.useCallback(async () => {
         //     /*
         //      * fetch a list of Genre,
@@ -140,20 +141,26 @@ function GamePresenter(props) {
                 <div>
                 <QuoteBox
                     movieToQuote = {movieQuoteGenerator}
-                    isHintCharacter = {showCharacter}
-                    isHintYear = {showYear}
                 />
                 <Question
                     onSubmit={submitAnswerACB}
                     onNext={nextQuoteACB}
-                    onCharacter={characterACB}
-                    onYear={yearACB}
                     onSelect={selectedAnswerACB}
                     movies={movieOptions}
                     hasSelected={answerId}
+                />
+                <HintView
+                    movieToQuote = {movieQuoteGenerator}
+                    onCharacter={characterACB}
+                    onYear={yearACB}
                     hasHintedYear={showYear}
                     hasHintedCharacter={showCharacter}
-                /></div>
+                    isHintCharacter = {showCharacter}
+                    isHintYear = {showYear}
+                    setHintCharacter={characterACB}
+                    setHintYear={yearACB}
+                />
+                </div>
                 )
             }
             {hasSubmittedAnswer && isAnswerCorrect &&(

@@ -30,7 +30,7 @@ function Question(props) {
         const id = movie.id
         const title = movie.title
         return(
-            <ListGroup.Item bsStyle="primary" default={props.hasSelected} action key={id} id={id} value={id} onClick={() => {
+            <ListGroup.Item default={props.hasSelected} action key={id} id={id} value={id} onClick={() => {
                 props.onSelect(id)
             }}>
                 {title}
@@ -42,8 +42,7 @@ function Question(props) {
         props.onSubmit()
     }
     function nextQuoteRequestACB() {props.onNext()}
-    function characterRequestACB() {props.onCharacter()}
-    function yearRequestACB() {props.onYear()}
+
     //planen är att göra hintsen med overlay från react-bootstrap
     return (<Stack direction="vertical" gap={3}>
             <ListGroup>
@@ -52,8 +51,6 @@ function Question(props) {
             <Stack direction="horizontal" gap={2}>
             <Button className="width:50%" onClick={handleAnswerACB} type={"submit"} disabled={props.hasSelected === ""}>Submit</Button>
             <Button onClick={nextQuoteRequestACB}>I just need another quote!</Button>
-            <Button onClick={characterRequestACB} disabled={props.hasHintedCharacter}>Who said what?</Button>
-            <Button onClick={yearRequestACB} disabled={props.hasHintedYear}>Just give me the Year!</Button>
             </Stack>
             </Stack>
         );
