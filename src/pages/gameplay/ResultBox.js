@@ -1,19 +1,18 @@
 import React from 'react';
-
+import Alert from 'react-bootstrap/Alert';
 function CorrectResultBox(props) {
     return (
-        <div>
+        <Alert variant ={'success'}>
             Congratulations! You scored {props.score} points with {props.hints} hints
-        </div>
+        </Alert>
     );
 }
 
 function BadResultBox(props) {
     return (
-        <div>
-            You Lose! Good Day Sir!
-            The right answer was {props.movie}.
-        </div>
+        <Alert variant={'danger'}>
+            The right answer was {props.movie}. You scored 0 points.
+        </Alert>
     );
 }
 

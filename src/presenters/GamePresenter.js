@@ -11,7 +11,6 @@ import QuoteBox from "../pages/gameplay/QuoteBox";
 import {CorrectResultBox, BadResultBox} from "../pages/gameplay/ResultBox";
 import LoadingScreen from '../views/LoadingScreen'
 import HintView from "../pages/gameplay/HintView"
->>>>>>> 3d74405 (styling of game questions)
 
 function GamePresenter(props) {
     const [answerId, setAnswerId] = React.useState({})
@@ -160,6 +159,7 @@ function GamePresenter(props) {
                 </div>
                 )
             }
+            <div>&nbsp;</div>
             {hasSubmittedAnswer && isAnswerCorrect &&(
                 <CorrectResultBox
                 isAnswerCorrect = {isAnswerCorrect}
