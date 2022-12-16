@@ -1,7 +1,7 @@
-import {gameActions} from "./gameSlice";
+import {gameSliceAction} from "./gameSlice";
 import {BASE_URL, API_KEY} from "../../apiConfig";
 import {TITLEIDS} from "../../util/filmConsts";
-import {createMovieQuoteGenerator} from "../../util/utilities";
+import {createMovieObjFromApiResult} from "../../util/utilities";
 
 const options = {
     method: 'GET',
@@ -29,19 +29,20 @@ export const fetchTitleIdsByGenre = (chosenGenre = 'action', noOfTitles = 100) =
        try {
            // const movieData = await fetchData()
            const titleIdListByGenre = await [...TITLEIDS]
-           dispatch(gameActions.replaceTitleIdList(titleIdListByGenre))
+           dispatch(gameSliceAction.replaceTitleIdList(titleIdListByGenre))
        } catch (error) {
            // Do something
        }
    }
 }
-export const fetchMovieQ = (titleId) => {
+export const fetchMovieQ = (...titleIds) => {
     function transformQuoteQueryResultACB(obj){
         // TODO: copy all from createMovieQuoteGenerator exempt for lines and characters
-        return createMovieQuoteGenerator(obj)
+        return createMovieObjFromApiResult(obj)
     }
 
-    return async (dispatch) => {
+
+    return async (dispatch, titleId) => {
         const endpoint = "/title/get-quotes?tconst=" // hardcoded?
         const fetchData = async () => {
 
@@ -57,14 +58,23 @@ export const fetchMovieQ = (titleId) => {
 
         }
         try {
-            // const movieData = await fetchData(titleId)
-            const movieData = await transformQuoteQueryResultACB(titleId) // if titleId is a const object e.g. QUOTE
+            const movieData = await fetchData(titleId)
+            // const movieData = await transformQuoteQueryResultACB(titleId) // if titleId is a const object e.g. QUOTE
             dispatch(
-                gameActions.addMovie(movieData)
+                gameSliceAction.addMovie(movieData)
             )
-
         } catch (error) {
+
+        } finally {
 
         }
     }
 }
+
+// const mapStateToProps = (state) => {
+//     return {
+//         lines: state.game.lines,
+//         characters: state.game.characters,
+//
+//     }
+// }
