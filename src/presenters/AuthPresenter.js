@@ -17,7 +17,7 @@ function AuthPresenter() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => dispatch(setUser(user)))
+        onAuthStateChanged(auth, (user) => dispatch(setUser(user?.toJSON())))
     }, [])
 
     async function checkIfUsernameAlreadyTaken(displayName, email) {

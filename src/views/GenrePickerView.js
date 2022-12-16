@@ -10,9 +10,9 @@ import Col from "react-bootstrap/Col";
 export default function GenrePickerView(props){
     function renderGenres(genre){
         return(
-            <Carousel.Item >
+            <Carousel.Item key={genre.name}>
                 <Card className={"d-flex justify-content-center"}
-                      key ={genre} value={genre.name}  style={{width:"auto"}}>
+                      key ={genre.name} value={genre.name}  style={{width:"auto"}}>
                     <Card.Header className={"text-center"}>Choose your genre to play</Card.Header>
                     <Card.Body>
                         <Row>
