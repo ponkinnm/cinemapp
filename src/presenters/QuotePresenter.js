@@ -9,8 +9,16 @@ import QuoteBox from "../pages/gameplay/QuoteBox";
 import LoadingScreen from '../views/LoadingScreen' // TODO should component/file be moved to /pages/gameplay/ ??
 import {CorrectResultBox, BadResultBox} from "../pages/gameplay/ResultBox"; // TODO Shouldn't it be one file per component?
 import {useDispatch, useSelector} from "react-redux";
+import {useGetMovieQuery} from "../features/api/apiSlice";
+import {skipToken} from "@reduxjs/toolkit/query";
 
 const QuotePresenter = () => {
+
+    // will get replaced
+    const [movieOptOne, setMovieOptOne] = useState(skipToken)
+    const [movieOptTwo, setMovieOptTwo] = useState(skipToken)
+    const [movieOptTree, setMovieOptTree] = useState(skipToken)
+
     // replace answerId and hasSubmittedAnswer to one. I.e. no submit button?
     const [answerId, setAnswerId] = useState({})
     const [hasSubmittedAnswer, setHasSubmittedAnswer] = useState(false)
@@ -28,7 +36,7 @@ const QuotePresenter = () => {
         console.log("Effect running game set up ")
 
         return () => {console.log("Effect clean up game set up")}
-        }, []
+        }, [data]
     )
 }
 
