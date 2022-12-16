@@ -41,7 +41,9 @@ function Question(props) {
     function handleAnswerACB() {
         props.onSubmit()
     }
-    function nextQuoteRequestACB() {props.onNext()}
+    function nextQuoteRequestACB() {
+        props.onNext()
+    }
 
     //planen är att göra hintsen med overlay från react-bootstrap
     return (<Stack direction="vertical" gap={3}>

@@ -10,7 +10,7 @@ export default function HintView(props){
     /*function characterRequestACB() {props.onCharacter()}
     function yearRequestACB() {props.onYear()}*/
     return <div>
-    <Stack direction="vertical" gap={3}>
+    <Stack direction="vertical" gap={4}>
         <Button
             variant="secondary"
             onClick={hintYearACB}
@@ -27,7 +27,7 @@ export default function HintView(props){
         <Overlay
             target={targetYear.current}
             show={props.isHintYear}
-            placement="left">
+            placement="top">
             <div style={{
               position: 'absolute',
               backgroundColor: '#808080',
@@ -41,7 +41,7 @@ export default function HintView(props){
         <Overlay
             target={targetCharacter.current}
             show={props.isHintCharacter}
-            placement="right">
+            placement="top">
             <div style={{
               position: 'absolute',
               backgroundColor: '#808080',
