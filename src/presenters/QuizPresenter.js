@@ -1,5 +1,5 @@
 import GamePresenter from './GamePresenter'
-import GenrePickerView from "../GenrePickerView.js";
+import GenrePickerView from "../views/GenrePickerView.js";
 import React, {useState, useEffect} from 'react'
 import {GENRE} from "../util/filmConsts.js";
 
