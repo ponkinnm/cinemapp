@@ -103,17 +103,17 @@ function GamePresenter(props) {
 
         setShowCharacter(false)
     }
-    function characterACB() {
-        game.addHints(1)
+    function characterACB(toggle) {
+        if(toggle) game.addHints(1)
         setGame({...game})
 
-        setShowCharacter(true)
+        setShowCharacter(toggle)
     }
-    function yearACB() {
-        game.addHints(1)
+    function yearACB(toggle) {
+        if(toggle)game.addHints(1)
         setGame({...game})
 
-        setShowYear(true)
+        setShowYear(toggle)
     }
 
     function submitAnswerACB() {
@@ -149,12 +149,9 @@ function GamePresenter(props) {
                     movies={movieOptions}
                     hasSelected={answerId}
                 />
+                <div>&nbsp;</div>
                 <HintView
                     movieToQuote = {movieQuoteGenerator}
-                    onCharacter={characterACB}
-                    onYear={yearACB}
-                    hasHintedYear={showYear}
-                    hasHintedCharacter={showCharacter}
                     isHintCharacter = {showCharacter}
                     isHintYear = {showYear}
                     setHintCharacter={characterACB}
