@@ -6,7 +6,7 @@ import Test from "./pages/Test";
 import { UserAuthContextProvider } from "./context/UserAuthContext";
 import QuizPresenter from "./presenters/QuizPresenter"
 import NoPage from "./pages/NoPage";
-
+document.body.style.backgroundColor = "#D3D3D3";
 function App() {
   return (
       <BrowserRouter>

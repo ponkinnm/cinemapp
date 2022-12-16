@@ -73,7 +73,7 @@ function SignUpView({error, handleSubmit, setHasAccount}) {
 
             <div className="p-4 box mt-3 text-center">
                 Already have an account?
-                <Button variant='secondary' onClick={() => setHasAccount(true)}>Log In</Button>
+                {" "}<Button size="sm" variant='secondary' onClick={() => setHasAccount(true)}>Log In</Button>
             </div>
             </div>
         </>
