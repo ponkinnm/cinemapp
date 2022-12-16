@@ -30,8 +30,9 @@ export default function GenrePickerView(props){
                 <Card.Img
                     className="d-block w-100"
                     variant="bottom"
-                    src={ingrid}
+                    src={genre.img}
                     alt={genre}
+                    style={{alignSelf:"center"}}
                      />
                 </Card>
             </Carousel.Item>

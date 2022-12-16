@@ -88,9 +88,10 @@ function GamePresenter(props) {
     }, [gameSetUp])
 
 
-    function checkAnswerCB() {return answerId === correctMovieId} // or just use movieQuoteGenerator.getId() instead of correctMovieId
+    function checkAnswerCB(id) {return id === correctMovieId} // or just use movieQuoteGenerator.getId() instead of correctMovieId
     function selectedAnswerACB(id) {
         setAnswerId(id)
+
     }
     function nextQuoteACB(){
         // movieQuoteGenerator.popQuote()
@@ -111,14 +112,17 @@ function GamePresenter(props) {
     function yearACB(toggle) {
         if(toggle)game.addHints(1)
         setGame({...game})
-
         setShowYear(toggle)
     }
 
-    function submitAnswerACB() {
+    function submitAnswerACB(id) {
+        setAnswerId(id);
+        console.log(id);
+        console.log(correctMovieId);
         setHasSubmittedAnswer(true)
-        setIsAnswerCorrect(checkAnswerCB())
-        if (checkAnswerCB()) {
+        setIsAnswerCorrect(checkAnswerCB(id))
+        console.log(isAnswerCorrect)
+        if (checkAnswerCB(id)) {
             game.addPoints(10)
         }
         // game.resetHintTracker()
@@ -136,6 +140,20 @@ function GamePresenter(props) {
         <>
             {error && (`Houston, we have a problem! Tell the newbies that the ${error}`)}
             {isLoading && <LoadingScreen/>}
+            <div>&nbsp;</div>
+            {hasSubmittedAnswer && isAnswerCorrect &&(
+                <CorrectResultBox
+                    isAnswerCorrect = {isAnswerCorrect}
+                    score={game.getScore()}
+                    hints={game.getHints()}
+                />
+            )}
+            {hasSubmittedAnswer && !isAnswerCorrect &&(
+                <BadResultBox
+                    isAnswerCorrect = {isAnswerCorrect}
+                    movie={movieQuoteGenerator.title}
+                />
+            )}
             {!isLoading && movieOptions && movieQuoteGenerator && (
                 <div>
                 <QuoteBox
@@ -146,6 +164,7 @@ function GamePresenter(props) {
                     onNext={nextQuoteACB}
                     onSelect={selectedAnswerACB}
                     movies={movieOptions}
+                    hasSubmittedAnswer={hasSubmittedAnswer}
                     hasSelected={answerId}
                 />
                 <div>&nbsp;</div>
@@ -159,20 +178,7 @@ function GamePresenter(props) {
                 </div>
                 )
             }
-            <div>&nbsp;</div>
-            {hasSubmittedAnswer && isAnswerCorrect &&(
-                <CorrectResultBox
-                isAnswerCorrect = {isAnswerCorrect}
-                score={game.getScore()}
-                hints={game.getHints()}
-                />
-            )}
-            {hasSubmittedAnswer && !isAnswerCorrect &&(
-                <BadResultBox
-                isAnswerCorrect = {isAnswerCorrect}
-                movie={movieQuoteGenerator.title}
-                />
-            )}
+
         </>
     );
 }

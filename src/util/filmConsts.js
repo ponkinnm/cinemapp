@@ -1,3 +1,5 @@
+import harry from '../img/action.jpg'
+import comedy from '../img/comedy.jpg'
 const USER = {
     "uid": "SG86a2mFHeb1H0GJXzdLXO6ogCi1",
     "email": "vincent.ferrigan@gmail.com",
@@ -29,8 +31,8 @@ const GENRE = ["","action", "adventure", "animation", "biography", "comedy", "cr
     "film-noir", "history", "horror", "music", "musical", "mystery", "news", "reality-tv", "romance",
     "sci-fi", "short", "sport", "talk-show", "thriller", "war", "western",];
 */
-const GENRE = [{name:"action", quote:"Feeling lucky, punk?"},{name:"comedy", quote:"Hey, you wanna hear the most annoying sound in the world?"},
-    {name:"drama", quote:"We'll always have Paris."},{name:"thriller", quote:"A census taker once tried to test me. I ate his liver with a nice chianti."},]
+const GENRE = [{name:"action", quote:"Feeling lucky, punk?", img: harry},{name:"comedy", quote:"Hey, you wanna hear the most annoying sound in the world?", img: comedy},
+    {name:"drama", quote:"We'll always have Paris.", img: harry},{name:"thriller", quote:"A census taker once tried to test me. I ate his liver with a nice chianti.", img: harry},]
 
 const QUOTE3 = {
         "id": "/title/tt0073195/",

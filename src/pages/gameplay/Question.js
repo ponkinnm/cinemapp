@@ -1,12 +1,15 @@
 import React from 'react';
-import {Card,Button, Stack, ListGroup} from 'react-bootstrap';
+import {Button, Stack} from 'react-bootstrap';
 import './quotebox.css';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import * as events from "events";
 
 function Question(props) {
 
     function alternativeCB(movie) {
         const id = movie.id
         const title = movie.title
+
         // const {url:imageUrl} = movie.base.image
 
         return (<div key={id}>
@@ -16,7 +19,7 @@ function Question(props) {
                    name={"answer"}
                    key={id}
                    default={props.hasSelected}
-                   onInput={() => {
+                   onClick={() => {
                        props.onSelect(id)
                    }}
             />
@@ -30,16 +33,16 @@ function Question(props) {
         const id = movie.id
         const title = movie.title
         return(
-            <ListGroup.Item default={props.hasSelected} action key={id} id={id} value={id} onClick={() => {
-                props.onSelect(id)
-            }}>
+            <Button variant="outline-secondary" type="submit" key={id} id={id} value={id}
+                    style={props.hasSubmittedAnswer? {pointerEvents: 'none'}: null}
+                    onClick={() => {props.onSubmit(id)}}>
                 {title}
-            </ListGroup.Item>
+            </Button>
 
         );
     }
     function handleAnswerACB() {
-        props.onSubmit()
+       // props.onSubmit()
     }
     function nextQuoteRequestACB() {
         props.onNext()
@@ -47,13 +50,12 @@ function Question(props) {
 
     //planen är att göra hintsen med overlay från react-bootstrap
     return (<Stack direction="vertical" gap={3}>
-            <ListGroup>
+            <ButtonGroup vertical>
                 {props.movies.map(alternativeListCB)}
-            </ListGroup>
-            <Stack direction="horizontal" gap={2}>
-            <Button className="width:50%" onClick={handleAnswerACB} type={"submit"} disabled={props.hasSelected === ""}>Submit</Button>
-            <Button onClick={nextQuoteRequestACB}>I just need another quote!</Button>
-            </Stack>
+            </ButtonGroup>
+            <Stack >
+                <Button onClick={nextQuoteRequestACB} style={props.hasSubmittedAnswer? {pointerEvents: 'none'}: null}>I just need another quote!</Button>
+                </Stack>
             </Stack>
         );
 }
