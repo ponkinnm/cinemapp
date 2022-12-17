@@ -22,35 +22,33 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(gameSliceAction.showCharacters())
         },
         onYear: () => {dispatch(gameSliceAction.showYear())}
-
     }
-
 }
 function Question(props) {
 
-    function alternativeCB(movie) {
-        const id = movie.id
-        const title = movie.title
-
-        // const {url:imageUrl} = movie.base.image
-
-        return (<div key={id}>
-            <input type="radio"
-                   id={id}
-                   value={id}
-                   name={"answer"}
-                   key={id}
-                   default={props.hasSelected}
-                   onClick={() => {
-                       props.onSelect(id)
-                   }}
-            />
-            {/*<label type="radio">*/}
-            {/*    <img alt={title} className="radioPic" width={250} src={imageUrl} /></label>*/}
-            <label htmlFor={id}>{title}</label>
-            {/*<img src={imageUrl} alt={title} />*/}
-        </div>)
-    }
+    // function alternativeCB(movie) {
+    //     const id = movie.id
+    //     const title = movie.title
+    //
+    //     // const {url:imageUrl} = movie.base.image
+    //
+    //     return (<div key={id}>
+    //         <input type="radio"
+    //                id={id}
+    //                value={id}
+    //                name={"answer"}
+    //                key={id}
+    //                default={props.hasSelected}
+    //                onClick={() => {
+    //                    props.onSelect(id)
+    //                }}
+    //         />
+    //         {/*<label type="radio">*/}
+    //         {/*    <img alt={title} className="radioPic" width={250} src={imageUrl} /></label>*/}
+    //         <label htmlFor={id}>{title}</label>
+    //         {/*<img src={imageUrl} alt={title} />*/}
+    //     </div>)
+    // }
     function alternativeListCB(movie){
         const id = movie.id
         const title = movie.title
