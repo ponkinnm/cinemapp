@@ -17,28 +17,27 @@ import {gameSliceAction} from "../features/game/gameSlice";
 
 function GamePresenter() {
     const [answerId, setAnswerId] = React.useState({})
-    const [hasSubmittedAnswer, setHasSubmittedAnswer] = React.useState(false)
     const [isLoading, setIsLoading] = React.useState(false)
     const [error, setError] = React.useState(null)
+    const dispatch = useDispatch()
+    const isAnswerCorrect = useSelector(state => state.game.correctAnswer)
+    const hasSubmittedAnswer  = useSelector(state => state.game.hasSubmittedAnswer)
 
+    // to replace
     const [game, setGame] = React.useState(null)
 
-    const [showCharacter, setShowCharacter] = React.useState(false)
-    const [showYear, setShowYear] = React.useState(false)
-    const [isAnswerCorrect, setIsAnswerCorrect] = React.useState(false)
-
-    const dispatch = useDispatch()
-    const correctMovieId = useSelector(state => state.game.correctMovieId)
+    // are these necessary ?
     const movieOptions = useSelector(state => state.game.movies)
+
 
     const gameSetUp = React.useCallback(async () => {
 
         setIsLoading(true)
         setError(null)
         setAnswerId("")
-        setHasSubmittedAnswer(false)
+        dispatch(gameSliceAction.resetGame())
 
-        // get player id and stuff from Firebase?
+        // To replace
         const firstGame = createGame()
 
         try {
@@ -68,22 +67,8 @@ function GamePresenter() {
     }, [gameSetUp])
 
 
-    function checkAnswerCB(id) {return id === correctMovieId} // or just use movieQuoteGenerator.getId() instead of correctMovieId
     function selectedAnswerACB(id) {setAnswerId(id)}
-    function submitAnswerACB(id) {
-        setAnswerId(id);
-        console.log(id);
-        console.log(correctMovieId);
-        setHasSubmittedAnswer(true)
-        setIsAnswerCorrect(checkAnswerCB(id))
-        console.log(isAnswerCorrect)
-        if (checkAnswerCB(id)) {
-            game.addPoints(10)
-        }
-        setHasSubmittedAnswer(true)
-        setIsAnswerCorrect(checkAnswerCB())
-        dispatch(gameSliceAction.submitAnswer(answerId))
-        // game.resetHintTracker()
+    function nextSetACB(id) {
         setGame({...game})
         newGame()
     }
@@ -91,25 +76,21 @@ function GamePresenter() {
         setTimeout(gameSetUp, delay)
     }
 
-    // movieToQuote = {{lines, characters} = movieOptions.find((movie) => movie.id === correctMovieId) }
-
-
     return (
         <>
             {error && (`Houston, we have a problem! Tell the newbies that the ${error}`)}
             {isLoading && <LoadingScreen/>}
             <div>&nbsp;</div>
-            {hasSubmittedAnswer && isAnswerCorrect && <CorrectResultBox/>}
-            {hasSubmittedAnswer && !isAnswerCorrect && <BadResultBox/>}
-            {!isLoading && movieOptions && (
+            {hasSubmittedAnswer
+                ? isAnswerCorrect
+                    ? <CorrectResultBox/>
+                    : <BadResultBox/>
+                : null }
+            {!isLoading && (
                 <div>
-                <QuoteBox
-                    movieToQuote = {movieOptions.find(movie => movie.id === correctMovieId)}
-                />
+                <QuoteBox/>
                 <Question
-                    onSubmit={submitAnswerACB}
-                    onSelect={selectedAnswerACB}
-                    hasSelected={answerId}
+                    onNextSet={nextSetACB}
                     hasSubmittedAnswer={hasSubmittedAnswer}
                 />
                 <div>&nbsp;</div>
