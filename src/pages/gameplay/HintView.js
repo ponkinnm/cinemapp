@@ -1,11 +1,31 @@
-import React, {useRef, useState} from 'react';
+import React, {useRef} from 'react';
 import {ListGroup, Overlay, Button, Stack} from 'react-bootstrap';
+import {connect} from "react-redux";
+import {gameSliceAction} from "../../features/game/gameSlice";
 
-export default function HintView(props){
+const mapStateToProps = (state) => {
+    return {
+        characters:state.game.characters,
+        year:state.game.year,
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onNext: () => {
+            dispatch(gameSliceAction.nextQuote())
+        },
+        onCharacter:() => {
+            dispatch(gameSliceAction.showCharacters())
+        },
+        onYear: () => {dispatch(gameSliceAction.showYear())}
+    }
+}
+function HintView(props){
     const targetYear = useRef(null);
     const targetCharacter = useRef(null);
     function hintYearACB(){
-        props.setHintYear(!props.isHintYear);
+        // props.setHintYear(!props.isHintYear);
+        props.onYear();
     }
     /*function characterRequestACB() {props.onCharacter()}
     function yearRequestACB() {props.onYear()}*/
@@ -19,14 +39,14 @@ export default function HintView(props){
         </Button>
         <Button
             variant="secondary"
-            onClick={()=>{props.setHintCharacter(!props.isHintCharacter)}}
+            onClick={()=>{props.onCharacter()}}
             ref={targetCharacter}>
             Hint for characters
         </Button>
     </Stack>
         <Overlay
             target={targetYear.current}
-            show={props.isHintYear}
+            show={props.year}
             placement="top">
             <div style={{
               position: 'absolute',
@@ -35,12 +55,12 @@ export default function HintView(props){
               color: 'white',
               borderRadius: 3,
             }}>
-            {props.movieToQuote.year}</div>
+            {props.year}</div>
         </Overlay>
 
         <Overlay
             target={targetCharacter.current}
-            show={props.isHintCharacter}
+            show={props.characters}
             placement="top">
             <div style={{
               position: 'absolute',
@@ -48,13 +68,12 @@ export default function HintView(props){
               padding: '2px 10px',
               color: 'white',
               borderRadius: 3,
-            }}>{props.movieToQuote.characters
-                .reduce((text, value, i, array) =>
-                    text + (i < array.length - 1 ? ', ' : ' and ') + value)}
+            }}>{props.characters}
             </div>
         </Overlay>
     </div>
 }
+export default connect(mapStateToProps, mapDispatchToProps)(HintView)
 /*<Button onClick={characterRequestACB} disabled={props.hasHintedCharacter}>Who said what?</Button>
 <Button onClick={yearRequestACB} disabled={props.hasHintedYear}>Just give me the Year!</Button>
 <Button variant="secondary" onClick={props.setShowCharacter}>Hint for character</Button>
