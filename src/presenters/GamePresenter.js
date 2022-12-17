@@ -113,14 +113,7 @@ function GamePresenter() {
                     hasSubmittedAnswer={hasSubmittedAnswer}
                 />
                 <div>&nbsp;</div>
-                    {/*koppla mot redux*/}
-                    {/*<HintView*/}
-                    {/*    movieToQuote = {movieQuoteGenerator}*/}
-                    {/*    isHintCharacter = {showCharacter}*/}
-                    {/*    isHintYear = {showYear}*/}
-                    {/*    setHintCharacter={characterACB}*/}
-                    {/*    setHintYear={yearACB}*/}
-                    {/*/>*/}
+                    <HintView/>
                 </div>
                 )
             }
@@ -129,3 +122,9 @@ function GamePresenter() {
 }
 
 export default GamePresenter;
+// <HintView
+//     movieToQuote = {movieQuoteGenerator}
+//     isHintCharacter = {showCharacter}
+//     isHintYear = {showYear}
+//     setHintCharacter={characterACB}
+//     setHintYear={yearACB}
