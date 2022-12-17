@@ -2,6 +2,8 @@ import React from 'react';
 import {ListGroup, Overlay, Button} from 'react-bootstrap';
 import {connect} from "react-redux";
 
+// TODO What should go where and how? HintView or QuoteBox?
+
 const mapStateToProps = (state) => {
     return {
         characters:state.game.characters,
@@ -9,11 +11,6 @@ const mapStateToProps = (state) => {
         year:state.game.year,
     }
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        }
-
-    }
 function QuoteBox(props) {
     function renderQuote(item, i){
         return <ListGroup.Item variant="dark" key={i}>{item}</ListGroup.Item>
@@ -39,7 +36,6 @@ function QuoteBox(props) {
     );
 }
 
-// TODO Erätt dessa delar med HintView efter avstämning
     // ? `${props.movieToQuote.getListOfCharacters().join(', ').replace(/, ([^,]*)$/, ' and $1')}`
     /*{(props.isHintCharacter || props.isHintYear) ? (<b>Hint:</b>) : null}
     <p>
