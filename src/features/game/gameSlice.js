@@ -86,6 +86,7 @@ const gameSlice = createSlice({
         },
         submitAnswer: (state,action) => {
             state.hasSubmittedAnswer = true
+            state.lines = []
             state.set++;
 
             if (state.correctMovieId === action.payload) {
