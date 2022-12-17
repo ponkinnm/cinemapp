@@ -17,5 +17,5 @@ export default function QuizPresenter(){
     //return {!genre && <GetTitlesFromGenre chooseGenre={(genre) => {setGenre(genre)}}}
     return (<>
         {!genre && <GenrePickerView setGenre={handleGenreChange} genres={GENRE}/>}
-        {genre && <GamePresenter genre={genre}/>}</>);
+        {genre && <GamePresenter/>}</>);
 }
