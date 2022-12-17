@@ -15630,6 +15630,6 @@ const QUOTE4 = {
             }
         ]
     }
-const TITLEIDS = ['tt0073195', 'tt9114286', 'tt0068646',]
+const TITLEIDS = ['/title/tt0944947/', '/title/tt0068646/', '/title/tt0073195/',]
 
 export {QUOTE, QUOTE2, QUOTE3, QUOTE4, GENRE, USER, TITLEIDS};
