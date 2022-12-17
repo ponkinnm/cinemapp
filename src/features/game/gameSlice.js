@@ -8,8 +8,10 @@ const initialState = {
 
     set: 0,
     score: 0,
+    totalScore:0,
     hints: 0, // is it necessary? TODO: reassess our score-logic
     correctAnswer: false,
+    hasSubmittedAnswer :false,
 
     title: "",
     lines: [],
@@ -25,11 +27,6 @@ const gameSlice = createSlice({
     name: 'game',
     initialState,
     reducers: {
-        // setPlayer: (state, action) => {
-        //     state.userId = action.payload.uid
-        //     state.displayName = action.payload.displayName
-        //     state.email = action.payload.email
-        // },
         addMovieIds: (state, action) => {
             action.payload.forEach((movieId) => {
                 if (!state.movieIds.some((id) => id === movieId)) {
@@ -37,7 +34,6 @@ const gameSlice = createSlice({
                 }
             })
         },
-        addPoints:(state) => {debugger},
         replaceListOfMovieIds: (state, action) => {
             state.movieIds = [...action.payload]
         },
@@ -57,6 +53,20 @@ const gameSlice = createSlice({
             const id = action.payload
             state.movies = state.movies.filter((item) => item.id !== id)
         },
+        resetGame: (state) => {
+            state.hints = 0
+            state.score = 0
+            state.correctAnswer = false
+            state.hasSubmittedAnswer = false
+            state.title = ""
+            state.lines = []
+            state.characters = ""
+            state.year = ""
+
+            state.movies = []
+            state.correctMovieId = ""
+
+        },
         setCorrectMovieId : (state, action) => {
             state.correctMovieId = action.payload
             state.title = state.movies.find(movie => movie.id === action.payload).title
@@ -75,16 +85,18 @@ const gameSlice = createSlice({
             state.hints++
         },
         submitAnswer: (state,action) => {
+            state.hasSubmittedAnswer = true
+            state.set++;
+
             if (state.correctMovieId === action.payload) {
                 state.score += 10
+                state.score -= state.hints
+                state.totalScore += state.score
                 state.correctAnswer = true
             } else {
                 state.correctAnswer = false
+                // state.score -= state.hints //???
             }
-            state.characters = ""
-            state.year = ""
-            state.set++;
-
         },
         nextQuote: (state) => {
             // TODO share these CBs with createMovieQuoteGenerator or replace them?
