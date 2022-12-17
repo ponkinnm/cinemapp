@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
+import Alert from 'react-bootstrap/Alert';
 
 const mapStateToBadResultBoxProps = (state) => {
     return {
@@ -8,10 +9,10 @@ const mapStateToBadResultBoxProps = (state) => {
 }
 function BadResultBox(props) {
     return (
-        <div>
+        <Alert variant={'danger'}>
             You Lose! Good Day Sir!
             The right answer was {props.movie}.
-        </div>
+        </Alert>
     );
 }
 

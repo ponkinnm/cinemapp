@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from "react-redux";
+import Alert from 'react-bootstrap/Alert';
 
 const mapStateToProps = (state) => {
     return {
@@ -9,9 +10,9 @@ const mapStateToProps = (state) => {
 }
 function CorrectResultBox(props) {
     return (
-        <div>
+        <Alert variant ={'success'}>
             Congratulations! You scored {props.score} points with {props.hints} hints
-        </div>
+        </Alert>
     );
 }
 
