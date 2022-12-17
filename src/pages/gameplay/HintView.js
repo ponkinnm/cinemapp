@@ -24,8 +24,7 @@ function HintView(props){
     const targetYear = useRef(null);
     const targetCharacter = useRef(null);
     function hintYearACB(){
-        // props.setHintYear(!props.isHintYear);
-        props.onYear();
+        props.year || props.onYear();
     }
     /*function characterRequestACB() {props.onCharacter()}
     function yearRequestACB() {props.onYear()}*/
@@ -39,7 +38,7 @@ function HintView(props){
         </Button>
         <Button
             variant="secondary"
-            onClick={()=>{props.onCharacter()}}
+            onClick={()=>{props.characters || props.onCharacter()}}
             ref={targetCharacter}>
             Hint for characters
         </Button>

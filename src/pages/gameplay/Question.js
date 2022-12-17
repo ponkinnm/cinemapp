@@ -11,6 +11,7 @@ const mapStateToProps = (state) => {
         hasHintedCharacter:state.game.characters,
         hasHintedYear:state.game.year,
         movies:state.game.movies,
+        hasSubmittedAnswer:state.game.hasSubmittedAnswer,
     }
 }
 const mapDispatchToProps = (dispatch) => {
@@ -18,55 +19,27 @@ const mapDispatchToProps = (dispatch) => {
         onNext: () => {
             dispatch(gameSliceAction.nextQuote())
         },
-        onCharacter:() => {
-            dispatch(gameSliceAction.showCharacters())
-        },
-        onYear: () => {dispatch(gameSliceAction.showYear())}
+        onSubmit: (id) => {dispatch(gameSliceAction.submitAnswer(id))},
     }
 }
 function Question(props) {
 
-    // function alternativeCB(movie) {
-    //     const id = movie.id
-    //     const title = movie.title
-    //
-    //     // const {url:imageUrl} = movie.base.image
-    //
-    //     return (<div key={id}>
-    //         <input type="radio"
-    //                id={id}
-    //                value={id}
-    //                name={"answer"}
-    //                key={id}
-    //                default={props.hasSelected}
-    //                onClick={() => {
-    //                    props.onSelect(id)
-    //                }}
-    //         />
-    //         {/*<label type="radio">*/}
-    //         {/*    <img alt={title} className="radioPic" width={250} src={imageUrl} /></label>*/}
-    //         <label htmlFor={id}>{title}</label>
-    //         {/*<img src={imageUrl} alt={title} />*/}
-    //     </div>)
-    // }
     function alternativeListCB(movie){
         const id = movie.id
         const title = movie.title
         return(
             <Button variant="outline-secondary" type="submit" key={id} id={id} value={id}
                     style={props.hasSubmittedAnswer? {pointerEvents: 'none'}: null}
-                    onClick={() => {props.onSubmit(id)}}>
+                    onClick={() => {
+                        props.onSubmit(id)
+                        props.onNextSet()
+                    }}>
                 {title}
             </Button>
 
         );
     }
-    function handleAnswerACB() {
-       // props.onSubmit()
-    }
-    function nextQuoteRequestACB() {
-        props.onNext()
-    }
+    function nextQuoteRequestACB() {props.onNext()}
 
     //planen är att göra hintsen med overlay från react-bootstrap
     return (<Stack direction="vertical" gap={3}>
