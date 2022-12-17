@@ -3,7 +3,29 @@ import {Button, Stack} from 'react-bootstrap';
 import './quotebox.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import * as events from "events";
+import {connect} from "react-redux";
+import {gameSliceAction} from "../../features/game/gameSlice";
 
+const mapStateToProps = (state) => {
+    return {
+        hasHintedCharacter:state.game.characters,
+        hasHintedYear:state.game.year,
+        movies:state.game.movies,
+    }
+}
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onNext: () => {
+            dispatch(gameSliceAction.nextQuote())
+        },
+        onCharacter:() => {
+            dispatch(gameSliceAction.showCharacters())
+        },
+        onYear: () => {dispatch(gameSliceAction.showYear())}
+
+    }
+
+}
 function Question(props) {
 
     function alternativeCB(movie) {
@@ -59,4 +81,5 @@ function Question(props) {
             </Stack>
         );
 }
-export default React.memo(Question);
+export default connect(mapStateToProps, mapDispatchToProps)(Question)
+// export default React.memo(Question);

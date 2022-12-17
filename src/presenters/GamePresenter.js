@@ -110,6 +110,7 @@ function GamePresenter() {
                     onSubmit={submitAnswerACB}
                     onSelect={selectedAnswerACB}
                     hasSelected={answerId}
+                    hasSubmittedAnswer={hasSubmittedAnswer}
                 />
                 <div>&nbsp;</div>
                     {/*koppla mot redux*/}
