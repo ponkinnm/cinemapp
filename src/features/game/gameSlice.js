@@ -9,6 +9,12 @@ const initialState = {
     set: 0,
     score: 0,
     hints: 0, // is it necessary? TODO: reassess our score-logic
+    correctAnswer: false,
+
+    title: "",
+    lines: [],
+    characters:"",
+    year: "",
 
     movieIds: [],
     movies: [],
@@ -24,13 +30,6 @@ const gameSlice = createSlice({
         //     state.displayName = action.payload.displayName
         //     state.email = action.payload.email
         // },
-        addPoints: (state, action) => {
-            state.set++;
-            state.score++; // TODO set logic later
-        },
-        addHints: (state) => {
-            state.hints++
-        },
         addMovieIds: (state, action) => {
             action.payload.forEach((movieId) => {
                 if (!state.movieIds.some((id) => id === movieId)) {
@@ -38,8 +37,9 @@ const gameSlice = createSlice({
                 }
             })
         },
+        addPoints:(state) => {debugger},
         replaceListOfMovieIds: (state, action) => {
-            state.movieIds= [...action.payload]
+            state.movieIds = [...action.payload]
         },
         removeMovieIds: (state, action) => {
             action.payload.forEach((movieId) => {
@@ -50,24 +50,46 @@ const gameSlice = createSlice({
             // check for duplicates? add several movies at once?
             state.movies = [...state.movies, action.payload]
         },
+        replaceMovies: (state, action) => {
+            state.movies = [...action.payload]
+        },
         removeMovie: (state, action) => {
             const id = action.payload
             state.movies = state.movies.filter((item) => item.id !== id)
-
-            // remove several movies at once?
-            // action.payload.forEach((id) => {
-            //     state.movies = state.movies.filter((movie) => movie.id !== id)
-            // })
         },
         setCorrectMovieId : (state, action) => {
             state.correctMovieId = action.payload
+            state.title = state.movies.find(movie => movie.id === action.payload).title
+            state.lines = state.movies.find(movie => movie.id === action.payload).lines
+        },
+        showCharacters: (state) => {
+            state.characters = state.movies.find(movie => movie.id === state.correctMovieId)
+                .characters
+                .reduce((text, value, i, array) =>
+                        text + (i < array.length - 1 ? ', ' : ' and ') + value)
+            state.hints++
+            // ? .join(', ').replace(/, ([^,]*)$/, ' and $1')}`
+        },
+        showYear: (state) => {
+            state.year = state.movies.find(movie => movie.id === state.correctMovieId).year
+            state.hints++
+        },
+        submitAnswer: (state,action) => {
+            if (state.correctMovieId === action.payload) {
+                state.score += 10
+                state.correctAnswer = true
+            } else {
+                state.correctAnswer = false
+            }
+            state.characters = ""
+            state.year = ""
+            state.set++;
+
         },
         nextQuote: (state) => {
             // TODO share these CBs with createMovieQuoteGenerator or replace them?
             // i.e. if alt 2 works fine, then createMovieQuoteGenerator can be replaced with a callback
             // that transforms fetched results to an object that is compatible for adding to state.movies
-
-            // TODO Open issue = add/assign quotesLeft to object?
 
             const characterArrayReducerCB = (accumulator, object) => {
                 const isInArrayCB = character => character === object.characters[0].character
@@ -84,23 +106,15 @@ const gameSlice = createSlice({
             // const id = action.payload
             const movie = state.movies.find((item) => item.id === id)
 
-            // alt. 1
-            if (movie) {
-                // state.movies = state.movies.filter((item) => item.id !== id)
-                state.movies = [...state.movies.filter((item) => item.id !== id),
-                    createMovieQuoteGenerator(movie)]
-            }
-            // } else {
-            //     throw new Error ("Oh no!")
-            // }
-
-            // alt. 2
             if (movie) {
                 const [quote, ...quotes] = movie.quotes
                 const lines = quote.lines.reduce(linesArrayReducerCB, [])
                 const characters = quote.lines.reduce(characterArrayReducerCB, [])
                 Object.assign(movie, {quotes, lines, characters})
             }
+            state.lines = movie.lines
+            state.characters = ""
+            state.hints++
         }
     },
 })
