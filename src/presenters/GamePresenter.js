@@ -13,8 +13,10 @@ import LoadingScreen from '../views/LoadingScreen'
 import HintView from "../pages/gameplay/HintView"
 import {useDispatch, useSelector} from "react-redux";
 import {gameSliceAction} from "../features/game/gameSlice";
+import {fetchAndAddMoviesToStore} from "../features/game/gameApiActions";
 
 function GamePresenter() {
+    const NUMBEROFMOVIES = 3
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
 
@@ -22,6 +24,7 @@ function GamePresenter() {
 
     const isAnswerCorrect = useSelector(state => state.game.correctAnswer)
     const hasSubmittedAnswer  = useSelector(state => state.game.hasSubmittedAnswer)
+    const movieIds = useSelector(state => state.game.movieIds)
 
     const newGame = (delay = 5000) => {setTimeout(gameSetUp, delay)}
 
@@ -30,17 +33,21 @@ function GamePresenter() {
         setError(null)
         dispatch(gameSliceAction.resetGame())
         try {
-            const movieData = [QUOTE, QUOTE2, QUOTE3].map(createMovieQuoteGenerator)
-            dispatch(gameSliceAction.replaceMovies(movieData))
+            // // TEST
+            // const movieData = [QUOTE, QUOTE2, QUOTE3].map(createMovieQuoteGenerator)
+            // dispatch(gameSliceAction.replaceMovies(movieData))
+            // // Randomly pick the movie to quote
+            // const quoteMovie = movieData[Math.floor(Math.random() * movieData.length)]
+            // dispatch(gameSliceAction.setCorrectMovieId(quoteMovie.id))
 
-            // Randomly pick the movie to quote
-            const quoteMovie = movieData[Math.floor(Math.random() * movieData.length)]
+            // The real deal
 
-            dispatch(gameSliceAction.setCorrectMovieId(quoteMovie.id))
+            dispatch(fetchAndAddMoviesToStore(movieIds, NUMBEROFMOVIES))
+
         } catch (err){
             console.error(err)
             setError(err.message)
-            newGame(200);
+            // newGame(200);
         }
         setIsLoading(false)
     }, [])
@@ -52,6 +59,8 @@ function GamePresenter() {
         gameSetUp();
         return () => {console.log("Effect clean up game set up")}
     }, [gameSetUp])
+
+
 
     function nextSetACB() {
         newGame()

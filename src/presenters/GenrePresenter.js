@@ -4,15 +4,16 @@ import React, {useState, useEffect} from 'react'
 import {GENRE} from "../util/filmConsts.js";
 import {useGetMovieIdsByGenreQuery} from "../features/api/apiSlice";
 import {skipToken} from "@reduxjs/toolkit/query";
-import {gameSliceAction, replaceMovieIds, replaceTitleIdList} from "../features/game/gameSlice";
+import {gameSliceAction} from "../features/game/gameSlice";
 import {useDispatch} from "react-redux";
 import LoadingScreen from "../views/LoadingScreen";
-import {fetchTitleIdsByGenre} from "../features/game/gameApiActions";
+// import {fetchTitleIdsByGenre} from "../features/game/gameApiActions";
 import GamePresenter from "./GamePresenter";
 
 export default function GenrePresenter() {
     const LIMIT = 100
     const [myGenre, setMyGenre] = useState(skipToken)
+    const dispatch = useDispatch()
 
     // alt 1
     function handleGenreChange(event) {
@@ -23,6 +24,7 @@ export default function GenrePresenter() {
     }
 
     const {
+        data,
         isLoading,
         isFetching,
         isSuccess,
@@ -31,12 +33,14 @@ export default function GenrePresenter() {
     } = useGetMovieIdsByGenreQuery(myGenre)
 
     useEffect(() => {
-            console.log("Effect running genre set up ")
-            return () => {
-                console.log("Effect clean up genre set up")
-            }
+        console.log("Effect running genre set up ")
+        return () => {console.log("Effect clean up genre set up")}
         }, []
     )
+    if (data) {
+        // TODO: fixed the problem but this is not optimal. It gets called twice
+        dispatch(gameSliceAction.replaceListOfMovieIds(data))
+    }
 
     // TODO: create an error component?  Like LoadingScreen...
     return (
@@ -45,7 +49,7 @@ export default function GenrePresenter() {
                 ? <div>{`Houston, we have a problem! Tell the newbies that the ${error.message.toString()}`}</div>
                 : (isLoading || isFetching)
                     ? <LoadingScreen/>
-                    : isSuccess
+                    : data && isSuccess
                         ? <GamePresenter/>
                         : <GenrePickerView
                             setGenre={handleGenreChange}
