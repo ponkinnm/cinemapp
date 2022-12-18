@@ -21,16 +21,17 @@ export const apiSlice = createApi({
                     headers
                 }
             ),
-            async onQueryStarted({limit, genre}, {dispatch, queryFulfilled}) {
-                try {
-                    const { data } = await queryFulfilled
-                    // onSuccess side effect
-                    dispatch(gameSliceAction.replaceListOfMovieIds(data))
-                } catch (err) {
-                    // onError side-effect
-                    console.error(err)
-                }
-            }
+            // async onQueryStarted({limit, genre}, {dispatch, queryFulfilled}) {
+            //     try {
+            //         const { data } = await queryFulfilled
+            //         // onSuccess side effect
+            //         debugger
+            //         dispatch(gameSliceAction.replaceListOfMovieIds(data))
+            //     } catch (err) {
+            //         // onError side-effect
+            //         console.error(err)
+            //     }
+            // }
         }),
         getMovie: builder.query({
             query: (movieId) => ({
