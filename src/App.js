@@ -2,8 +2,8 @@ import './App.css';
 import Welcome from "./presenters/Welcome";
 import Layout from "./pages/Layout";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import QuizPresenter from "./presenters/QuizPresenter"
-// import GenrePresenter from "./presenters/GenrePresenter";
+// import QuizPresenter from "./presenters/QuizPresenter"
+import GenrePresenter from "./presenters/GenrePresenter";
 import NoPage from "./pages/NoPage";
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Layout />}>
                   <Route index element={<Welcome />} />
-                  <Route path="game" element={<QuizPresenter />}/>
+                  <Route path="game" element={<GenrePresenter/>}/>
                   <Route path="*" element={<NoPage />} />
               </Route>
           </Routes>
