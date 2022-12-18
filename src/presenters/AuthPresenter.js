@@ -13,7 +13,6 @@ function AuthPresenter() {
     const [hasAccount, setHasAccount] = useState(false);
     const [error, setError] = useState("");
     const dispatch = useDispatch();
-
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -22,20 +21,23 @@ function AuthPresenter() {
 
     async function checkIfUsernameAlreadyTaken(displayName, email) {
         const dbRef = (ref(database, 'users'));
+        let checker = 0;
         get(dbRef)
             .then(response => {
                 if (response.hasChildren()) {
+                    checker = Object.keys(response.val()).length - 1;
                     response.forEach((child) => {
                         const user = child.val()
                         console.log(user);
                         if (user.username === displayName) {
                             //ta bort skapad authentication
+                            setError("Username already taken")
+                            setHasAccount(null);
                             return deleteCurrentUser();
-
-                        } else {
+                        } else if (!checker) {
                             return writeUserToDatabase(displayName, email)
-
                         }
+                        checker = checker - 1;
                     })
                 }
                 //checker
@@ -61,7 +63,6 @@ function AuthPresenter() {
             const user = await signUp(email, password, displayName);
             await checkIfUsernameAlreadyTaken(displayName, email)
             dispatch(setUser(user))
-            //navigate("/game");
 
         } catch (err) {
             if (err.message.includes("email")) {
