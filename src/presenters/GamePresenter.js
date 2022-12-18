@@ -4,8 +4,6 @@
  */
 import React, {useState} from 'react';
 import Question from "../pages/gameplay/Question";
-import {createMovieQuoteGenerator, createMovieObjFromApiResult} from "../util/utilities";
-import {QUOTE, QUOTE2, QUOTE3} from "../util/filmConsts";
 import QuoteBox from "../pages/gameplay/QuoteBox";
 import CorrectResultBox from "../pages/gameplay/CorrectResultBox";
 import BadResultBox from "../pages/gameplay/BadResultBox";
@@ -14,6 +12,10 @@ import HintView from "../pages/gameplay/HintView"
 import {useDispatch, useSelector} from "react-redux";
 import {gameSliceAction} from "../features/game/gameSlice";
 import {fetchAndAddMoviesToStore} from "../features/game/gameApiActions";
+
+// only when testing
+// import {createMovieQuoteGenerator, createMovieObjFromApiResult} from "../util/utilities";
+// import {QUOTE, QUOTE2, QUOTE3} from "../util/filmConsts";
 
 function GamePresenter() {
     const NUMBEROFMOVIES = 3
@@ -33,7 +35,7 @@ function GamePresenter() {
         setError(null)
         dispatch(gameSliceAction.resetGame())
         try {
-            // // TEST
+            // // TESTING
             // const movieData = [QUOTE, QUOTE2, QUOTE3].map(createMovieQuoteGenerator)
             // dispatch(gameSliceAction.replaceMovies(movieData))
             // // Randomly pick the movie to quote
@@ -41,8 +43,7 @@ function GamePresenter() {
             // dispatch(gameSliceAction.setCorrectMovieId(quoteMovie.id))
 
             // The real deal
-
-            dispatch(fetchAndAddMoviesToStore(movieIds, NUMBEROFMOVIES))
+            await dispatch(fetchAndAddMoviesToStore(movieIds, NUMBEROFMOVIES))
 
         } catch (err){
             console.error(err)
