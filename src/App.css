@@ -11,6 +11,19 @@ body {
     margin-bottom: 50px;
 }
 
+.page-welcome {
+    width: 50vw;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+
+
+
 .menu {
     display: flex;
     gap: 8px;
@@ -19,6 +32,7 @@ body {
     padding: 0;
     margin: 0;
     font-weight: 500;
+    align-items: center;
 }
 
 .menu__item {
@@ -31,7 +45,7 @@ a, a:visited {
     transition: color .2s;
 }
 
-a:hover {
+a:hover, .navigation a:hover {
     color: #666;
 }
 
@@ -42,6 +56,10 @@ a.active {
 
 a.active:hover {
     color: #222;
+}
+
+.logo:hover, .logo:active, .logo:visited {
+    color: #000;
 }
 
 img {
@@ -75,4 +93,24 @@ img {
 }
 .rounded-corners{
     border-radius:50px;
+}
+
+
+@media screen and (max-width: 440px) {
+
+    .navigation {
+        margin-bottom: 32px;
+    }
+
+    .page-welcome {
+        width: 90vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        font-size: 16px;
+    }
 }

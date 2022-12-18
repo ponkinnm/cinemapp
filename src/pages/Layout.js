@@ -1,4 +1,4 @@
-import {Outlet, NavLink} from "react-router-dom";
+import {Outlet, NavLink, Link} from "react-router-dom";
 import SignOutButton from "../SignOutButton";
 import {useSelector} from "react-redux";
 import {selectUser} from "../features/auth/authSlice";
@@ -10,11 +10,11 @@ function Layout() {
 
         <>
             <nav className={"navigation"}>
-                <span className="font-accent">CinemApp</span>
-                <ul className={"menu"}>
-                    <li className={"menu__item"}>
-                        <NavLink to="/">Home</NavLink>
-                    </li>
+                <Link className={"logo"} to="/">
+                    <span className="font-accent">CinemApp</span>
+                </Link>
+
+                <ul className="menu">
                     {user && <>
                         <li className={"menu__item"}>
                             <NavLink
