@@ -1,6 +1,7 @@
 import {gameSliceAction} from "./gameSlice";
 import {BASE_URL, API_KEY} from "../../apiConfig";
-import {createMovieObjFromApiResult} from "../../util/utilities";
+import {createMovieObjFromApiResult, createMovieQuoteGenerator} from "../../util/utilities";
+import {useSelector} from "react-redux";
 
 const options = {
     method: 'GET',
@@ -23,6 +24,7 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
 
     const transformQuoteQueryResultACB = (obj) => {
         // TODO: copy all from createMovieObjFromApiResult exempt for lines and characters
+        // return createMovieQuoteGenerator(obj)
         return createMovieObjFromApiResult(obj)
     }
 
@@ -32,8 +34,8 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
 
         const randomTitleId = getRandomTitleId()
 
-        if (!successfulIds.some(id => randomTitleId === id)) {pickUniqueRandomMovieId()}
-        if (!failedIds.some(id => randomTitleId === id)) {pickUniqueRandomMovieId()}
+        if (successfulIds.some(id => randomTitleId === id)) {pickUniqueRandomMovieId()}
+        if (failedIds.some(id => randomTitleId === id)) {pickUniqueRandomMovieId()}
 
         return randomTitleId
     }
@@ -46,7 +48,7 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
             const response = await fetch(`https://${BASE_URL}${endpoint}${titleId}`, options)
             if (!response.ok) {
                 failedIds.push(id)
-                dispatch(gameSliceAction.removeMovieIds(id))
+                dispatch(gameSliceAction.removeMovieId(id))
                 throw new Error(`API error! status: ${response.status}`)
             }
 
@@ -56,25 +58,21 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
             // only proceed once the second promise is resolved
             return transformQuoteQueryResultACB(data);
         }
-        while (successfulIds.length <= numberOfMovies) {
+        while (successfulIds.length < numberOfMovies) {
             try {
                 const movieId = pickUniqueRandomMovieId()
                 const movieData = await fetchData(movieId)
-
                 dispatch(gameSliceAction.addMovie(movieData))
+                dispatch(gameSliceAction.removeMovieId(movieId))
                 successfulIds.push(movieId)
-                dispatch(gameSliceAction.removeMovieIds(movieId))
-
                 if (successfulIds.length === numberOfMovies) {
-                    dispatch(
-                        gameSliceAction.setCorrectMovieId(
-                            successfulIds[Math.floor(Math.random()*successfulIds.length)])
-                    )
+                    const correctMovieId = successfulIds[Math.floor(Math.random()*successfulIds.length)]
+                    dispatch(gameSliceAction.setCorrectMovieId(correctMovieId))
                     dispatch(gameSliceAction.nextQuote())
                 }
-
             } catch (error) {
                 console.log(error.message.toString())
+                debugger
                 continue
             }
         }
@@ -82,29 +80,29 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
     }
 }
 
-export const fetchTitleIdsByGenre = (chosenGenre = 'action', noOfTitles = 100) => {
-   return async (dispatch) => {
-       const endpoint = '/title/v2/get-popular-movies-by-genre?'
-       const fetchData = async () => {
-           const searchParams = {limit: noOfTitles, genre: chosenGenre,}
-           // await response of the fetch call
-           const response = await fetch(`https://${BASE_URL}${endpoint}${new URLSearchParams(searchParams)}`, options)
-           if (!response.ok) {throw new Error(`API error! status: ${response.status}`)}
-
-           // only proceed once the first promise is resolved
-           const data = await response.json()
-
-           // only proceed once the second promise is resolved
-           return data
-       }
-       try {
-           const movieData = await fetchData()
-           dispatch(gameSliceAction.replaceListOfMovieIds(movieData))
-       } catch (error) {
-           // Do something
-       }
-   }
-}
+// export const fetchTitleIdsByGenre = (chosenGenre = 'action', noOfTitles = 100) => {
+//    return async (dispatch) => {
+//        const endpoint = '/title/v2/get-popular-movies-by-genre?'
+//        const fetchData = async () => {
+//            const searchParams = {limit: noOfTitles, genre: chosenGenre,}
+//            // await response of the fetch call
+//            const response = await fetch(`https://${BASE_URL}${endpoint}${new URLSearchParams(searchParams)}`, options)
+//            if (!response.ok) {throw new Error(`API error! status: ${response.status}`)}
+//
+//            // only proceed once the first promise is resolved
+//            const data = await response.json()
+//
+//            // only proceed once the second promise is resolved
+//            return data
+//        }
+//        try {
+//            const movieData = await fetchData()
+//            dispatch(gameSliceAction.replaceListOfMovieIds(movieData))
+//        } catch (error) {
+//            // Do something
+//        }
+//    }
+// }
 // const mapStateToProps = (state) => {
 //     return {
 //         lines: state.game.lines,
