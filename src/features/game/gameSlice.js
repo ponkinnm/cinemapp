@@ -22,20 +22,12 @@ const gameSlice = createSlice({
     name: 'game',
     initialState,
     reducers: {
-        addMovieIds: (state, action) => {
-            action.payload.forEach((movieId) => {
-                if (!state.movieIds.some((id) => id === movieId)) {
-                    state.movieIds= [...state.movieIds, movieId]
-                }
-            })
-        },
         replaceListOfMovieIds: (state, action) => {
+            // TODO: gets called twice during first game set. Why?
             state.movieIds = [...action.payload]
         },
-        removeMovieIds: (state, action) => {
-            action.payload.forEach((movieId) => {
-                state.movieIds= state.movieIds.filter((itemId) => itemId !== movieId);
-            })
+        removeMovieId: (state, action) => {
+            state.movieIds = state.movieIds.filter(itemId => itemId !== action.payload)
         },
         addMovie: (state, action) => {
             // check for duplicates? add several movies at once?
@@ -49,6 +41,7 @@ const gameSlice = createSlice({
             state.movies = state.movies.filter((item) => item.id !== id)
         },
         resetGame: (state) => {
+            // state.movies = state.movies.filter((item) => item.id !== state.correctMovieId)
             state.hints = 0
             state.score = 0
             state.correctAnswer = false
@@ -58,14 +51,14 @@ const gameSlice = createSlice({
             state.characters = ""
             state.year = ""
 
+            // don't really want to reset this part.
             state.movies = []
             state.correctMovieId = ""
-
         },
         setCorrectMovieId : (state, action) => {
             state.correctMovieId = action.payload
             state.title = state.movies.find(movie => movie.id === action.payload).title
-            state.lines = state.movies.find(movie => movie.id === action.payload).lines
+            // state.lines = state.movies.find(movie => movie.id === action.payload).lines
         },
         showCharacters: (state) => {
             state.characters = state.movies.find(movie => movie.id === state.correctMovieId)
@@ -93,7 +86,7 @@ const gameSlice = createSlice({
                 state.correctAnswer = true
             } else {
                 state.correctAnswer = false
-                // state.score -= state.hints //???
+                // state.totalScore -= state.hints //???
             }
         },
         nextQuote: (state) => {
