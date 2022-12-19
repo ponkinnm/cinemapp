@@ -28,7 +28,7 @@ function Layout() {
                         </li>
                         <li className={"menu__item"}>
                             <NavLink
-                                to="highscore">Highscore</NavLink>
+                                to="highscore">High Score</NavLink>
                         </li>
                     </>}
                 </ul>
