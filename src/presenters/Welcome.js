@@ -7,6 +7,8 @@ import Toast from 'react-bootstrap/Toast';
 import ToastContainer from 'react-bootstrap/ToastContainer';
 import Spinner from 'react-bootstrap/Spinner';
 import Stack from 'react-bootstrap/Stack';
+import StartButton from "../StartButton";
+import ShowHighScoreButton from "../ShowHighScoreButton";
 
 function Welcome() {
     const user = useSelector(selectUser);
@@ -30,8 +32,13 @@ function Welcome() {
                             aria-hidden="true"/>
                         <strong className="me-auto">{' '} CinemApp</strong>
                     </Toast.Header>
-                    <Toast.Body >Hello, {user.displayName}! <br/>Welcome to this game where you shall guess the movie from different quotes.</Toast.Body>
+                    <Toast.Body >Hello, {user.displayName}! <br/>Welcome to this game where you shall guess the movie
+                        from different quotes. <br/>
+                    </Toast.Body>
+                        <StartButton/><br/>
+                        <ShowHighScoreButton/>
                 </Toast>
+
                 </ToastContainer>
                 </Stack>
                 }
