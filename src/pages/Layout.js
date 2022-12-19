@@ -5,6 +5,7 @@ import {selectUser, setUser} from "../features/auth/authSlice";
 import {useEffect} from "react";
 import {onAuthStateChanged} from "firebase/auth";
 import {auth} from "../firebaseConfig";
+import {motion} from "framer-motion";
 
 function Layout() {
     const user = useSelector(selectUser);
@@ -41,9 +42,18 @@ function Layout() {
                     </>}
                 </ul>
             </nav>
-            <div className="main-content">
+            <motion.main initial={{ opacity: 0 }}
+                         animate={{ opacity: 1 }}
+                         exit={{
+                             opacity: 0,
+                         }}
+                         transition={{
+                             duration: 0.15,
+                             ease: [0.43, 0.13, 0.23, 0.96],
+                         }}
+                         className="main-content">
                 <Outlet/>
-            </div>
+            </motion.main>
         </>
     )
 
