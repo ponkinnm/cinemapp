@@ -10,16 +10,17 @@ import LoadingScreen from "../views/LoadingScreen";
 // import {fetchTitleIdsByGenre} from "../features/game/gameApiActions";
 import GamePresenter from "./GamePresenter";
 
+let isInitial = true
 export default function GenrePresenter() {
     const LIMIT = 100
     const [myGenre, setMyGenre] = useState(skipToken)
     const dispatch = useDispatch()
 
     // alt 1
-    function handleGenreChange(event) {
+    function handleGenreChange(selectedGenre) {
         setMyGenre({
             limit: LIMIT,
-            genre: event.target.value
+            genre: selectedGenre,
         })
     }
 
@@ -37,9 +38,11 @@ export default function GenrePresenter() {
         return () => {console.log("Effect clean up genre set up")}
         }, []
     )
-    if (data) {
-        // TODO: fixed the problem but this is not optimal. It gets called twice
+    if (data && isInitial) {
+        // TODO: fixed the problem with suboptimal solution (isInitial). Is there a better solution?
+        debugger
         dispatch(gameSliceAction.replaceListOfMovieIds(data))
+        isInitial = false
     }
 
     // TODO: create an error component?  Like LoadingScreen...
