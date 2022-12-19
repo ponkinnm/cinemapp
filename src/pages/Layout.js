@@ -3,6 +3,7 @@ import SignOutButton from "../SignOutButton";
 import {useSelector} from "react-redux";
 import {selectUser} from "../features/auth/authSlice";
 
+
 function Layout() {
     const user = useSelector(selectUser);
 
@@ -25,6 +26,10 @@ function Layout() {
                         </li>
                         <li className={"menu__item"}>
                             <SignOutButton/>
+                        </li>
+                        <li className={"menu__item"}>
+                            <NavLink
+                                to="Highscore">Highscore</NavLink>
                         </li>
                     </>}
                 </ul>
