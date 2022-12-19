@@ -9,7 +9,7 @@ function CorrectResultBox(props) {
             Congratulations! You scored {props.score} {props.score === 1 ? "point" : "points"} with
             {props.hints === 1 ? " just ": " "} {props.hints} {props.hints === 1 ? "hint": "hints" }.
             <div>
-            Your total score is {props.totalScore}!
+            Your total score is {props.currentScore}!
             </div>
         </Alert>
     );
