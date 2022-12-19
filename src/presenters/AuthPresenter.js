@@ -53,7 +53,7 @@ function AuthPresenter() {
             username: displayName,
             uid: auth.currentUser.uid,
             email: email,
-            highScore: 0
+            highScore: []
         }).catch(err => console.error(err.message))
     }
 
