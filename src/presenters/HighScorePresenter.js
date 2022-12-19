@@ -23,6 +23,8 @@ function HighScorePresenter(props) {
     const [gotScore, setGotScore]=useState(0);
     useEffect(()=> {
         setHighscoreDb(props.totalScore);
+        upd();
+        getHighScoreFromDb();
     }, []);
     //Helper function to appendHighScore to db
     function appendHighScore(score) {
@@ -53,12 +55,13 @@ function HighScorePresenter(props) {
 
         <div>
             {gotScore &&
-             <Row>{user.displayName }{" "}{gotScore}
-             </Row>}
-            <Row> <Button onClick={upd} type="submit">Update</Button>
-            <Button onClick={getHighScoreFromDb} type="submit">get highScore</Button> </Row>
+             <div>current score: {gotScore[0][0]}
+             </div>}
+
         </div>
     )
 
 }
 export default connect(mapStateToProps)(HighScorePresenter)
+/*<Row> <Button onClick={upd} type="submit">Update</Button>
+<Button onClick={getHighScoreFromDb} type="submit">get highScore</Button> </Row>*/

@@ -2,7 +2,7 @@ import {Outlet, NavLink, Link} from "react-router-dom";
 import SignOutButton from "../SignOutButton";
 import {useSelector} from "react-redux";
 import {selectUser} from "../features/auth/authSlice";
-
+import HighScorePresenter from "../presenters/HighScorePresenter";
 function Layout() {
     const user = useSelector(selectUser);
 
@@ -29,6 +29,9 @@ function Layout() {
                         <li className={"menu__item"}>
                             <NavLink
                                 to="highscore">Highscore</NavLink>
+                        </li>
+                        <li className={"menu__item"}>
+                            <HighScorePresenter/>
                         </li>
                     </>}
                 </ul>
