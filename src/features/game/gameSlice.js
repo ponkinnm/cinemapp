@@ -4,7 +4,7 @@ const initialState = {
     set: 0,
     score: 0,
     totalScore:0,
-    hints: 0, // is it necessary? TODO: reassess our score-logic
+    hints: -1, // is it necessary? TODO: reassess our score-logic
     correctAnswer: false,
     hasSubmittedAnswer :false,
 
@@ -23,7 +23,6 @@ const gameSlice = createSlice({
     initialState,
     reducers: {
         replaceListOfMovieIds: (state, action) => {
-            // TODO: gets called twice during first game set. Why?
             state.movieIds = [...action.payload]
         },
         removeMovieId: (state, action) => {
@@ -42,7 +41,7 @@ const gameSlice = createSlice({
         },
         resetGame: (state) => {
             // state.movies = state.movies.filter((item) => item.id !== state.correctMovieId)
-            state.hints = 0
+            state.hints = -1 // nextQuote increments hints
             state.score = 0
             state.correctAnswer = false
             state.hasSubmittedAnswer = false
