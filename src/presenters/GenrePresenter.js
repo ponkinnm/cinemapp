@@ -1,4 +1,3 @@
-import QuotePresenter from "./QuotePresenter"; // TODO: Move this file to pages
 import GenrePickerView from "../views/GenrePickerView.js";
 import React, {useState, useEffect} from 'react'
 import {GENRE} from "../util/filmConsts.js";
@@ -7,7 +6,6 @@ import {skipToken} from "@reduxjs/toolkit/query";
 import {gameSliceAction} from "../features/game/gameSlice";
 import {useDispatch} from "react-redux";
 import LoadingScreen from "../views/LoadingScreen";
-// import {fetchTitleIdsByGenre} from "../features/game/gameApiActions";
 import GamePresenter from "./GamePresenter";
 
 let isInitial = true
