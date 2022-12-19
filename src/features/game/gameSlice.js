@@ -43,7 +43,12 @@ const gameSlice = createSlice({
             const id = action.payload
             state.movies = state.movies.filter((item) => item.id !== id)
         },
-        resetGame: (state) => {
+        resetGame:(state) => {
+            state.totalScore = 0
+            state.currentScore = 0
+            state.set = 0
+        },
+        startSet: (state) => {
             // state.movies = state.movies.filter((item) => item.id !== state.correctMovieId)
             state.hints = -1 // nextQuote increments hints
             state.score = 0
