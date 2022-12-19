@@ -3,6 +3,7 @@ import {ListGroup, Overlay, Button} from 'react-bootstrap';
 import {connect} from "react-redux";
 import "./quotebox.css"
 import {mapStateToQuoteBoxProps} from "../../features/game/gameMap";
+import Alert from 'react-bootstrap/Alert'
 // TODO What should go where and how? HintView or QuoteBox?
 
 function QuoteBox(props) {
@@ -14,15 +15,18 @@ function QuoteBox(props) {
             <ListGroup>
                 <div className={"quotes"}>{props.lines.map(renderQuote)}</div>
             </ListGroup>
-            {(props.characters || props.year) ? (<b>Hint:</b>) : null}
+            <div>{" "}</div>
+            {/*{(props.characters || props.year)*/}
+            {/*    ? <Alert variant ={'info'}><b>The Hint cost you {props.hints} points: </b></Alert>*/}
+            {/*    : null }*/}
             <p>
             {props.characters
-            ? `- We quoted ${props.characters}.`
+                ? <Alert variant ={'info'}>{ `We quoted ${props.characters}.`}</Alert>
             : null}
             </p>
             <p>
             {props.year
-                ? `- The movie was made ${props.year}.`
+                ? <Alert variant ={'info'}>{`The movie was made ${props.year}.`}</Alert>
                 : null}
             </p>
             <div>{" "}</div>
