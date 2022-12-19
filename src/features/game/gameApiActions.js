@@ -1,7 +1,5 @@
 import {gameSliceAction} from "./gameSlice";
 import {BASE_URL, API_KEY} from "../../apiConfig";
-import {createMovieObjFromApiResult, createMovieQuoteGenerator} from "../../util/utilities";
-import {useSelector} from "react-redux";
 
 const options = {
     method: 'GET',
@@ -23,9 +21,19 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
     const failedIds = []
 
     const transformQuoteQueryResultACB = (obj) => {
-        // TODO: copy all from createMovieObjFromApiResult exempt for lines and characters
-        // return createMovieQuoteGenerator(obj)
-        return createMovieObjFromApiResult(obj)
+        const id = obj.id
+        const title = obj.base.title
+        const year = obj.base.year
+        const imageUrl = obj.base.image.url
+        const quotes = obj.quotes
+
+        return {
+            id,
+            title,
+            year,
+            imageUrl,
+            quotes,
+        };
     }
 
     const pickUniqueRandomMovieId = () => {
@@ -75,37 +83,5 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
                 continue
             }
         }
-        // const randomIndex = Math.floor(Math.random() * successfulIds.length)
     }
 }
-
-// export const fetchTitleIdsByGenre = (chosenGenre = 'action', noOfTitles = 100) => {
-//    return async (dispatch) => {
-//        const endpoint = '/title/v2/get-popular-movies-by-genre?'
-//        const fetchData = async () => {
-//            const searchParams = {limit: noOfTitles, genre: chosenGenre,}
-//            // await response of the fetch call
-//            const response = await fetch(`https://${BASE_URL}${endpoint}${new URLSearchParams(searchParams)}`, options)
-//            if (!response.ok) {throw new Error(`API error! status: ${response.status}`)}
-//
-//            // only proceed once the first promise is resolved
-//            const data = await response.json()
-//
-//            // only proceed once the second promise is resolved
-//            return data
-//        }
-//        try {
-//            const movieData = await fetchData()
-//            dispatch(gameSliceAction.replaceListOfMovieIds(movieData))
-//        } catch (error) {
-//            // Do something
-//        }
-//    }
-// }
-// const mapStateToProps = (state) => {
-//     return {
-//         lines: state.game.lines,
-//         characters: state.game.characters,
-//
-//     }
-// }

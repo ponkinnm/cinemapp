@@ -24,7 +24,7 @@ export const mapStateToBadResultBoxProps = (state) => {
 export const mapStateToCorrectResultProps = (state) => {
     return {
         score:state.game.score,
-        totalScore:state.game.totalScore,
+        currentScore:state.game.currentScore,
         hints:state.game.hints,
     }
 }
@@ -50,5 +50,6 @@ export const mapStateToQuoteBoxProps = (state) => {
         characters:state.game.characters,
         lines:state.game.lines,
         year:state.game.year,
+        hints:state.game.hints
     }
 }
