@@ -1,12 +1,8 @@
 import React from 'react';
 import {connect} from "react-redux";
 import Alert from 'react-bootstrap/Alert';
+import {mapStateToBadResultBoxProps} from "../../features/game/gameMap";
 
-const mapStateToBadResultBoxProps = (state) => {
-    return {
-        movie:state.game.title
-    }
-}
 function BadResultBox(props) {
     return (
         <Alert variant={'danger'}>

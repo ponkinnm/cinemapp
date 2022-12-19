@@ -40,7 +40,6 @@ export default function GenrePresenter() {
     )
     if (data && isInitial) {
         // TODO: fixed the problem with suboptimal solution (isInitial). Is there a better solution?
-        debugger
         dispatch(gameSliceAction.replaceListOfMovieIds(data))
         isInitial = false
     }

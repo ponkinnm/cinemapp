@@ -12,6 +12,7 @@ import HintView from "../pages/gameplay/HintView"
 import {useDispatch, useSelector} from "react-redux";
 import {gameSliceAction} from "../features/game/gameSlice";
 import {fetchAndAddMoviesToStore} from "../features/game/gameApiActions";
+import HighScorePresenter from "./HighScorePresenter";
 
 // only when testing
 // import {createMovieQuoteGenerator, createMovieObjFromApiResult} from "../util/utilities";
@@ -27,6 +28,8 @@ function GamePresenter() {
     const isAnswerCorrect = useSelector(state => state.game.correctAnswer)
     const hasSubmittedAnswer  = useSelector(state => state.game.hasSubmittedAnswer)
     const movieIds = useSelector(state => state.game.movieIds)
+    const set = useSelector(state => state.game.set)
+    const SETPERGAME = 3
 
     const newGame = (delay = 5000) => {setTimeout(gameSetUp, delay)}
 
@@ -64,7 +67,9 @@ function GamePresenter() {
 
 
     function nextSetACB() {
-        newGame()
+        if (set > SETPERGAME) {
+            // TODO
+        } else {newGame()}
     }
 
     // TODO Error should have its own view! Prio: NICE TO HAVE

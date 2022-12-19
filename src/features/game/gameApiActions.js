@@ -71,8 +71,7 @@ export const fetchAndAddMoviesToStore = (listOfMovieIds, numberOfMovies) => {
                     dispatch(gameSliceAction.nextQuote())
                 }
             } catch (error) {
-                console.log(error.message.toString())
-                debugger
+                // console.log(error.message.toString())
                 continue
             }
         }

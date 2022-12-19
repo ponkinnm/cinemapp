@@ -1,14 +1,8 @@
 import React from 'react';
 import {connect} from "react-redux";
 import Alert from 'react-bootstrap/Alert';
+import {mapStateToCorrectResultProps} from "../../features/game/gameMap";
 
-const mapStateToProps = (state) => {
-    return {
-        score:state.game.score,
-        totalScore:state.game.totalScore,
-        hints:state.game.hints,
-    }
-}
 function CorrectResultBox(props) {
     return (
         <Alert variant ={'success'}>
@@ -20,5 +14,4 @@ function CorrectResultBox(props) {
         </Alert>
     );
 }
-
-export default connect(mapStateToProps)(CorrectResultBox)
+export default connect(mapStateToCorrectResultProps)(CorrectResultBox)
