@@ -20,8 +20,9 @@ function HighScorePresenter(props) {
     const dbRef = ref(database, `users/${user.uid}`)
     const dbRefHighScore = ref(database, `users/${user.uid}/highScore`)
     const [highscoreDb, setHighscoreDb] = useState(getHighScoreFromDb);
+    const [gotScore, setGotScore]=useState(0);
     useEffect(()=> {
-        setHighscoreDb(props.score);
+        setHighscoreDb(props.totalScore);
     }, []);
     //Helper function to appendHighScore to db
     function appendHighScore(score) {
@@ -39,20 +40,20 @@ function HighScorePresenter(props) {
     async function getHighScoreFromDb() {
         onValue(dbRef, (response) => {
             if(response.exists() === true) {
-            setHighscoreDb( [...response.val().highScore])}
+            setGotScore( [...response.val().highScore])}
         })
     }
     //Checker func to se that you can push to db
     function upd(){
-        updateDb(props.score);
+        updateDb(props.totalScore);
     }
-    console.log(highscoreDb);
+    console.log(gotScore);
     //just checker to push to db
     return (
 
         <div>
-            {highscoreDb &&
-             <Row>{user.displayName }{" "}{props.totalScore}
+            {gotScore &&
+             <Row>{user.displayName }{" "}{gotScore}
              </Row>}
             <Row> <Button onClick={upd} type="submit">Update</Button>
             <Button onClick={getHighScoreFromDb} type="submit">get highScore</Button> </Row>
