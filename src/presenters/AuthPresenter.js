@@ -86,7 +86,7 @@ function AuthPresenter() {
         try {
             const user = await login(email, password);
             dispatch(setUser(user));
-            navigate('/game');
+            navigate('/');
         } catch (err) {
             if (err.message.includes("password")) {
                 setError("Invalid password");
