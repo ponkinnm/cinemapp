@@ -28,7 +28,7 @@ function GamePresenter() {
     const gameSetUp = useCallback(async () => {
         setIsLoading(true)
         setError(null)
-        dispatch(gameSliceAction.resetGame())
+        dispatch(gameSliceAction.startSet())
         try {
             await dispatch(fetchAndAddMoviesToStore(movieIds, NUMBEROFMOVIES))
         } catch (err){
