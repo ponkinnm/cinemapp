@@ -1,7 +1,7 @@
 import React from 'react';
 import {ListGroup, Overlay, Button} from 'react-bootstrap';
 import {connect} from "react-redux";
-
+import "./quotebox.css"
 // TODO What should go where and how? HintView or QuoteBox?
 
 const mapStateToProps = (state) => {
@@ -18,7 +18,7 @@ function QuoteBox(props) {
     return (
         <>
             <ListGroup>
-                {props.lines.map(renderQuote)}
+                <div className={"quotes"}>{props.lines.map(renderQuote)}</div>
             </ListGroup>
             {(props.characters || props.year) ? (<b>Hint:</b>) : null}
             <p>

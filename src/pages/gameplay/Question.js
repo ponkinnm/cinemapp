@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Stack} from 'react-bootstrap';
-import './quotebox.css';
+import './question.css';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import * as events from "events";
 import {connect} from "react-redux";

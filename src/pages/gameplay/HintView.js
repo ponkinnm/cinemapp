@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, {} from 'react';
 import {ListGroup, Overlay, Button, Stack} from 'react-bootstrap';
 import {connect} from "react-redux";
 import {gameSliceAction} from "../../features/game/gameSlice";
@@ -21,8 +21,6 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 function HintView(props){
-    const targetYear = useRef(null);
-    const targetCharacter = useRef(null);
     function hintYearACB(){
         props.year || props.onYear();
     }
@@ -32,44 +30,15 @@ function HintView(props){
     <Stack direction="vertical" gap={4}>
         <Button
             variant="secondary"
-            onClick={hintYearACB}
-            ref={targetYear}>
+            onClick={hintYearACB}>
             Hint for year
         </Button>
         <Button
             variant="secondary"
-            onClick={()=>{props.characters || props.onCharacter()}}
-            ref={targetCharacter}>
+            onClick={()=>{props.characters || props.onCharacter()}}>
             Hint for characters
         </Button>
     </Stack>
-        <Overlay
-            target={targetYear.current}
-            show={props.year}
-            placement="top">
-            <div style={{
-              position: 'absolute',
-              backgroundColor: '#808080',
-              padding: '2px 10px',
-              color: 'white',
-              borderRadius: 3,
-            }}>
-            {props.year}</div>
-        </Overlay>
-
-        <Overlay
-            target={targetCharacter.current}
-            show={props.characters}
-            placement="top">
-            <div style={{
-              position: 'absolute',
-              backgroundColor: '#808080',
-              padding: '2px 10px',
-              color: 'white',
-              borderRadius: 3,
-            }}>{props.characters}
-            </div>
-        </Overlay>
     </div>
 }
 export default connect(mapStateToProps, mapDispatchToProps)(HintView)
