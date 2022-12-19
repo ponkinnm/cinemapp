@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const MAXPOINTS = 10
-const MAXSET = 2
+const MAXSET = 5
 
 const initialState = {
     set: 0,
     score: 0,
     totalScore:0,
     currentScore:0,
-    hints: -1, // is it necessary? TODO: reassess our score-logic
+    hints: -1,
     correctAnswer: false,
     hasSubmittedAnswer :false,
 
@@ -89,9 +89,9 @@ const gameSlice = createSlice({
                 state.correctAnswer = true
             } else {
                 state.correctAnswer = false
-                // state.currentScore -= state.hints //???
+                state.currentScore -= state.hints //???
             }
-            if (state.set = MAXSET) {
+            if (state.set >= MAXSET) {
                 state.totalScore = state.currentScore
             }
         },
