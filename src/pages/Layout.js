@@ -26,6 +26,10 @@ function Layout() {
                         <li className={"menu__item"}>
                             <SignOutButton/>
                         </li>
+                        <li className={"menu__item"}>
+                            <NavLink
+                                to="highscore">Highscore</NavLink>
+                        </li>
                     </>}
                 </ul>
             </nav>
