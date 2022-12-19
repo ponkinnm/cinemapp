@@ -13,10 +13,11 @@ function SignUpView({error, handleSubmit, setHasAccount}) {
     const [email, setEmail] = useState("");
     const [displayName, setDisplayName] = useState("");
     const [password, setPassword] = useState("");
+    const [passwordChecker, setPasswordChecker] = useState("");
 
     function onSubmit(e) {
         e.preventDefault();
-        handleSubmit(email, password, displayName)
+        handleSubmit(email, password, passwordChecker, displayName)
     }
 
     return (
@@ -55,6 +56,14 @@ function SignUpView({error, handleSubmit, setHasAccount}) {
                             type="password"
                             placeholder="Password"
                             onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </FloatingLabel>
+                    <FloatingLabel label="Enter the same password" className="mb-3" controlId="formBasicPasswordCheck">
+                        <Form.Control
+                            required
+                            placeholder="Enter password"
+                            type="password"
+                            onChange={(e) => (setPasswordChecker(e.target.value))}
                         />
                     </FloatingLabel>
                     <Form.Group className="mb-3">

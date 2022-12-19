@@ -7,10 +7,9 @@ import {auth} from '../firebaseConfig'
 import {database} from "../firebaseConfig";
 import {useDispatch} from "react-redux";
 import LoginView from "../views/LoginView";
-import {onAuthStateChanged} from 'firebase/auth'
 
 function AuthPresenter() {
-    const [hasAccount, setHasAccount] = useState(false);
+    const [hasAccount, setHasAccount] = useState(true);
     const [error, setError] = useState("");
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -31,15 +30,14 @@ function AuthPresenter() {
                             //ta bort skapad authentication
                             setError("Username already taken")
                             setHasAccount(null);
-                            return deleteCurrentUser();
+                            deleteCurrentUser();
+                            return Promise.reject(new Error)
                         } else if (!checker) {
                             return writeUserToDatabase(displayName, email)
                         }
                         checker = checker - 1;
                     })
                 }
-                //checker
-                console.log(response);
             })
             .catch(err => {
                 console.log(err.message)
@@ -55,9 +53,14 @@ function AuthPresenter() {
         }).catch(err => console.error(err.message))
     }
 
-    async function handleSignup(email, password, displayName) {
+    async function handleSignup(email, password, passwordChecker, displayName) {
         setError("");
         try {
+
+            if(passwordChecker !== password){
+                setError("password must be the same")
+                return Promise.reject(new Error)
+            }
             const user = await signUp(email, password, displayName);
             await checkIfUsernameAlreadyTaken(displayName, email)
             dispatch(setUser(user))
