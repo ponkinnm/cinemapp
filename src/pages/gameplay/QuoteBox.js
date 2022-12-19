@@ -1,5 +1,5 @@
 import React from 'react';
-import {ListGroup, Overlay, Button} from 'react-bootstrap';
+import {ListGroup} from 'react-bootstrap';
 import {connect} from "react-redux";
 import "./quotebox.css"
 import {mapStateToQuoteBoxProps} from "../../features/game/gameMap";
@@ -16,19 +16,16 @@ function QuoteBox(props) {
                 <div className={"quotes"}>{props.lines.map(renderQuote)}</div>
             </ListGroup>
             <div>{" "}</div>
-            {/*{(props.characters || props.year)*/}
-            {/*    ? <Alert variant ={'info'}><b>The Hint cost you {props.hints} points: </b></Alert>*/}
-            {/*    : null }*/}
-            <p>
+            {(props.characters || props.year)
+                ? <Alert variant ={'warning'}><b>Darn! I forgot to tell you that every hint and quote cost you a point.
+                    You've {props.hints !== 1 && "now "} lost  {props.hints} {props.hints === 1 ? "point" : "points"}.</b></Alert>
+                : null }
             {props.characters
                 ? <Alert variant ={'info'}>{ `We quoted ${props.characters}.`}</Alert>
             : null}
-            </p>
-            <p>
             {props.year
                 ? <Alert variant ={'info'}>{`The movie was made ${props.year}.`}</Alert>
                 : null}
-            </p>
             <div>{" "}</div>
         </>
     );
