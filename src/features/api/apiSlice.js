@@ -1,7 +1,6 @@
 // Import the RTK Query methods from the React-specific entry point
 import {createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
 import {API_KEY, BASE_URL} from "../../apiConfig";
-import {gameSliceAction} from "../game/gameSlice";
 
 const headers = {
     'X-RapidAPI-Key': API_KEY,
@@ -21,17 +20,6 @@ export const apiSlice = createApi({
                     headers
                 }
             ),
-            // async onQueryStarted({limit, genre}, {dispatch, queryFulfilled}) {
-            //     try {
-            //         const { data } = await queryFulfilled
-            //         // onSuccess side effect
-            //         debugger
-            //         dispatch(gameSliceAction.replaceListOfMovieIds(data))
-            //     } catch (err) {
-            //         // onError side-effect
-            //         console.error(err)
-            //     }
-            // }
         }),
         getMovie: builder.query({
             query: (movieId) => ({
