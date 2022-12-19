@@ -1,63 +1,70 @@
 import React, {useEffect, useState} from 'react';
 import {connect} from "react-redux";
-import {ref, push, update, onValue } from 'firebase/database'
+import {ref, push, onValue} from 'firebase/database'
 import {database} from "../firebaseConfig";
 import {useSelector} from "react-redux";
 import {selectUser} from "../features/auth/authSlice";
-import Row from "react-bootstrap/Row";
-import Button from "react-bootstrap/Button";
 
-
-
-const mapStateToProps = (state) =>{
+const mapStateToProps = (state) => {
     return {
         score: state.game.score,
         totalScore: state.game.totalScore
     }
 }
+
 function HighScorePresenter(props) {
     const user = useSelector(selectUser);
-    const dbRef = ref(database, `users/${user.uid}`)
-    const dbRefHighScore = ref(database, `users/${user.uid}/highScore`)
-    const [highscoreDb, setHighscoreDb] = useState(getHighScoreFromDb);
-    useEffect(()=> {
-        setHighscoreDb(props.score);
-    }, []);
-    //Helper function to appendHighScore to db
-    function appendHighScore(score) {
-        let highScore = [score]
-        highScore.push(highscoreDb.toString())
-        return highScore
-    }
+    console.log("rendering highscore presenter")
+    const [dbRef, setDbRef] = useState(null);
+    const [highscores, setHighscores] = useState([]);
+
+    useEffect(() => {
+        if (user) {
+            setDbRef(ref(database, `users/${user.uid}/highScore`))
+        }
+    }, [user])
+
+    useEffect(() => {
+        getHighScoreFromDb();
+    }, [dbRef])
+
     //function to call when push a new score to db
-    function updateDb(score){
-        if(score === 0){ return; }
-        update(dbRef, {highScore: [appendHighScore(score)]
-            }).catch(err => console.error(err));
+    function updateDb(score) {
+        if (score === 0) {
+            return;
+        }
+        push(dbRef, score);
+        /*update(dbRef, {
+            highScore: [appendHighScore(score)]
+        }).catch(err => console.error(err));*/
     }
+
     //Getter for highScore from logged in user
     async function getHighScoreFromDb() {
-        onValue(dbRef, (response) => {
-            if(response.exists() === true) {
-            setHighscoreDb( [...response.val().highScore])}
-        })
+        if (dbRef) {
+            onValue(dbRef, (response) => {
+                if (response.exists()) {
+                    console.log(Object.values(response.val()));
+                    setHighscores([...new Set(Object.values(response.val()))].sort((a, b) => b - a).slice(0, 6));
+                }
+            })
+        }
     }
-    //Checker func to se that you can push to db
-    function upd(){
-        updateDb(props.score);
-    }
-    console.log(highscoreDb);
-    //just checker to push to db
-    return (
 
+    function highscoreListCB(highscore, index) {
+        return <li key={highscore}>{`#${index + 1}: ${highscore}`}</li>
+    }
+
+    return (
         <div>
-            {highscoreDb &&
-             <Row>{user.displayName }{" "}{props.totalScore}
-             </Row>}
-            <Row> <Button onClick={upd} type="submit">Update</Button>
-            <Button onClick={getHighScoreFromDb} type="submit">get highScore</Button> </Row>
+            <h1>Your High scores</h1>
+            {highscores.length ?
+                <ul className="p-1 list-unstyled d-flex flex-column justify-content-center text-center">
+                    {highscores.map(highscoreListCB)}
+                </ul> : null}
         </div>
     )
 
 }
+
 export default connect(mapStateToProps)(HighScorePresenter)

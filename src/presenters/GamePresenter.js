@@ -15,12 +15,12 @@ function GamePresenter() {
 
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(null)
+    const navigate = useNavigate();
 
     const dispatch = useDispatch()
-    const navigate = useNavigate()
 
     const isAnswerCorrect = useSelector(state => state.game.correctAnswer)
-    const hasSubmittedAnswer  = useSelector(state => state.game.hasSubmittedAnswer)
+    const hasSubmittedAnswer = useSelector(state => state.game.hasSubmittedAnswer)
     const movieIds = useSelector(state => state.game.movieIds)
     const totalScore = useSelector(state => state.game.totalScore)
     const newGame = (delay = 2000) => {setTimeout(gameSetUp, delay)}
@@ -44,7 +44,9 @@ function GamePresenter() {
         setIsLoading(true)
         setError(null)
         gameSetUp();
-        return () => {console.log("Effect clean up game set up")}
+        return () => {
+            console.log("Effect clean up game set up")
+        }
     }, [gameSetUp])
 
     function nextSetACB() {
@@ -65,17 +67,17 @@ function GamePresenter() {
                 ? isAnswerCorrect
                     ? <CorrectResultBox/>
                     : <BadResultBox/>
-                : null }
+                : null}
             {!isLoading && (
                 <div>
-                <QuoteBox/>
-                <Question
-                    onNextSet={nextSetACB}
-                />
-                <div>&nbsp;</div>
+                    <QuoteBox/>
+                    <Question
+                        onNextSet={nextSetACB}
+                    />
+                    <div>&nbsp;</div>
                     <HintView/>
                 </div>
-                )
+            )
             }
         </>
     );
